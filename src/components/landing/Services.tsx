@@ -1,5 +1,6 @@
 import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
 import companionshipTea from "@/assets/companionship-tea.png";
+import outAndAbout from "@/assets/out-and-about.jpeg";
 
 const chapters = [
   {
