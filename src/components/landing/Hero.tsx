@@ -1,4 +1,5 @@
 import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
+import sabrinaPhoto from "@/assets/sabrina.jpg";
 
 export function Hero() {
   const titleRef = useScrollReveal<HTMLHeadingElement>();
