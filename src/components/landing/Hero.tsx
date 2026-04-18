@@ -86,8 +86,8 @@ export function Hero() {
           <div className="relative aspect-[4/5] overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,transparent)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.3)]">
             <img
               ref={imageInnerRef}
-              src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=1400&q=80"
-              alt="Sabrina sharing a warm moment of companionship with an older client"
+              src="https://images.unsplash.com/photo-1581579438747-104c53e7a26a?auto=format&fit=crop&w=1400&q=80"
+              alt="Placeholder portrait — to be replaced with a photo of Sabrina"
               className="h-[112%] w-full -translate-y-[6%] object-cover"
               loading="eager"
             />
