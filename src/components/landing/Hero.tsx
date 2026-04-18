@@ -1,4 +1,5 @@
 import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
+import sabrinaPhoto from "@/assets/sabrina.jpg";
 
 export function Hero() {
   const titleRef = useScrollReveal<HTMLHeadingElement>();
@@ -86,9 +87,9 @@ export function Hero() {
           <div className="relative aspect-[4/5] overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,transparent)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.3)]">
             <img
               ref={imageInnerRef}
-              src="https://images.unsplash.com/photo-1581579438747-104c53e7a26a?auto=format&fit=crop&w=1400&q=80"
-              alt="Placeholder portrait — to be replaced with a photo of Sabrina"
-              className="h-[112%] w-full -translate-y-[6%] object-cover"
+              src={sabrinaPhoto}
+              alt="Sabrina Myers — founder of Sabrina Myers Lifestyle & Companionship"
+              className="h-[112%] w-full -translate-y-[6%] object-cover object-top"
               loading="eager"
             />
           </div>
