@@ -16,7 +16,11 @@ const faqs = [
   },
   {
     q: "Can you take my parent to appointments or out shopping?",
-    a: "Absolutely. Getting out and about is our specialty! Sabrina is fully insured for business travel, and uniquely, we never charge extra mileage fees — you only pay the standard hourly rate.",
+    a: "Absolutely. Getting out and about is our specialty! Sabrina is fully insured for business travel. We include 15 miles of travel completely free with every visit. If an outing or appointment takes us further afield, we just charge a standard 45p per mile for the extra distance.",
+  },
+  {
+    q: "Who pays for tickets, meals, or activities during an outing?",
+    a: "Our £20 hourly rate covers Sabrina's time and all travel/mileage. However, any out-of-pocket expenses during the visit—such as theatre tickets, café bills, or admission fees for both the client and Sabrina—are to be covered by the client.",
   },
   {
     q: "Are you insured and background checked?",
