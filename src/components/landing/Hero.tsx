@@ -50,8 +50,8 @@ export function Hero() {
             >
               <span className="font-semibold italic">Hello, I&apos;m Sabrina.</span> I offer
               private companionship and lifestyle support across Blackburn, Darwen, the
-              Ribble Valley, and wider Lancashire — so your loved ones can live well,
-              comfortably, and independently at home.
+              Ribble Valley, and wider Lancashire — helping you, or someone you love,
+              live well, comfortably, and independently at home.
             </p>
 
             <div
