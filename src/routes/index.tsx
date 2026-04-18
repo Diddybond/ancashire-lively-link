@@ -5,6 +5,7 @@ import { TrustBar } from "@/components/landing/TrustBar";
 import { About } from "@/components/landing/About";
 import { IndependentDifference } from "@/components/landing/IndependentDifference";
 import { Services } from "@/components/landing/Services";
+import { Testimonials } from "@/components/landing/Testimonials";
 import { Pricing } from "@/components/landing/Pricing";
 import { FAQ } from "@/components/landing/FAQ";
 import { Contact } from "@/components/landing/Contact";
@@ -25,6 +26,7 @@ function Index() {
         <About />
         <IndependentDifference />
         <Services />
+        <Testimonials />
         <Pricing />
         <FAQ />
         <ScopeNotice />
