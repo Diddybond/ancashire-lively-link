@@ -6,88 +6,99 @@ export function Hero() {
   const copyRef = useScrollReveal<HTMLParagraphElement>();
   const ctaRef = useScrollReveal<HTMLDivElement>();
   const imageWrapRef = useScrollReveal<HTMLDivElement>();
-  const imageInnerRef = useParallax<HTMLImageElement>(0.08);
-  const cardRef = useScrollReveal<HTMLDivElement>();
+  const imageInnerRef = useParallax<HTMLImageElement>(0.06);
 
   return (
-    <section id="top" className="relative overflow-hidden pt-32 lg:pt-40">
-      {/* Decorative background type */}
+    <section
+      id="top"
+      className="relative overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28"
+    >
+      {/* Soft sage shape behind image — agency polish */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-6 right-4 select-none font-serif text-[18vw] leading-none italic text-foreground/[0.04] lg:right-12 lg:text-[14vw]"
-      >
-        est. care
-      </div>
+        className="pointer-events-none absolute right-0 top-24 hidden h-[80%] w-[42%] rounded-l-[3rem] bg-[color-mix(in_oklab,var(--primary)_14%,transparent)] lg:block"
+      />
+      {/* Soft bronze shape bottom-left */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-10 -left-10 hidden h-64 w-64 rounded-full bg-[color-mix(in_oklab,var(--bronze)_18%,transparent)] blur-2xl lg:block"
+      />
 
-      <div className="mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-12 gap-x-8 px-6 pb-20 sm:px-8 lg:gap-x-16 lg:px-12 lg:pb-32">
-        <div className="col-span-12 lg:col-span-6">
-          <span
-            ref={eyebrowRef}
-            className="reveal-up mb-8 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]"
-          >
-            Sabrina Myers · Lifestyle &amp; Companionship
-          </span>
-          <h1
-            ref={titleRef}
-            className="reveal-up delay-1 font-serif text-[clamp(2.75rem,6.5vw,5.5rem)] font-light leading-[1.02] tracking-tight text-balance text-foreground"
-          >
-            Quietly attentive
-            <span className="block italic text-[var(--bronze)]">companionship.</span>
-          </h1>
-          <p
-            ref={copyRef}
-            className="reveal-up delay-2 mt-10 max-w-[48ch] text-lg font-light leading-relaxed text-foreground/75"
-          >
-            A private companionship and lifestyle service for older adults across Blackburn
-            with Darwen and the wider Lancashire area — personally led by Sabrina Myers, so
-            your loved ones live beautifully and independently at home.
-          </p>
-          <p className="reveal-up delay-2 mt-6 text-[11px] font-medium uppercase tracking-[0.3em] text-foreground/55">
-            Quietly attentive · Carefully considered
-          </p>
-          <div ref={ctaRef} className="reveal-up delay-3 mt-12 flex flex-wrap items-center gap-10">
-            <a
-              href="#contact"
-              className="group flex items-center gap-4 border-b border-foreground/25 pb-2 text-[11px] font-medium uppercase tracking-eyebrow text-foreground transition-colors hover:border-[var(--bronze)] hover:text-[var(--bronze)]"
+      <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-12 gap-x-8 px-6 sm:px-8 lg:gap-x-12 lg:px-12">
+        {/* LEFT: white card with content (like reference) */}
+        <div className="relative z-10 col-span-12 lg:col-span-7">
+          <div className="bg-background/95 p-8 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)] sm:p-12 lg:p-16 lg:-mr-16">
+            <span
+              ref={eyebrowRef}
+              className="reveal-up mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]"
             >
-              Arrange a Free Chat
-              <span className="transition-transform group-hover:translate-x-2">→</span>
-            </a>
-            <a
-              href="tel:07515975760"
-              className="group flex items-center gap-3 text-[11px] font-medium uppercase tracking-eyebrow text-foreground/70 transition-colors hover:text-foreground"
+              Companionship &amp; Lifestyle Support
+            </span>
+
+            <h1
+              ref={titleRef}
+              className="reveal-up delay-1 font-serif text-[clamp(2.5rem,5.5vw,4.75rem)] font-medium leading-[1.05] tracking-tight text-foreground"
             >
-              <span className="h-px w-8 bg-foreground/40 transition-all group-hover:w-12" />
-              Call 07515 975 760
-            </a>
-          </div>
-        </div>
+              Quietly attentive care,
+              <span className="block text-[var(--primary)]">delivered personally.</span>
+            </h1>
 
-        <div ref={imageWrapRef} className="reveal-up delay-2 relative col-span-12 lg:col-span-6">
-          <div className="relative aspect-[4/5] overflow-hidden bg-[var(--primary)]/10 shadow-[40px_40px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)]">
-            <img
-              ref={imageInnerRef}
-              src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=1400&q=80"
-              alt="A warm moment of companionship between a carer and an older woman"
-              className="h-[115%] w-full -translate-y-[7%] object-cover [filter:grayscale(10%)_contrast(1.02)]"
-              loading="eager"
-            />
-            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-foreground/5" />
-          </div>
+            <p
+              ref={copyRef}
+              className="reveal-up delay-2 mt-8 max-w-[52ch] text-xl leading-relaxed text-foreground/80"
+            >
+              <span className="font-semibold italic">Hello, I&apos;m Sabrina.</span> I offer
+              private companionship and lifestyle support for older adults across Blackburn
+              with Darwen and the wider Lancashire area — so your loved ones can live well,
+              comfortably, and independently at home.
+            </p>
 
-          {/* Floating editorial card */}
-          <div
-            ref={cardRef}
-            className="reveal-up delay-3 absolute -bottom-10 -left-6 hidden max-w-xs bg-background p-8 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] sm:block lg:-left-12 lg:p-10"
-          >
-            <span className="mb-3 block font-serif text-4xl italic text-[var(--bronze)]">01</span>
-            <p className="text-[10px] font-medium uppercase leading-relaxed tracking-eyebrow text-foreground">
-              Proudly serving the towns and villages of Blackburn with Darwen and Lancashire.
+            <div
+              ref={ctaRef}
+              className="reveal-up delay-3 mt-10 flex flex-wrap items-center gap-6"
+            >
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center bg-[var(--primary)] px-10 py-5 text-base font-semibold uppercase tracking-[0.18em] text-[var(--primary-foreground)] shadow-sm transition-all hover:bg-[var(--bronze)] hover:shadow-md"
+              >
+                Arrange a Free Chat
+              </a>
+              <a
+                href="tel:07515975760"
+                className="inline-flex items-center gap-3 text-lg font-medium text-foreground transition-colors hover:text-[var(--primary)]"
+              >
+                <span aria-hidden className="text-[var(--bronze)]">☏</span>
+                07515 975 760
+              </a>
+            </div>
+
+            <p className="mt-8 text-sm font-medium uppercase tracking-[0.24em] text-foreground/60">
+              Quietly attentive · Carefully considered
             </p>
           </div>
         </div>
+
+        {/* RIGHT: large photo */}
+        <div
+          ref={imageWrapRef}
+          className="reveal-up delay-2 relative col-span-12 lg:col-span-5"
+        >
+          <div className="relative aspect-[4/5] overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,transparent)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.3)]">
+            <img
+              ref={imageInnerRef}
+              src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=1400&q=80"
+              alt="Sabrina sharing a warm moment of companionship with an older client"
+              className="h-[112%] w-full -translate-y-[6%] object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
       </div>
-      <div aria-hidden className="mx-auto h-px max-w-7xl border-t border-[color-mix(in_oklab,var(--primary)_28%,transparent)]" />
+
+      <div
+        aria-hidden
+        className="mx-auto mt-16 h-px max-w-7xl border-t border-[color-mix(in_oklab,var(--primary)_28%,transparent)]"
+      />
     </section>
   );
 }
