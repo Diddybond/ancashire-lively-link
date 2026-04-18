@@ -38,7 +38,7 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="mx-auto mb-20 max-w-3xl text-center">
           <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
-            Inquiry · By Private Appointment
+            Enquiry · By Private Appointment
           </span>
           <h2
             ref={heading}
@@ -93,7 +93,7 @@ export function Contact() {
               className="mt-12 font-medium uppercase tracking-eyebrow"
               disabled={submitting}
             >
-              {submitting ? "Sending…" : "Send Inquiry →"}
+              {submitting ? "Sending…" : "Send Enquiry →"}
             </Button>
           </form>
 

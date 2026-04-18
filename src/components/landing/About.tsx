@@ -57,13 +57,13 @@ export function About() {
             className="reveal-up delay-3 mt-6 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80"
           >
             My early career was in retail, which gave me a deep appreciation for customer service
-            and simply having a really good chat! As my children grew older, I realized my true
+            and simply having a really good chat! As my children grew older, I realised my true
             calling was in care.
           </p>
           <p className="reveal-up delay-3 mt-6 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80">
             My experience comes directly from working as a professional Activities and Lifestyle
             Coordinator in premium care homes, where I discovered my absolute passion for
-            person-centered, joyful support. I founded this independent business because I saw a
+            person-centred, joyful support. I founded this independent business because I saw a
             desperate need in our community for consistent, unhurried companionship — the exact
             opposite of the standard agency model. When you book with me, you get my dedicated
             time and a genuine relationship, every single visit.
