@@ -24,7 +24,7 @@ export function Footer() {
           </div>
           <div className="col-span-6 lg:col-span-2">
             <h4 className="mb-6 text-[10px] font-medium uppercase tracking-eyebrow opacity-50">
-              Inquiry
+              Enquiry
             </h4>
             <ul className="space-y-4 text-sm font-light">
               <li><a href="#contact" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">Begin a Conversation</a></li>
