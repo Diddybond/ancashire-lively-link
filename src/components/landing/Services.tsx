@@ -1,12 +1,12 @@
 import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
+import companionshipTea from "@/assets/companionship-tea.png";
 
 const chapters = [
   {
     no: "One",
     title: "Friendly Companionship",
     desc: "A good chat over a cuppa, shared hobbies, and a helping hand around the house. Time spent together, never watched on a clock.",
-    image:
-      "https://images.unsplash.com/photo-1581579438747-104c53e7a01c?auto=format&fit=crop&w=1200&q=80",
+    image: companionshipTea,
     meta: ["Conversation & company", "Hobbies & light home help", "Reading & memory work"],
   },
   {
