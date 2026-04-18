@@ -31,9 +31,7 @@ export function Header() {
       }`}
     >
       <div className="mx-auto grid h-20 max-w-7xl grid-cols-3 items-center px-6 sm:px-8 lg:px-12">
-        <div className="hidden text-[10px] font-medium uppercase tracking-eyebrow text-foreground/70 lg:block">
-          Est. Lancashire
-        </div>
+        <div aria-hidden className="hidden lg:block" />
 
         <a
           href="#top"
