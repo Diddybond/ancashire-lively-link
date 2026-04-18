@@ -49,8 +49,8 @@ export function Hero() {
               className="reveal-up delay-2 mt-8 max-w-[52ch] text-xl leading-relaxed text-foreground/80"
             >
               <span className="font-semibold italic">Hello, I&apos;m Sabrina.</span> I offer
-              private companionship and lifestyle support for older adults across Blackburn
-              with Darwen and the wider Lancashire area — so your loved ones can live well,
+              private companionship and lifestyle support across Blackburn, Darwen, the
+              Ribble Valley, and wider Lancashire — so your loved ones can live well,
               comfortably, and independently at home.
             </p>
 

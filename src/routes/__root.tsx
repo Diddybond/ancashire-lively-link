@@ -30,17 +30,17 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sabrina Myers Lifestyle & Companionship — Blackburn with Darwen, Lancashire" },
+      { title: "Sabrina Myers | Private Senior Companionship Blackburn & Lancashire" },
       {
         name: "description",
         content:
-          "Sabrina Myers Lifestyle & Companionship — a private, non-medical companionship service for older adults in Blackburn with Darwen and across Lancashire. Quietly attentive. Carefully considered.",
+          "Sabrina Myers provides bespoke, independent lifestyle support and companionship for older adults in Blackburn with Darwen, the Ribble Valley, and Lancashire. £25/hr, no mileage fees for the first 15 miles.",
       },
-      { property: "og:title", content: "Sabrina Myers Lifestyle & Companionship — Lancashire" },
+      { property: "og:title", content: "Sabrina Myers | Private Senior Companionship Blackburn & Lancashire" },
       {
         property: "og:description",
         content:
-          "Quietly attentive, carefully considered companionship and lifestyle support for older adults across Blackburn with Darwen and Lancashire.",
+          "Bespoke, independent companionship and lifestyle support for older adults in Blackburn, Darwen, the Ribble Valley, and Lancashire. Quietly attentive. Carefully considered.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

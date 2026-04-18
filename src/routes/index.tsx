@@ -9,6 +9,7 @@ import { InspirationMenu } from "@/components/landing/InspirationMenu";
 import { Testimonials } from "@/components/landing/Testimonials";
 import { Pricing } from "@/components/landing/Pricing";
 import { FAQ } from "@/components/landing/FAQ";
+import { ServiceAreas } from "@/components/landing/ServiceAreas";
 import { Contact } from "@/components/landing/Contact";
 import { ScopeNotice } from "@/components/landing/ScopeNotice";
 import { Footer } from "@/components/landing/Footer";
@@ -30,6 +31,7 @@ function Index() {
         <InspirationMenu />
         <Testimonials />
         <Pricing />
+        <ServiceAreas />
         <FAQ />
         <ScopeNotice />
         <Contact />
