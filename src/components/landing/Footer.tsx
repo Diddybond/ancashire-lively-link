@@ -53,6 +53,11 @@ export function Footer() {
             <a href="#" className="hover:opacity-100">Terms</a>
           </div>
         </div>
+
+        <p className="mt-8 max-w-4xl text-xs leading-relaxed text-white/40">
+          Private senior companionship and non-medical home help in Blackburn, Darwen,
+          Clitheroe, Accrington, Burnley, Preston, and Chorley.
+        </p>
       </div>
     </footer>
   );
