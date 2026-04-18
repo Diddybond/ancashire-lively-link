@@ -36,7 +36,7 @@ export function Header() {
 
         <a
           href="#top"
-          className="col-start-1 col-end-3 font-serif text-xl italic tracking-tight text-foreground sm:text-2xl lg:col-start-2 lg:col-end-3 lg:text-center"
+          className="col-start-1 col-end-3 truncate font-serif text-xl italic tracking-tight text-foreground sm:text-2xl lg:col-start-2 lg:col-end-3 lg:text-center"
         >
           Sabrina Myers
         </a>
