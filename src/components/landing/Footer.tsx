@@ -1,26 +1,53 @@
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-[oklch(0.28_0.04_150)] text-[oklch(0.97_0.018_90)]">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
-          <div>
-            <p className="font-serif text-lg font-semibold">Sabrina Myers</p>
-            <p className="mt-1 text-sm opacity-80">
-              Private elderly companionship and lifestyle coordination in Blackburn, Darwen, and
-              Lancashire.
+    <footer className="bg-[var(--forest)] text-[color-mix(in_oklab,var(--background)_92%,transparent)]">
+      <div className="mx-auto max-w-7xl px-6 py-32 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-12 gap-y-12 gap-x-12 border-b border-white/10 pb-20">
+          <div className="col-span-12 lg:col-span-5">
+            <div className="font-serif text-5xl italic">Sabrina Myers</div>
+            <p className="mt-6 max-w-sm text-sm font-light leading-relaxed opacity-70">
+              Private companionship and lifestyle coordination for distinguished older adults
+              across Blackburn, Darwen and the wider Lancashire estate.
             </p>
           </div>
-          <nav aria-label="Footer" className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
-            <a href="#about" className="opacity-80 hover:opacity-100">About</a>
-            <a href="#services" className="opacity-80 hover:opacity-100">Services</a>
-            <a href="#contact" className="opacity-80 hover:opacity-100">Contact</a>
-            <a href="#privacy" className="opacity-80 hover:opacity-100">Privacy Policy</a>
-          </nav>
+
+          <div className="col-span-6 lg:col-span-2 lg:col-start-7">
+            <h4 className="mb-6 text-[10px] font-medium uppercase tracking-eyebrow opacity-50">
+              The Practice
+            </h4>
+            <ul className="space-y-4 text-sm font-light">
+              <li><a href="#about" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">About Sabrina</a></li>
+              <li><a href="#services" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">The Curation</a></li>
+              <li><a href="#pricing" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">Investment</a></li>
+            </ul>
+          </div>
+          <div className="col-span-6 lg:col-span-2">
+            <h4 className="mb-6 text-[10px] font-medium uppercase tracking-eyebrow opacity-50">
+              Inquiry
+            </h4>
+            <ul className="space-y-4 text-sm font-light">
+              <li><a href="#contact" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">Begin a Conversation</a></li>
+              <li><a href="tel:07515975760" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">07515 975 760</a></li>
+              <li><a href="mailto:hello@sabrinamyers.co.uk" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100 break-all">hello@sabrinamyers.co.uk</a></li>
+            </ul>
+          </div>
+          <div className="col-span-12 lg:col-span-3 lg:text-right">
+            <h4 className="mb-6 text-[10px] font-medium uppercase tracking-eyebrow opacity-50">
+              By Appointment
+            </h4>
+            <p className="font-serif text-2xl italic">Mon — Sat</p>
+            <p className="mt-2 text-sm font-light opacity-70">Strictly by private arrangement</p>
+          </div>
         </div>
-        <p className="mt-8 text-sm opacity-70">
-          © {year} Sabrina Myers. All rights reserved.
-        </p>
+
+        <div className="flex flex-col items-start justify-between gap-6 pt-10 text-[10px] font-medium uppercase tracking-eyebrow opacity-50 sm:flex-row sm:items-center">
+          <p>© {year} Sabrina Myers · All Rights Reserved</p>
+          <div className="flex gap-8">
+            <a href="#privacy" className="hover:opacity-100">Privacy</a>
+            <a href="#" className="hover:opacity-100">Terms</a>
+          </div>
+        </div>
       </div>
     </footer>
   );

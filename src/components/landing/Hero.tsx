@@ -1,48 +1,87 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
 
 export function Hero() {
+  const titleRef = useScrollReveal<HTMLHeadingElement>();
+  const eyebrowRef = useScrollReveal<HTMLSpanElement>();
+  const copyRef = useScrollReveal<HTMLParagraphElement>();
+  const ctaRef = useScrollReveal<HTMLDivElement>();
+  const imageWrapRef = useScrollReveal<HTMLDivElement>();
+  const imageInnerRef = useParallax<HTMLImageElement>(0.08);
+  const cardRef = useScrollReveal<HTMLDivElement>();
+
   return (
-    <section id="top" className="relative overflow-hidden">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:py-24 lg:px-8">
-        <div>
-          <p className="mb-4 inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-sm font-medium text-foreground/70">
-            Blackburn with Darwen · Lancashire
-          </p>
-          <h1 className="font-serif text-4xl font-semibold leading-tight text-foreground sm:text-5xl lg:text-6xl">
-            Enriching the Lives of Older Adults in Lancashire.
+    <section id="top" className="relative overflow-hidden pt-32 lg:pt-40">
+      {/* Decorative background type */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-6 right-4 select-none font-serif text-[18vw] leading-none italic text-foreground/[0.04] lg:right-12 lg:text-[14vw]"
+      >
+        est. care
+      </div>
+
+      <div className="mx-auto grid max-w-7xl grid-cols-12 items-end gap-8 px-6 pb-20 sm:px-8 lg:gap-12 lg:px-12 lg:pb-32">
+        <div className="col-span-12 lg:col-span-6 lg:pb-12">
+          <span
+            ref={eyebrowRef}
+            className="reveal-up mb-8 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]"
+          >
+            Defining a New Standard of Companionship
+          </span>
+          <h1
+            ref={titleRef}
+            className="reveal-up delay-1 font-serif text-[clamp(3.25rem,9vw,8.5rem)] font-light leading-[0.88] tracking-tight text-balance text-foreground"
+          >
+            The <span className="italic">Art</span> of
+            <br />
+            Living Well.
           </h1>
-          <p className="mt-6 text-lg text-foreground/75 sm:text-xl">
-            Professional companionship, social outings, and lifestyle support in Blackburn with
-            Darwen. Led by an experienced Activities Coordinator.
+          <p
+            ref={copyRef}
+            className="reveal-up delay-2 mt-10 max-w-[42ch] text-lg font-light leading-relaxed text-foreground/75"
+          >
+            A private companionship and lifestyle service for distinguished older adults across
+            Blackburn with Darwen and the wider Lancashire estate. Quietly attentive. Carefully
+            considered. Personally led by Sabrina Myers.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Button asChild size="lg" className="font-semibold">
-              <a href="#contact">
-                Schedule a Free Meet &amp; Greet
-                <ArrowRight className="h-4 w-4" />
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="font-semibold">
-              <a href="#services">Explore Services</a>
-            </Button>
+          <div ref={ctaRef} className="reveal-up delay-3 mt-12 flex flex-wrap items-center gap-10">
+            <a
+              href="#contact"
+              className="group flex items-center gap-4 border-b border-foreground/25 pb-2 text-[11px] font-medium uppercase tracking-eyebrow text-foreground transition-colors hover:border-[var(--bronze)] hover:text-[var(--bronze)]"
+            >
+              Request a Private Consultation
+              <span className="transition-transform group-hover:translate-x-2">→</span>
+            </a>
+            <a
+              href="#services"
+              className="group flex items-center gap-3 text-[11px] font-medium uppercase tracking-eyebrow text-foreground/70 transition-colors hover:text-foreground"
+            >
+              <span className="h-px w-8 bg-foreground/40 transition-all group-hover:w-12" />
+              Explore the Curation
+            </a>
           </div>
         </div>
 
-        <div className="relative">
-          <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-muted shadow-xl">
+        <div ref={imageWrapRef} className="reveal-up delay-2 relative col-span-12 lg:col-span-6">
+          <div className="relative aspect-[4/5] overflow-hidden bg-[var(--primary)]/10">
             <img
-              src="https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?auto=format&fit=crop&w=1200&q=80"
-              alt="Two older adults walking happily outdoors in a Lancashire park"
-              className="h-full w-full object-cover"
+              ref={imageInnerRef}
+              src="https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?auto=format&fit=crop&w=1400&q=80"
+              alt="An older couple walking through a tree-lined Lancashire park at golden hour"
+              className="h-[115%] w-full -translate-y-[7%] object-cover [filter:grayscale(15%)_contrast(1.02)]"
               loading="eager"
             />
+            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-foreground/5" />
           </div>
-          <div className="absolute -bottom-6 -left-6 hidden max-w-xs rounded-xl border border-border bg-card p-5 shadow-lg sm:block">
-            <p className="font-serif text-base font-semibold text-foreground">
-              "Joy, engagement, and independence — at home."
+
+          {/* Floating editorial card */}
+          <div
+            ref={cardRef}
+            className="reveal-up delay-3 absolute -bottom-10 -left-6 hidden max-w-xs bg-background p-8 shadow-[0_30px_60px_-30px_rgba(0,0,0,0.25)] sm:block lg:-left-12 lg:p-10"
+          >
+            <span className="mb-3 block font-serif text-4xl italic text-[var(--bronze)]">01</span>
+            <p className="text-[10px] font-medium uppercase leading-relaxed tracking-eyebrow text-foreground">
+              Serving the historic towns and villages of Blackburn with Darwen and Lancashire.
             </p>
-            <p className="mt-1 text-sm text-foreground/70">— Sabrina Myers</p>
           </div>
         </div>
       </div>

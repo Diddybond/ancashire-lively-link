@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const faqs = [
   {
@@ -16,53 +17,76 @@ const faqs = [
   },
   {
     q: "Can you take my parent to appointments or out shopping?",
-    a: "Absolutely. Getting out and about is our specialty! Sabrina is fully insured for business travel. We include 15 miles of travel completely free with every visit. If an outing or appointment takes us further afield, we just charge a standard 45p per mile for the extra distance.",
+    a: "Absolutely. Getting out and about is our specialty. Sabrina is fully insured for business travel. We include 15 miles completely free with every visit; further afield is charged at a standard 45p per mile.",
   },
   {
     q: "Who pays for tickets, meals, or activities during an outing?",
-    a: "Our £20 hourly rate covers Sabrina's time and all travel/mileage. However, any out-of-pocket expenses during the visit—such as theatre tickets, café bills, or admission fees for both the client and Sabrina—are to be covered by the client.",
+    a: "Our £20 hourly rate covers Sabrina's time and all travel/mileage. Out-of-pocket expenses during the visit — theatre tickets, café bills, admission fees for both client and Sabrina — are covered by the client.",
   },
   {
     q: "Are you insured and background checked?",
-    a: "Yes. Sabrina holds an Enhanced DBS check and the business carries full public liability insurance to guarantee peace of mind for you and your family.",
+    a: "Yes. Sabrina holds an Enhanced DBS check and the business carries full public liability insurance for complete peace of mind.",
   },
   {
     q: "What exact areas do you cover?",
-    a: "We are proudly based in Blackburn with Darwen and provide services across the wider Lancashire area. If you are unsure if we cover your specific village, just get in touch!",
+    a: "Proudly based in Blackburn with Darwen and serving the wider Lancashire area. If you are unsure whether we cover your specific village, please simply get in touch.",
   },
   {
     q: "Do you work with local care homes?",
-    a: "Yes, we provide freelance Activities Coordination support to care homes that need extra hands for events, engaging lifestyle sessions, or covering staff absences.",
+    a: "Yes — freelance Activities Coordination support for events, lifestyle sessions, or cover for staff absences.",
   },
 ];
 
 export function FAQ() {
+  const heading = useScrollReveal<HTMLHeadingElement>();
+  const list = useScrollReveal<HTMLDivElement>();
+
   return (
     <section
       id="faqs"
-      className="scroll-mt-24 bg-card/50 py-20 lg:py-28"
+      className="scroll-mt-24 py-32 lg:py-48"
       aria-labelledby="faq-heading"
     >
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground/60">
-            FAQs
-          </p>
-          <h2 id="faq-heading" className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
-            Common Questions from Families
+      <div className="mx-auto grid max-w-7xl grid-cols-12 gap-12 px-6 sm:px-8 lg:px-12">
+        <div className="col-span-12 lg:col-span-4 lg:sticky lg:top-32 lg:self-start">
+          <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+            Considered Answers
+          </span>
+          <h2
+            ref={heading}
+            id="faq-heading"
+            className="reveal-up font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+          >
+            Questions, <br /> answered.
           </h2>
+          <p className="mt-6 max-w-sm text-base font-light text-foreground/70">
+            Common conversations from families considering Sabrina's care for a loved one.
+          </p>
         </div>
 
-        <Accordion type="single" collapsible className="mt-10 w-full">
-          {faqs.map((f, i) => (
-            <AccordionItem key={f.q} value={`item-${i}`}>
-              <AccordionTrigger className="text-left text-base font-semibold text-foreground sm:text-lg">
-                {f.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-base text-foreground/80">{f.a}</AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <div ref={list} className="reveal-up col-span-12 lg:col-span-7 lg:col-start-6">
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((f, i) => (
+              <AccordionItem
+                key={f.q}
+                value={`item-${i}`}
+                className="border-b border-foreground/15"
+              >
+                <AccordionTrigger className="py-6 text-left font-serif text-xl font-normal text-foreground hover:no-underline sm:text-2xl">
+                  <span className="flex items-baseline gap-6">
+                    <span className="text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+                      0{i + 1}
+                    </span>
+                    <span>{f.q}</span>
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="pb-8 pl-14 text-base font-light leading-relaxed text-foreground/75">
+                  {f.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </section>
   );

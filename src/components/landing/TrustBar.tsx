@@ -1,21 +1,37 @@
 import { ShieldCheck, FileBadge, Car } from "lucide-react";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const items = [
   { icon: ShieldCheck, label: "Enhanced DBS Checked" },
   { icon: FileBadge, label: "Fully Insured" },
-  { icon: Car, label: "Free Local Travel (Up to 15 Miles)" },
+  { icon: Car, label: "Free Local Travel · 15 Miles" },
 ];
 
 export function TrustBar() {
+  const ref = useScrollReveal();
   return (
-    <section aria-label="Trust and credentials" className="border-y border-border bg-card/60">
-      <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 sm:grid-cols-3 sm:px-6 lg:px-8">
-        {items.map(({ icon: Icon, label }) => (
-          <div key={label} className="flex items-center justify-center gap-3 text-center sm:justify-start">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/15 text-foreground">
-              <Icon className="h-5 w-5" />
+    <section
+      ref={ref}
+      aria-label="Trust and credentials"
+      className="reveal-up border-y border-border/60 bg-background"
+    >
+      <div className="mx-auto grid max-w-7xl gap-x-12 gap-y-6 px-6 py-10 sm:grid-cols-3 sm:px-8 lg:px-12">
+        {items.map(({ icon: Icon, label }, i) => (
+          <div
+            key={label}
+            className={`flex items-center gap-4 ${
+              i > 0 ? "sm:border-l sm:border-border/60 sm:pl-12" : ""
+            }`}
+          >
+            <span className="text-[var(--bronze)]">
+              <Icon className="h-5 w-5" strokeWidth={1.25} />
             </span>
-            <span className="text-base font-semibold text-foreground">{label}</span>
+            <div>
+              <p className="text-[9px] font-medium uppercase tracking-eyebrow text-foreground/55">
+                Assurance
+              </p>
+              <p className="font-serif text-lg leading-tight text-foreground">{label}</p>
+            </div>
           </div>
         ))}
       </div>
