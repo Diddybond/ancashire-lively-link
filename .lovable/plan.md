@@ -1,11 +1,43 @@
 
-The user uploaded a headshot of Sabrina Myers to use on the landing page. I'll incorporate it into the About Sabrina section (and use her real name throughout) when I switch to default mode.
+The reference shows a warm, friendly senior-wellbeing site. I'll pull only the **palette and aesthetic cues** — not the layout, copy, or imagery.
 
-## Plan
+## What I'm taking from the reference
 
-1. **Save the image** — copy `user-uploads://IMG_5428.JPG` to `src/assets/sabrina.jpg` so it's bundled and optimized.
-2. **Use it in the About section** — import the asset and replace the placeholder headshot in the About Sabrina component with this real photo (alt text: "Sabrina Myers, Lifestyle Coordinator").
-3. **Update name references** — replace "Sabrina" placeholders with "Sabrina Myers" where a full name reads naturally (e.g. About heading intro, footer credit). Keep first-name-only "Sabrina" in conversational copy.
-4. **Continue building the rest of the landing page** as outlined in the previously approved plan (Header, Hero, Trust Bar, About, Services, Pricing, FAQ, Contact, Footer) using stone-50 / slate-900 / amber-500, Lora + Inter, and Lucide icons.
+- **Sage/forest green** as the primary accent (replacing current amber)
+- **Warm cream** background (slightly warmer than current stone-50)
+- **Soft beige/peach card tints** for service/pricing cards
+- **Deep forest green** footer band
+- **Rounded pill buttons** with generous padding
+- **Soft, friendly serif headings** (Lora stays — already a good fit)
 
-No other changes to the prior plan.
+## Changes
+
+1. **`src/styles.css`** — token swap only:
+   - `--background`: warm cream (~oklch 0.97 0.015 90)
+   - `--primary`: sage green (~oklch 0.55 0.08 145), keep good contrast for white text on buttons
+   - `--primary-foreground`: white/cream
+   - `--secondary` / `--accent` / `--muted`: soft beige tints
+   - `--ring`: matches new primary
+
+2. **`src/components/landing/Header.tsx`** — pill-shaped CTA button to match reference
+
+3. **`src/components/landing/Hero.tsx`** — pill CTA, slightly warmer background tone
+
+4. **`src/components/landing/TrustBar.tsx`** — softer card, sage icon chips
+
+5. **`src/components/landing/Services.tsx`** — beige-tinted card backgrounds (not white), rounded corners, sage icons
+
+6. **`src/components/landing/Pricing.tsx`** — sage primary button, beige card tint
+
+7. **`src/components/landing/ScopeNotice.tsx`** — re-tint with new primary (sage/10)
+
+8. **`src/components/landing/Contact.tsx`** — sage submit button (pill)
+
+9. **`src/components/landing/Footer.tsx`** — deep forest green background band, cream text
+
+## Out of scope
+
+- No copy changes
+- No new sections or layout restructuring
+- No new images (Sabrina's photo stays as-is)
+- Typography unchanged (Lora + Inter)
