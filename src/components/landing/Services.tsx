@@ -22,8 +22,7 @@ const chapters = [
     no: "Three",
     title: "Special Occasions",
     desc: "An evening at the theatre, a late-night bingo win, a milestone birthday with the family. Flexible hours arranged around what matters to you.",
-    image:
-      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80",
+    image: specialOccasions,
     meta: ["Evening events", "Theatre & bingo", "Family celebrations"],
   },
   {
