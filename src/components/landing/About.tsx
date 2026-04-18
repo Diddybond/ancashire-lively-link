@@ -41,32 +41,29 @@ export function About() {
             id="about-heading"
             className="reveal-up delay-1 font-serif text-5xl font-light leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            A lifetime of <span className="italic">care</span>,
-            <br /> patiently practiced.
+            About <span className="italic">Sabrina Myers</span>.
           </h2>
           <p
             ref={p1}
             className="reveal-up delay-2 mt-10 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80"
           >
-            Hello! I'm Sabrina. Originally from Ballymena in Northern Ireland, I've proudly
-            called the mainland home for 25 years, and I love serving the community here in
-            Lancashire.
+            Hello! I'm Sabrina Myers. Originally from Ballymena in Northern Ireland, I've
+            proudly called the mainland home for 25 years, and I love serving the community
+            here in Lancashire.
           </p>
           <p
             ref={p2}
             className="reveal-up delay-3 mt-6 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80"
           >
-            My early career was in retail, which gave me a deep appreciation for customer service
-            and simply having a really good chat! As my children grew older, I realised my true
-            calling was in care.
+            My early career spanned 25 years in retail — a background that taught me the value
+            of genuine customer service and the simple pleasure of a really good chat. As my
+            children grew older, I realised my true calling was lifestyle coordination and care.
           </p>
           <p className="reveal-up delay-3 mt-6 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80">
-            My experience comes directly from working as a professional Activities and Lifestyle
-            Coordinator in premium care homes, where I discovered my absolute passion for
-            person-centred, joyful support. I founded this independent business because I saw a
-            desperate need in our community for consistent, unhurried companionship — the exact
-            opposite of the standard agency model. When you book with me, you get my dedicated
-            time and a genuine relationship, every single visit.
+            I've always worked independently of agencies, and I always will. It's the only way
+            to maintain the unhurried, premium standard of companionship I believe every older
+            adult deserves. When you book with me, you get my dedicated time and a genuine
+            relationship — never a rota, never a stranger, every single visit.
           </p>
 
           <div ref={sig} className="reveal-up delay-4 mt-12 flex items-center gap-6">

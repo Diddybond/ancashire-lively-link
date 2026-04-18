@@ -25,23 +25,21 @@ export function Hero() {
             ref={eyebrowRef}
             className="reveal-up mb-8 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]"
           >
-            A Warmer Kind of Companionship
+            Sabrina Myers Lifestyle &amp; Companionship
           </span>
           <h1
             ref={titleRef}
-            className="reveal-up delay-1 font-serif text-[clamp(3.25rem,9vw,8.5rem)] font-light leading-[0.88] tracking-tight text-balance text-foreground"
+            className="reveal-up delay-1 font-serif text-[clamp(2.5rem,6vw,5.25rem)] font-light leading-[1.05] tracking-tight text-balance text-foreground"
           >
-            Time well <span className="italic">spent</span>,
-            <br />
-            together.
+            A private companionship and lifestyle service for older adults across{" "}
+            <span className="italic">Blackburn with Darwen</span> and the wider Lancashire area.
           </h1>
           <p
             ref={copyRef}
-            className="reveal-up delay-2 mt-10 max-w-[42ch] text-lg font-light leading-relaxed text-foreground/75"
+            className="reveal-up delay-2 mt-10 max-w-[46ch] text-lg font-light leading-relaxed tracking-wide text-foreground/75"
           >
-            Friendly, unhurried companionship and lifestyle support for older adults across
-            Blackburn with Darwen and the wider Lancashire area. Personally led by Sabrina Myers
-            — never an agency, never rushed.
+            Quietly attentive. Carefully considered. Personally led by Sabrina Myers to ensure
+            your loved ones live beautifully and independently at home.
           </p>
           <div ref={ctaRef} className="reveal-up delay-3 mt-12 flex flex-wrap items-center gap-10">
             <a
@@ -52,11 +50,11 @@ export function Hero() {
               <span className="transition-transform group-hover:translate-x-2">→</span>
             </a>
             <a
-              href="#services"
+              href="tel:07515975760"
               className="group flex items-center gap-3 text-[11px] font-medium uppercase tracking-eyebrow text-foreground/70 transition-colors hover:text-foreground"
             >
               <span className="h-px w-8 bg-foreground/40 transition-all group-hover:w-12" />
-              Explore the Curation
+              Call 07515 975 760
             </a>
           </div>
         </div>
@@ -85,6 +83,7 @@ export function Hero() {
           </div>
         </div>
       </div>
+      <div aria-hidden className="mx-auto mt-8 h-px max-w-7xl border-t border-[color-mix(in_oklab,var(--primary)_28%,transparent)]" />
     </section>
   );
 }
