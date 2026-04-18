@@ -37,17 +37,18 @@ export function Contact() {
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="mx-auto mb-20 max-w-3xl text-center">
-          <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+          <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             Get In Touch
           </span>
           <h2
             ref={heading}
             id="contact-heading"
-            className="reveal-up font-serif text-5xl font-light leading-[1.05] tracking-tight text-foreground sm:text-7xl"
+            className="reveal-up font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-7xl"
           >
-            Let's have a <span className="italic">chat</span>.
+            Let's have a
+            <span className="italic text-[var(--primary)]"> chat.</span>
           </h2>
-          <p className="reveal-up delay-1 mt-6 text-lg font-light text-foreground/75">
+          <p className="reveal-up delay-1 mt-6 text-xl text-foreground/80">
             Tell me a little about what you're looking for and I'll be in touch within one
             working day.
           </p>

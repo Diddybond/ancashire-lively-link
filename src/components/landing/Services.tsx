@@ -79,11 +79,11 @@ function Chapter({
           reverse ? "lg:order-1 lg:col-start-1" : "lg:order-2 lg:col-start-8"
         }`}
       >
-        <span className="mb-4 block font-serif text-2xl italic text-[var(--bronze)]">{no}</span>
-        <h3 className="font-serif text-5xl font-light leading-[1.05] tracking-tight text-foreground sm:text-6xl">
+        <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">{no}</span>
+        <h3 className="font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl">
           {title}
         </h3>
-        <p className="mt-8 max-w-[44ch] text-lg font-light leading-relaxed text-foreground/80">
+        <p className="mt-8 max-w-[44ch] text-xl leading-relaxed text-foreground/80">
           {desc}
         </p>
         <ul className="mt-10 space-y-0">
@@ -116,18 +116,19 @@ export function Services() {
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="mb-32 flex flex-col items-center text-center">
-          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--bronze)]/40" />
-          <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--primary)]/40" />
+          <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             Services
           </span>
           <h2
             ref={heading}
             id="services-heading"
-            className="reveal-up delay-1 font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            className="reveal-up delay-1 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            How I can help.
+            How I can
+            <span className="italic text-[var(--primary)]"> help.</span>
           </h2>
-          <p className="reveal-up delay-2 mt-6 max-w-xl text-lg font-light text-foreground/75">
+          <p className="reveal-up delay-2 mt-6 max-w-xl text-xl text-foreground/80">
             Four ways I support older adults and their families — non-medical, person-centred,
             and shaped around what brings each person joy.
           </p>

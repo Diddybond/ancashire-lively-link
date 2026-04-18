@@ -28,18 +28,19 @@ export function Pricing() {
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="mb-24 flex flex-col items-center text-center">
-          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--bronze)]/40" />
-          <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--primary)]/40" />
+          <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             Pricing
           </span>
           <h2
             ref={heading}
             id="pricing-heading"
-            className="reveal-up delay-1 font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            className="reveal-up delay-1 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            Honest &amp; straightforward.
+            Honest &amp;
+            <span className="italic text-[var(--primary)]"> straightforward.</span>
           </h2>
-          <p className="reveal-up delay-2 mt-6 max-w-xl text-lg font-light text-foreground/75">
+          <p className="reveal-up delay-2 mt-6 max-w-xl text-xl text-foreground/80">
             One simple hourly rate. No agency markups, no hidden extras, no awkward conversations.
           </p>
         </div>
@@ -61,10 +62,9 @@ export function Pricing() {
               </p>
               <a
                 href="#contact"
-                className="group mt-12 inline-flex items-center gap-4 border-b border-foreground/25 pb-2 text-[11px] font-medium uppercase tracking-eyebrow text-foreground transition-colors hover:border-[var(--bronze)] hover:text-[var(--bronze)]"
+                className="mt-12 inline-flex items-center justify-center bg-[var(--primary)] px-10 py-5 text-base font-semibold uppercase tracking-[0.18em] text-[var(--primary-foreground)] transition-all hover:bg-[var(--bronze)]"
               >
                 Ask for a Quote
-                <span className="transition-transform group-hover:translate-x-2">→</span>
               </a>
             </div>
           </div>
@@ -76,7 +76,7 @@ export function Pricing() {
                   key={k}
                   className="grid grid-cols-12 gap-6 border-t border-foreground/15 py-6"
                 >
-                  <span className="col-span-12 text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)] sm:col-span-3">
+                  <span className="col-span-12 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary)] sm:col-span-3">
                     0{i + 1} · {k}
                   </span>
                   <span className="col-span-12 font-serif text-lg leading-snug text-foreground/85 sm:col-span-9">

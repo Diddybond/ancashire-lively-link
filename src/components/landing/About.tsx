@@ -13,68 +13,76 @@ export function About() {
   return (
     <section
       id="about"
-      className="scroll-mt-24 py-32 lg:py-48"
+      className="relative scroll-mt-24 py-32 lg:py-48"
       aria-labelledby="about-heading"
     >
-      <div className="mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-16 gap-x-12 px-6 sm:px-8 lg:px-12">
+      {/* Soft sage shape — matches hero language */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute left-0 top-24 hidden h-[70%] w-[38%] rounded-r-[3rem] bg-[color-mix(in_oklab,var(--primary)_12%,transparent)] lg:block"
+      />
+
+      <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-16 gap-x-12 px-6 sm:px-8 lg:px-12">
         <div ref={imgWrap} className="reveal-up col-span-12 lg:col-span-5">
-          <div className="relative aspect-[4/5] overflow-hidden bg-[var(--primary)]/10 shadow-[40px_40px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)]">
+          <div className="relative aspect-[4/5] overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,transparent)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.3)]">
             <img
               ref={imgInner}
               src={sabrina}
               alt="Sabrina Myers, Lifestyle Coordinator"
-              className="h-[115%] w-full -translate-y-[7%] object-cover [filter:grayscale(10%)]"
+              className="h-[115%] w-full -translate-y-[7%] object-cover object-top"
               loading="lazy"
             />
           </div>
         </div>
 
         <div className="col-span-12 lg:col-span-6 lg:col-start-7">
-          <span
-            ref={eyebrow}
-            className="reveal-up mb-6 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]"
-          >
-            Chapter · Founder
-          </span>
-          <h2
-            ref={title}
-            id="about-heading"
-            className="reveal-up delay-1 font-serif text-5xl font-light leading-[1.05] tracking-tight text-foreground sm:text-6xl"
-          >
-            About <span className="italic">Sabrina Myers</span>.
-          </h2>
-          <p
-            ref={p1}
-            className="reveal-up delay-2 mt-10 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80"
-          >
-            Hello! I'm Sabrina Myers. Originally from Ballymena in Northern Ireland, I've
-            proudly called the mainland home for 25 years, and I love serving the community
-            here in Lancashire.
-          </p>
-          <p
-            ref={p2}
-            className="reveal-up delay-3 mt-6 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80"
-          >
-            My early career spanned 25 years in retail — a background that taught me the value
-            of genuine customer service and the simple pleasure of a really good chat. As my
-            children grew older, I realised my true calling was lifestyle coordination and care.
-          </p>
-          <p className="reveal-up delay-3 mt-6 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80">
-            I've always worked independently of agencies, and I always will. It's the only way
-            to maintain the unhurried, premium standard of companionship I believe every older
-            adult deserves. When you book with me, you get my dedicated time and a genuine
-            relationship — never a rota, never a stranger, every single visit.
-          </p>
-
-          <div ref={sig} className="reveal-up delay-4 mt-12 flex items-center gap-6">
-            <div className="font-serif text-3xl italic text-[var(--bronze)]">— Sabrina</div>
-            <div className="hairline h-px flex-1" />
-            <a
-              href="#contact"
-              className="text-[11px] font-medium uppercase tracking-eyebrow text-foreground transition-colors hover:text-[var(--bronze)]"
+          <div className="bg-background/95 p-8 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.2)] sm:p-12 lg:p-14">
+            <span
+              ref={eyebrow}
+              className="reveal-up mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]"
             >
-              Speak with Sabrina →
-            </a>
+              About · Founder
+            </span>
+            <h2
+              ref={title}
+              id="about-heading"
+              className="reveal-up delay-1 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            >
+              Meet
+              <span className="block text-[var(--primary)]">Sabrina Myers.</span>
+            </h2>
+            <p
+              ref={p1}
+              className="reveal-up delay-2 mt-8 max-w-[52ch] text-xl leading-relaxed text-foreground/80"
+            >
+              Hello! I'm Sabrina Myers. Originally from Ballymena in Northern Ireland, I've
+              proudly called the mainland home for 25 years, and I love serving the community
+              here in Lancashire.
+            </p>
+            <p
+              ref={p2}
+              className="mt-6 max-w-[52ch] text-xl leading-relaxed text-foreground/80"
+            >
+              My early career spanned 25 years in retail — a background that taught me the value
+              of genuine customer service and the simple pleasure of a really good chat. As my
+              children grew older, I realised my true calling was lifestyle coordination and care.
+            </p>
+            <p className="mt-6 max-w-[52ch] text-xl leading-relaxed text-foreground/80">
+              I've always worked independently of agencies, and I always will. It's the only way
+              to maintain the unhurried, premium standard of companionship I believe every older
+              adult deserves. When you book with me, you get my dedicated time and a genuine
+              relationship — never a rota, never a stranger, every single visit.
+            </p>
+
+            <div ref={sig} className="reveal-up delay-4 mt-10 flex flex-wrap items-center gap-6">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center bg-[var(--primary)] px-8 py-4 text-base font-semibold uppercase tracking-[0.18em] text-[var(--primary-foreground)] transition-all hover:bg-[var(--bronze)]"
+              >
+                Speak with Sabrina
+              </a>
+              <span className="font-serif text-2xl italic text-[var(--primary)]">— Sabrina</span>
+            </div>
           </div>
         </div>
       </div>
