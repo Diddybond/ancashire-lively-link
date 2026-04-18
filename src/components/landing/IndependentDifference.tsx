@@ -16,7 +16,7 @@ export function IndependentDifference() {
         <div ref={mark} className="reveal-up col-span-12 lg:col-span-4">
           <span
             ref={eyebrow}
-            className="reveal-up mb-6 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]"
+            className="reveal-up mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--bronze)]"
           >
             Why Choose Independent
           </span>
@@ -29,14 +29,14 @@ export function IndependentDifference() {
           <h2
             ref={heading}
             id="independent-heading"
-            className="reveal-up delay-1 font-serif text-5xl font-light leading-[1.05] tracking-tight sm:text-6xl"
+            className="reveal-up delay-1 font-serif text-5xl font-medium leading-[1.05] tracking-tight sm:text-6xl"
           >
-            The <span className="italic">Independent</span> Alternative
+            The <span className="italic text-[var(--bronze)]">Independent</span> Alternative
             <br /> to Care Agencies.
           </h2>
           <p
             ref={body}
-            className="reveal-up delay-2 mt-12 max-w-[58ch] text-lg font-light leading-relaxed opacity-85"
+            className="reveal-up delay-2 mt-12 max-w-[58ch] text-xl leading-relaxed opacity-90"
           >
             I have never operated like a standard agency, and I never will. When families rely on
             large franchises, they often face a revolving door of different, rushed staff on
@@ -53,10 +53,10 @@ export function IndependentDifference() {
               ["No agency markup", "A direct, honest, transparent rate."],
             ].map(([k, v]) => (
               <div key={k} className="border-t border-white/15 pt-5">
-                <p className="text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--bronze)]">
                   {k}
                 </p>
-                <p className="mt-2 font-serif text-xl italic opacity-90">{v}</p>
+                <p className="mt-2 font-serif text-xl opacity-95">{v}</p>
               </div>
             ))}
           </div>

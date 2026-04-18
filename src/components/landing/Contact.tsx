@@ -100,10 +100,10 @@ export function Contact() {
 
           <aside ref={aside} className="reveal-up delay-1 col-span-12 lg:col-span-4 lg:col-start-9">
             <div className="border-t border-foreground/15 pt-10">
-              <h3 className="font-serif text-3xl font-light italic text-foreground">
-                Or just give me a call
+              <h3 className="font-serif text-3xl font-medium text-foreground">
+                Or just give me a <span className="italic text-[var(--primary)]">call</span>
               </h3>
-              <p className="mt-3 text-base font-light text-foreground/70">
+              <p className="mt-3 text-lg leading-relaxed text-foreground/80">
                 A friendly chat over the phone is often the easiest place to start.
               </p>
 
@@ -151,7 +151,7 @@ function FieldRow({
     <div className={full ? "sm:col-span-2" : ""}>
       <Label
         htmlFor={htmlFor}
-        className="text-[10px] font-medium uppercase tracking-eyebrow text-foreground/55"
+        className="text-xs font-semibold uppercase tracking-[0.24em] text-foreground/65"
       >
         {label}
       </Label>
@@ -175,10 +175,10 @@ function ContactItem({
     <li className="flex items-start gap-4">
       <span className="mt-1 text-[var(--bronze)]">{icon}</span>
       <div>
-        <p className="text-[10px] font-medium uppercase tracking-eyebrow text-foreground/55">
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-foreground/65">
           {label}
         </p>
-        <p className="mt-1 font-serif text-lg text-foreground">{children}</p>
+        <p className="mt-1 font-serif text-xl text-foreground">{children}</p>
       </div>
     </li>
   );

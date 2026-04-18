@@ -51,18 +51,18 @@ export function Testimonials() {
     >
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="mb-24 flex flex-col items-center text-center">
-          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--bronze)]/40" />
-          <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--primary)]/40" />
+          <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             In Their Own Words
           </span>
           <h2
             ref={heading}
             id="testimonials-heading"
-            className="reveal-up delay-1 font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            className="reveal-up delay-1 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            Kind words.
+            Kind <span className="italic text-[var(--primary)]">words.</span>
           </h2>
-          <p className="reveal-up delay-2 mt-6 max-w-xl text-lg font-light text-foreground/75">
+          <p className="reveal-up delay-2 mt-6 max-w-xl text-xl text-foreground/80">
             A growing collection of words from the families and care homes Sabrina has had the
             pleasure of working with.
           </p>
@@ -99,18 +99,18 @@ function TestimonialCard({
     >
       <span
         aria-hidden
-        className="mb-4 font-serif text-6xl leading-none text-[var(--bronze)]/70"
+        className="mb-4 font-serif text-6xl leading-none text-[var(--primary)]/70"
       >
         &ldquo;
       </span>
-      <blockquote className="font-serif text-2xl font-light italic leading-snug text-foreground/85">
+      <blockquote className="font-serif text-2xl font-medium leading-snug text-foreground/85">
         {quote}
       </blockquote>
-      <figcaption className="mt-8 flex items-baseline justify-between text-[10px] font-medium uppercase tracking-eyebrow text-foreground/55">
+      <figcaption className="mt-8 flex items-baseline justify-between text-xs font-semibold uppercase tracking-[0.24em] text-foreground/60">
         <span>{name}</span>
-        <span className="text-[var(--bronze)]">{location}</span>
+        <span className="text-[var(--primary)]">{location}</span>
       </figcaption>
-      <p className="mt-3 text-[9px] font-medium uppercase tracking-eyebrow text-foreground/35">
+      <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-foreground/40">
         Placeholder · 0{index + 1}
       </p>
     </figure>

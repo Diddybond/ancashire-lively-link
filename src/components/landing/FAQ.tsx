@@ -49,17 +49,18 @@ export function FAQ() {
     >
       <div className="mx-auto grid max-w-7xl grid-cols-12 gap-12 px-6 sm:px-8 lg:px-12">
         <div className="col-span-12 lg:col-span-4 lg:sticky lg:top-32 lg:self-start">
-          <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+          <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             FAQs
           </span>
           <h2
             ref={heading}
             id="faq-heading"
-            className="reveal-up font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            className="reveal-up font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            Common <br /> questions.
+            Common
+            <span className="block italic text-[var(--primary)]">questions.</span>
           </h2>
-          <p className="mt-6 max-w-sm text-base font-light text-foreground/70">
+          <p className="mt-6 max-w-sm text-xl leading-relaxed text-foreground/80">
             The things families most often ask before booking Sabrina to support a loved one.
           </p>
         </div>
@@ -72,15 +73,15 @@ export function FAQ() {
                 value={`item-${i}`}
                 className="border-b border-foreground/15"
               >
-                <AccordionTrigger className="py-6 text-left font-serif text-xl font-normal text-foreground hover:no-underline sm:text-2xl">
+                <AccordionTrigger className="py-6 text-left font-serif text-xl font-medium text-foreground hover:no-underline sm:text-2xl">
                   <span className="flex items-baseline gap-6">
-                    <span className="text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+                    <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary)]">
                       0{i + 1}
                     </span>
                     <span>{f.q}</span>
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="pb-8 pl-14 text-base font-light leading-relaxed text-foreground/75">
+                <AccordionContent className="pb-8 pl-14 text-lg leading-relaxed text-foreground/80">
                   {f.a}
                 </AccordionContent>
               </AccordionItem>

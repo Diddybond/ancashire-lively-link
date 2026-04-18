@@ -27,10 +27,10 @@ export function TrustBar() {
               <Icon className="h-5 w-5" strokeWidth={1.25} />
             </span>
             <div>
-              <p className="text-[9px] font-medium uppercase tracking-eyebrow text-foreground/55">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-foreground/60">
                 Assurance
               </p>
-              <p className="font-serif text-lg leading-tight text-foreground">{label}</p>
+              <p className="font-serif text-xl leading-tight text-foreground">{label}</p>
             </div>
           </div>
         ))}

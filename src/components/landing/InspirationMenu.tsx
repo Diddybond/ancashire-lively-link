@@ -107,20 +107,21 @@ export function InspirationMenu() {
     >
       <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12">
         <div className="mb-20 flex flex-col items-center text-center">
-          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--bronze)]/40" />
-          <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--primary)]/40" />
+          <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             The Inspiration Menu
           </span>
           <h2
             ref={heading}
             id="inspiration-heading"
-            className="reveal-up delay-1 font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            className="reveal-up delay-1 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            What we can do together.
+            What we can
+            <span className="italic text-[var(--primary)]"> do together.</span>
           </h2>
           <p
             ref={intro}
-            className="reveal-up delay-2 mt-6 max-w-2xl text-lg font-light leading-relaxed text-foreground/75"
+            className="reveal-up delay-2 mt-6 max-w-2xl text-xl leading-relaxed text-foreground/80"
           >
             Sometimes it&apos;s hard to know exactly what kind of support you need. Here are
             just a few examples of how Sabrina can turn a standard visit into a wonderful
@@ -138,14 +139,14 @@ export function InspirationMenu() {
               >
                 <AccordionTrigger className="group px-2 py-8 hover:no-underline sm:px-6">
                   <div className="flex flex-1 items-baseline gap-6 text-left">
-                    <span className="font-serif text-2xl italic text-[var(--bronze)] shrink-0">
+                    <span className="font-serif text-2xl italic text-[var(--primary)] shrink-0">
                       {m.no}
                     </span>
                     <div className="flex-1">
-                      <h3 className="font-serif text-3xl font-light leading-tight tracking-tight text-foreground sm:text-4xl">
+                      <h3 className="font-serif text-3xl font-medium leading-tight tracking-tight text-foreground sm:text-4xl">
                         {m.title}
                       </h3>
-                      <span className="mt-2 block text-[11px] font-medium uppercase tracking-eyebrow text-foreground/55">
+                      <span className="mt-2 block text-xs font-semibold uppercase tracking-[0.24em] text-foreground/60">
                         {m.subtitle}
                       </span>
                     </div>
@@ -159,14 +160,14 @@ export function InspirationMenu() {
                         className="flex flex-col gap-2 border-t border-border/50 py-5 sm:flex-row sm:gap-8"
                       >
                         <div className="flex shrink-0 items-baseline gap-3 sm:w-64">
-                          <span className="text-foreground/40 text-xs">
+                          <span className="text-foreground/40 text-sm">
                             0{idx + 1}
                           </span>
-                          <span className="text-[12px] font-medium uppercase tracking-eyebrow text-foreground/85">
+                          <span className="text-xs font-semibold uppercase tracking-[0.24em] text-foreground/85">
                             {item.h}
                           </span>
                         </div>
-                        <p className="text-base font-light leading-relaxed text-foreground/75">
+                        <p className="text-lg leading-relaxed text-foreground/80">
                           {item.d}
                         </p>
                       </li>
