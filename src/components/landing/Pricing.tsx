@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
 const points = [
   "£20 per hour — flat rate, no surprises",
   "2-hour minimum visit",
-  "No hidden travel or mileage fees",
+  "Free Local Travel: The first 15 miles of any trip are completely free. Any additional driving is simply charged at the standard rate of 45p per mile.",
+  "Activity Costs: The £20 hourly rate covers Sabrina's time and all travel/mileage. However, the client is responsible for covering any third-party costs during outings (e.g., event tickets, café bills, or admission fees for both the client and Sabrina).",
   "Free initial consultation",
 ];
 

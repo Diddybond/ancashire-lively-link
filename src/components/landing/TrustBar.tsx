@@ -3,7 +3,7 @@ import { ShieldCheck, FileBadge, Car } from "lucide-react";
 const items = [
   { icon: ShieldCheck, label: "Enhanced DBS Checked" },
   { icon: FileBadge, label: "Fully Insured" },
-  { icon: Car, label: "Zero Hidden Mileage Fees" },
+  { icon: Car, label: "Free Local Travel (Up to 15 Miles)" },
 ];
 
 export function TrustBar() {

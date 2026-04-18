@@ -10,7 +10,7 @@ const services = [
   {
     icon: Map,
     title: "Out & About",
-    desc: "Chaperoned appointments and daytime social outings. Zero mileage fees.",
+    desc: "Chaperoned appointments and daytime social outings. We include 15 miles of free travel per visit.",
   },
   {
     icon: Ticket,
