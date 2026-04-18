@@ -18,7 +18,7 @@ export function IndependentDifference() {
             ref={eyebrow}
             className="reveal-up mb-6 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]"
           >
-            A Different Standard
+            Why Choose Independent
           </span>
           <div className="font-serif text-[10rem] font-light leading-none italic text-[var(--bronze)]/80">
             ¶

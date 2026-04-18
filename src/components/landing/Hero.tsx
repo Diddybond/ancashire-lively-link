@@ -80,7 +80,7 @@ export function Hero() {
           >
             <span className="mb-3 block font-serif text-4xl italic text-[var(--bronze)]">01</span>
             <p className="text-[10px] font-medium uppercase leading-relaxed tracking-eyebrow text-foreground">
-              Serving the historic towns and villages of Blackburn with Darwen and Lancashire.
+              Proudly serving the towns and villages of Blackburn with Darwen and Lancashire.
             </p>
           </div>
         </div>

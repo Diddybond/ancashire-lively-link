@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Who pays for tickets, meals, or activities during an outing?",
-    a: "Our £20 hourly rate covers Sabrina's time and all travel/mileage. Out-of-pocket expenses during the visit — theatre tickets, café bills, admission fees for both client and Sabrina — are covered by the client.",
+    a: "Our £25 hourly rate covers Sabrina's time and all travel/mileage. Out-of-pocket expenses during the visit — theatre tickets, café bills, admission fees for both client and Sabrina — are covered by the client.",
   },
   {
     q: "Are you insured and background checked?",
