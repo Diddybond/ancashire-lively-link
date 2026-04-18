@@ -76,7 +76,7 @@ export function Pricing() {
                   key={k}
                   className="grid grid-cols-12 gap-6 border-t border-foreground/15 py-6"
                 >
-                  <span className="col-span-12 text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)] sm:col-span-3">
+                  <span className="col-span-12 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary)] sm:col-span-3">
                     0{i + 1} · {k}
                   </span>
                   <span className="col-span-12 font-serif text-lg leading-snug text-foreground/85 sm:col-span-9">
