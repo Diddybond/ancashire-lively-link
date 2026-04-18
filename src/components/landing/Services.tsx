@@ -1,5 +1,6 @@
 import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
 import companionshipTea from "@/assets/companionship-tea.png";
+import outAndAbout from "@/assets/out-and-about.jpeg";
 
 const chapters = [
   {
@@ -13,8 +14,7 @@ const chapters = [
     no: "Two",
     title: "Out & About",
     desc: "Lifts to appointments and proper days out — the local park, a favourite tearoom, the shops or a Sunday gallery. The first 15 miles are always on the house.",
-    image:
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
+    image: outAndAbout,
     meta: ["Appointment chaperone", "Daytime social outings", "15 free miles per visit"],
   },
   {
