@@ -5,10 +5,15 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 py-32 sm:px-8 lg:px-12">
         <div className="grid grid-cols-12 gap-y-12 gap-x-12 border-b border-white/10 pb-20">
           <div className="col-span-12 lg:col-span-5">
-            <div className="font-serif text-5xl italic">Sabrina Myers</div>
+            <div className="font-serif text-4xl italic leading-tight sm:text-5xl">
+              Sabrina Myers
+              <span className="block text-2xl not-italic font-light tracking-wide opacity-80 sm:text-3xl">
+                Lifestyle &amp; Companionship
+              </span>
+            </div>
             <p className="mt-6 max-w-sm text-sm font-light leading-relaxed opacity-70">
               Friendly, independent companionship and lifestyle support for older adults
-              across Blackburn, Darwen and the wider Lancashire area.
+              across Blackburn with Darwen and the wider Lancashire area.
             </p>
           </div>
 
@@ -42,7 +47,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-start justify-between gap-6 pt-10 text-[10px] font-medium uppercase tracking-eyebrow opacity-50 sm:flex-row sm:items-center">
-          <p>© {year} Sabrina Myers · All Rights Reserved</p>
+          <p>© {year} Sabrina Myers Lifestyle &amp; Companionship · All Rights Reserved</p>
           <div className="flex gap-8">
             <a href="#privacy" className="hover:opacity-100">Privacy</a>
             <a href="#" className="hover:opacity-100">Terms</a>

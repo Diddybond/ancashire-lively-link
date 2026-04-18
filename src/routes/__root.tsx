@@ -30,17 +30,17 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sabrina Myers — Elderly Companionship in Blackburn with Darwen, Lancashire" },
+      { title: "Sabrina Myers Lifestyle & Companionship — Blackburn with Darwen, Lancashire" },
       {
         name: "description",
         content:
-          "Private, non-medical companionship and lifestyle coordination for older adults in Blackburn with Darwen and across Lancashire. Led by Sabrina Myers, an experienced Activities Coordinator.",
+          "Sabrina Myers Lifestyle & Companionship — a private, non-medical companionship service for older adults in Blackburn with Darwen and across Lancashire. Quietly attentive. Carefully considered.",
       },
-      { property: "og:title", content: "Sabrina Myers — Elderly Companionship in Lancashire" },
+      { property: "og:title", content: "Sabrina Myers Lifestyle & Companionship — Lancashire" },
       {
         property: "og:description",
         content:
-          "Professional companionship, social outings, and lifestyle support for seniors in Blackburn with Darwen.",
+          "Quietly attentive, carefully considered companionship and lifestyle support for older adults across Blackburn with Darwen and Lancashire.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
