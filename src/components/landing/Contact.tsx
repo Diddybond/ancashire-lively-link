@@ -100,10 +100,10 @@ export function Contact() {
           <aside ref={aside} className="reveal-up delay-1 col-span-12 lg:col-span-4 lg:col-start-9">
             <div className="border-t border-foreground/15 pt-10">
               <h3 className="font-serif text-3xl font-light italic text-foreground">
-                Or speak directly
+                Or just give me a call
               </h3>
               <p className="mt-3 text-base font-light text-foreground/70">
-                A chat over the phone is often the gentlest place to begin.
+                A friendly chat over the phone is often the easiest place to start.
               </p>
 
               <ul className="mt-10 space-y-8">

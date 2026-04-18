@@ -125,11 +125,11 @@ export function Services() {
             id="services-heading"
             className="reveal-up delay-1 font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            The Curation
+            How I can help.
           </h2>
           <p className="reveal-up delay-2 mt-6 max-w-xl text-lg font-light text-foreground/75">
-            Four pillars of non-medical, person-centred support — each shaped around what brings
-            the individual joy.
+            Four ways I support older adults and their families — non-medical, person-centred,
+            and shaped around what brings each person joy.
           </p>
         </div>
 
