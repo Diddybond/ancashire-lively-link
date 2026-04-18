@@ -60,11 +60,11 @@ export function Testimonials() {
             id="testimonials-heading"
             className="reveal-up delay-1 font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            Kind reflections.
+            Kind words.
           </h2>
           <p className="reveal-up delay-2 mt-6 max-w-xl text-lg font-light text-foreground/75">
-            A growing collection of words from the families and care settings Sabrina has had the
-            privilege to serve.
+            A growing collection of words from the families and care homes Sabrina has had the
+            pleasure of working with.
           </p>
         </div>
 

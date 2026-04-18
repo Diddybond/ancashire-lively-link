@@ -7,37 +7,37 @@ export function Footer() {
           <div className="col-span-12 lg:col-span-5">
             <div className="font-serif text-5xl italic">Sabrina Myers</div>
             <p className="mt-6 max-w-sm text-sm font-light leading-relaxed opacity-70">
-              Private companionship and lifestyle coordination for distinguished older adults
-              across Blackburn, Darwen and the wider Lancashire estate.
+              Friendly, independent companionship and lifestyle support for older adults
+              across Blackburn, Darwen and the wider Lancashire area.
             </p>
           </div>
 
           <div className="col-span-6 lg:col-span-2 lg:col-start-7">
             <h4 className="mb-6 text-[10px] font-medium uppercase tracking-eyebrow opacity-50">
-              The Practice
+              Sabrina
             </h4>
             <ul className="space-y-4 text-sm font-light">
               <li><a href="#about" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">About Sabrina</a></li>
-              <li><a href="#services" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">The Curation</a></li>
-              <li><a href="#pricing" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">Investment</a></li>
+              <li><a href="#services" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">Services</a></li>
+              <li><a href="#pricing" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">Pricing</a></li>
             </ul>
           </div>
           <div className="col-span-6 lg:col-span-2">
             <h4 className="mb-6 text-[10px] font-medium uppercase tracking-eyebrow opacity-50">
-              Enquiry
+              Get In Touch
             </h4>
             <ul className="space-y-4 text-sm font-light">
-              <li><a href="#contact" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">Begin a Conversation</a></li>
+              <li><a href="#contact" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">Send a Message</a></li>
               <li><a href="tel:07515975760" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100">07515 975 760</a></li>
               <li><a href="mailto:hello@sabrinamyers.co.uk" className="opacity-80 hover:text-[var(--bronze)] hover:opacity-100 break-all">hello@sabrinamyers.co.uk</a></li>
             </ul>
           </div>
           <div className="col-span-12 lg:col-span-3 lg:text-right">
             <h4 className="mb-6 text-[10px] font-medium uppercase tracking-eyebrow opacity-50">
-              By Appointment
+              Hours
             </h4>
             <p className="font-serif text-2xl italic">Mon — Sat</p>
-            <p className="mt-2 text-sm font-light opacity-70">Strictly by private arrangement</p>
+            <p className="mt-2 text-sm font-light opacity-70">Flexible by arrangement</p>
           </div>
         </div>
 

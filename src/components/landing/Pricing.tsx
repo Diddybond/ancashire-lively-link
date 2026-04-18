@@ -1,17 +1,17 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const points = [
-  ["Hourly Rate", "£20 per hour — flat, all inclusive."],
-  ["Minimum Visit", "Two hours, arranged at your convenience."],
+  ["Hourly Rate", "£25 per hour — flat, all inclusive."],
+  ["Minimum Visit", "Two hours, arranged at a time that suits you."],
   [
     "Travel",
-    "The first 15 miles of any visit are complimentary. Additional travel is charged at 45p / mile.",
+    "The first 15 miles of any visit are included free of charge. Anything further afield is just 45p per mile.",
   ],
   [
     "Activity Costs",
-    "Third-party costs during outings — tickets, café bills, admissions for both client and Sabrina — are covered by the client.",
+    "Out-of-pocket costs during outings — tickets, café bills, entry fees for both Sabrina and your loved one — are covered by the client.",
   ],
-  ["Initial Consultation", "Always complimentary, always unhurried."],
+  ["First Chat", "Always free, never rushed."],
 ];
 
 export function Pricing() {
@@ -30,17 +30,17 @@ export function Pricing() {
         <div className="mb-24 flex flex-col items-center text-center">
           <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--bronze)]/40" />
           <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
-            Investment
+            Pricing
           </span>
           <h2
             ref={heading}
             id="pricing-heading"
             className="reveal-up delay-1 font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            Transparent. Simple.
+            Honest &amp; straightforward.
           </h2>
           <p className="reveal-up delay-2 mt-6 max-w-xl text-lg font-light text-foreground/75">
-            One honest hourly rate. No agency markups, no surprises, no awkward conversations.
+            One simple hourly rate. No agency markups, no hidden extras, no awkward conversations.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export function Pricing() {
               </p>
               <div className="mt-6 flex items-baseline gap-3">
                 <span className="font-serif text-[8rem] font-light leading-none tracking-tight text-foreground">
-                  £20
+                  £25
                 </span>
                 <span className="font-serif text-2xl italic text-foreground/60">/ hour</span>
               </div>
@@ -63,7 +63,7 @@ export function Pricing() {
                 href="#contact"
                 className="group mt-12 inline-flex items-center gap-4 border-b border-foreground/25 pb-2 text-[11px] font-medium uppercase tracking-eyebrow text-foreground transition-colors hover:border-[var(--bronze)] hover:text-[var(--bronze)]"
               >
-                Request a Bespoke Quote
+                Ask for a Quote
                 <span className="transition-transform group-hover:translate-x-2">→</span>
               </a>
             </div>

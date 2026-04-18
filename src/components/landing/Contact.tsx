@@ -38,18 +38,18 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="mx-auto mb-20 max-w-3xl text-center">
           <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
-            Enquiry · By Private Appointment
+            Get In Touch
           </span>
           <h2
             ref={heading}
             id="contact-heading"
             className="reveal-up font-serif text-5xl font-light leading-[1.05] tracking-tight text-foreground sm:text-7xl"
           >
-            Begin a <span className="italic">conversation</span>.
+            Let's have a <span className="italic">chat</span>.
           </h2>
           <p className="reveal-up delay-1 mt-6 text-lg font-light text-foreground/75">
-            Tell us a little about what you are looking for. A reply within one working day,
-            without exception.
+            Tell me a little about what you're looking for and I'll be in touch within one
+            working day.
           </p>
         </div>
 
@@ -93,17 +93,17 @@ export function Contact() {
               className="mt-12 font-medium uppercase tracking-eyebrow"
               disabled={submitting}
             >
-              {submitting ? "Sending…" : "Send Enquiry →"}
+              {submitting ? "Sending…" : "Send Message →"}
             </Button>
           </form>
 
           <aside ref={aside} className="reveal-up delay-1 col-span-12 lg:col-span-4 lg:col-start-9">
             <div className="border-t border-foreground/15 pt-10">
               <h3 className="font-serif text-3xl font-light italic text-foreground">
-                Or speak directly
+                Or just give me a call
               </h3>
               <p className="mt-3 text-base font-light text-foreground/70">
-                A chat over the phone is often the gentlest place to begin.
+                A friendly chat over the phone is often the easiest place to start.
               </p>
 
               <ul className="mt-10 space-y-8">

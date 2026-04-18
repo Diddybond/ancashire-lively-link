@@ -2,36 +2,36 @@ import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
 
 const chapters = [
   {
-    no: "Chapter One",
-    title: "Active Companionship",
-    desc: "Considered conversation, shared interests, and the small rituals that make a home feel lived-in. We sit, we listen, we engage.",
+    no: "One",
+    title: "Friendly Companionship",
+    desc: "A good chat over a cuppa, shared hobbies, and a helping hand around the house. Time spent together, never watched on a clock.",
     image:
       "https://images.unsplash.com/photo-1581579438747-104c53e7a01c?auto=format&fit=crop&w=1200&q=80",
     meta: ["Conversation & company", "Hobbies & light home help", "Reading & memory work"],
   },
   {
-    no: "Chapter Two",
+    no: "Two",
     title: "Out & About",
-    desc: "Chaperoned appointments and unhurried daytime outings — the parks of Lancashire, a favourite tearoom, the quiet of a Sunday gallery. The first fifteen miles, always complimentary.",
+    desc: "Lifts to appointments and proper days out — the local park, a favourite tearoom, the shops or a Sunday gallery. The first 15 miles are always on the house.",
     image:
       "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
     meta: ["Appointment chaperone", "Daytime social outings", "15 free miles per visit"],
   },
   {
-    no: "Chapter Three",
+    no: "Three",
     title: "Special Occasions",
-    desc: "An evening at the theatre. A late-night bingo win. A milestone birthday in the company of friends. Flexible hours arranged with discretion.",
+    desc: "An evening at the theatre, a late-night bingo win, a milestone birthday with the family. Flexible hours arranged around what matters to you.",
     image:
       "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80",
     meta: ["Evening events", "Theatre & bingo", "Family celebrations"],
   },
   {
-    no: "Chapter Four",
+    no: "Four",
     title: "Care Home Support",
-    desc: "Freelance Activities Coordination for local care settings — bringing the same considered approach to wider residential communities.",
+    desc: "Freelance Activities Coordination for local care homes — bringing the same warm, person-centred approach to wider residential settings.",
     image:
       "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=1200&q=80",
-    meta: ["Lifestyle programming", "Event facilitation", "Cover for absences"],
+    meta: ["Lifestyle programmes", "Event facilitation", "Cover for absences"],
   },
 ];
 
@@ -125,11 +125,11 @@ export function Services() {
             id="services-heading"
             className="reveal-up delay-1 font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            The Curation
+            How I can help.
           </h2>
           <p className="reveal-up delay-2 mt-6 max-w-xl text-lg font-light text-foreground/75">
-            Four pillars of non-medical, person-centred support — each shaped around what brings
-            the individual joy.
+            Four ways I support older adults and their families — non-medical, person-centred,
+            and shaped around what brings each person joy.
           </p>
         </div>
 

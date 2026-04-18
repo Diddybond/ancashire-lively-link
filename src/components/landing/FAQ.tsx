@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Who pays for tickets, meals, or activities during an outing?",
-    a: "Our £20 hourly rate covers Sabrina's time and all travel/mileage. Out-of-pocket expenses during the visit — theatre tickets, café bills, admission fees for both client and Sabrina — are covered by the client.",
+    a: "Our £25 hourly rate covers Sabrina's time and all travel/mileage. Out-of-pocket expenses during the visit — theatre tickets, café bills, admission fees for both client and Sabrina — are covered by the client.",
   },
   {
     q: "Are you insured and background checked?",
@@ -50,17 +50,17 @@ export function FAQ() {
       <div className="mx-auto grid max-w-7xl grid-cols-12 gap-12 px-6 sm:px-8 lg:px-12">
         <div className="col-span-12 lg:col-span-4 lg:sticky lg:top-32 lg:self-start">
           <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
-            Considered Answers
+            FAQs
           </span>
           <h2
             ref={heading}
             id="faq-heading"
             className="reveal-up font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            Questions, <br /> answered.
+            Common <br /> questions.
           </h2>
           <p className="mt-6 max-w-sm text-base font-light text-foreground/70">
-            Common conversations from families considering Sabrina's care for a loved one.
+            The things families most often ask before booking Sabrina to support a loved one.
           </p>
         </div>
 
