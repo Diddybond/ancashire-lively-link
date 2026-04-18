@@ -25,30 +25,30 @@ export function Hero() {
             ref={eyebrowRef}
             className="reveal-up mb-8 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]"
           >
-            Defining a New Standard of Companionship
+            A Warmer Kind of Companionship
           </span>
           <h1
             ref={titleRef}
             className="reveal-up delay-1 font-serif text-[clamp(3.25rem,9vw,8.5rem)] font-light leading-[0.88] tracking-tight text-balance text-foreground"
           >
-            The <span className="italic">Art</span> of
+            Time well <span className="italic">spent</span>,
             <br />
-            Living Well.
+            together.
           </h1>
           <p
             ref={copyRef}
             className="reveal-up delay-2 mt-10 max-w-[42ch] text-lg font-light leading-relaxed text-foreground/75"
           >
-            A private companionship and lifestyle service for distinguished older adults across
-            Blackburn with Darwen and the wider Lancashire estate. Quietly attentive. Carefully
-            considered. Personally led by Sabrina Myers.
+            Friendly, unhurried companionship and lifestyle support for older adults across
+            Blackburn with Darwen and the wider Lancashire area. Personally led by Sabrina Myers
+            — never an agency, never rushed.
           </p>
           <div ref={ctaRef} className="reveal-up delay-3 mt-12 flex flex-wrap items-center gap-10">
             <a
               href="#contact"
               className="group flex items-center gap-4 border-b border-foreground/25 pb-2 text-[11px] font-medium uppercase tracking-eyebrow text-foreground transition-colors hover:border-[var(--bronze)] hover:text-[var(--bronze)]"
             >
-              Request a Private Consultation
+              Arrange a Free Chat
               <span className="transition-transform group-hover:translate-x-2">→</span>
             </a>
             <a
