@@ -2,6 +2,7 @@ import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
 import companionshipTea from "@/assets/companionship-tea.png";
 import outAndAbout from "@/assets/out-and-about.jpeg";
 import specialOccasions from "@/assets/special-occasions.png";
+import careHomeSupport from "@/assets/care-home-support.png";
 
 const chapters = [
   {
@@ -29,8 +30,7 @@ const chapters = [
     no: "Four",
     title: "Care Home Support",
     desc: "Freelance Activities Coordination for local care homes — bringing the same warm, person-centred approach to wider residential settings.",
-    image:
-      "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=1200&q=80",
+    image: careHomeSupport,
     meta: ["Lifestyle programmes", "Event facilitation", "Cover for absences"],
   },
 ];
