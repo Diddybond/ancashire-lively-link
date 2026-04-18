@@ -3,6 +3,7 @@ import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { TrustBar } from "@/components/landing/TrustBar";
 import { About } from "@/components/landing/About";
+import { IndependentDifference } from "@/components/landing/IndependentDifference";
 import { Services } from "@/components/landing/Services";
 import { Pricing } from "@/components/landing/Pricing";
 import { FAQ } from "@/components/landing/FAQ";
@@ -22,6 +23,7 @@ function Index() {
         <Hero />
         <TrustBar />
         <About />
+        <IndependentDifference />
         <Services />
         <Pricing />
         <FAQ />

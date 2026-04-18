@@ -48,17 +48,25 @@ export function About() {
             ref={p1}
             className="reveal-up delay-2 mt-10 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80"
           >
-            With over three years as a professional Activities and Lifestyle Coordinator in
-            premium care settings, I founded this practice to bring engagement, dignity and
-            independence directly into the home.
+            Hello! I'm Sabrina. Originally from Ballymena in Northern Ireland, I've proudly
+            called the mainland home for 25 years, and I love serving the community here in
+            Lancashire.
           </p>
           <p
             ref={p2}
             className="reveal-up delay-3 mt-6 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80"
           >
-            Born and raised in Darwen, my approach is unhurried — because real connection takes
-            time. A cup of tea, a quiet conversation, an afternoon at a beloved spot. Each day,
-            considered.
+            My early career was in retail, which gave me a deep appreciation for customer service
+            and simply having a really good chat! As my children grew older, I realized my true
+            calling was in care.
+          </p>
+          <p className="reveal-up delay-3 mt-6 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80">
+            My experience comes directly from working as a professional Activities and Lifestyle
+            Coordinator in premium care homes, where I discovered my absolute passion for
+            person-centered, joyful support. I founded this independent business because I saw a
+            desperate need in our community for consistent, unhurried companionship — the exact
+            opposite of the standard agency model. When you book with me, you get my dedicated
+            time and a genuine relationship, every single visit.
           </p>
 
           <div ref={sig} className="reveal-up delay-4 mt-12 flex items-center gap-6">
