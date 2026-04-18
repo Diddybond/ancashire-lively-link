@@ -82,8 +82,8 @@ const menu = [
         d: "Chaperoned trips to matinee or evening shows, and late-night bingo!",
       },
       {
-        h: "Family Event Chaperone",
-        d: "Sabrina can attend weddings or parties with your loved one, ensuring they are fed, comfortable, and safe, allowing you to relax and host.",
+        h: "Event Chaperone",
+        d: "A calm, capable companion at weddings, parties, or family gatherings — making sure everyone is fed, comfortable, and at ease throughout the day.",
       },
       {
         h: "Life Admin",

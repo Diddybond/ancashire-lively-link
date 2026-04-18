@@ -38,11 +38,11 @@ export function IndependentDifference() {
             ref={body}
             className="reveal-up delay-2 mt-12 max-w-[58ch] text-xl leading-relaxed opacity-90"
           >
-            I have never operated like a standard agency, and I never will. When families rely on
-            large franchises, they often face a revolving door of different, rushed staff on
-            tight 15-minute schedules. By choosing my independent service, you guarantee total
-            continuity of care. No corporate red tape, no rotating staff — just one dedicated
-            professional who treats your loved ones like family.
+            I have never operated like a standard agency, and I never will. With large
+            franchises, you often face a revolving door of different, rushed staff on
+            tight 15-minute schedules. By choosing my independent service, you guarantee
+            total continuity of care. No corporate red tape, no rotating staff — just one
+            dedicated professional who treats every client like family.
           </p>
 
           <div className="mt-14 grid grid-cols-1 gap-y-8 sm:grid-cols-2 sm:gap-x-12">

@@ -61,7 +61,7 @@ export function FAQ() {
             <span className="block italic text-[var(--primary)]">questions.</span>
           </h2>
           <p className="mt-6 max-w-sm text-xl leading-relaxed text-foreground/80">
-            The things families most often ask before booking Sabrina to support a loved one.
+            The things clients and families most often ask before booking Sabrina.
           </p>
         </div>
 
