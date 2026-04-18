@@ -6,6 +6,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 const links = [
   { href: "#about", label: "About" },
   { href: "#services", label: "Services" },
+  { href: "#journal", label: "Journal" },
   { href: "#pricing", label: "Pricing" },
   { href: "#faqs", label: "FAQs" },
   { href: "#contact", label: "Contact" },
