@@ -9,7 +9,7 @@ const points = [
   ],
   [
     "Activity Costs",
-    "Out-of-pocket costs during outings — tickets, café bills, entry fees for both Sabrina and your loved one — are covered by the client.",
+    "Out-of-pocket costs during outings — tickets, café bills, entry fees for both Sabrina and the person she's accompanying — are covered by the client.",
   ],
   ["First Chat", "Always free, never rushed."],
 ];
