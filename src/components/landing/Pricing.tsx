@@ -1,54 +1,91 @@
-import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const points = [
-  "£20 per hour — flat rate, no surprises",
-  "2-hour minimum visit",
-  "Free Local Travel: The first 15 miles of any trip are completely free. Any additional driving is simply charged at the standard rate of 45p per mile.",
-  "Activity Costs: The £20 hourly rate covers Sabrina's time and all travel/mileage. However, the client is responsible for covering any third-party costs during outings (e.g., event tickets, café bills, or admission fees for both the client and Sabrina).",
-  "Free initial consultation",
+  ["Hourly Rate", "£20 per hour — flat, all inclusive."],
+  ["Minimum Visit", "Two hours, arranged at your convenience."],
+  [
+    "Travel",
+    "The first 15 miles of any visit are complimentary. Additional travel is charged at 45p / mile.",
+  ],
+  [
+    "Activity Costs",
+    "Third-party costs during outings — tickets, café bills, admissions for both client and Sabrina — are covered by the client.",
+  ],
+  ["Initial Consultation", "Always complimentary, always unhurried."],
 ];
 
 export function Pricing() {
+  const heading = useScrollReveal<HTMLHeadingElement>();
+  const rule = useScrollReveal<HTMLDivElement>();
+  const price = useScrollReveal<HTMLDivElement>();
+  const list = useScrollReveal<HTMLDivElement>();
+
   return (
-    <section id="pricing" className="scroll-mt-24 py-20 lg:py-28" aria-labelledby="pricing-heading">
-      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground/60">
-            Pricing
-          </p>
-          <h2 id="pricing-heading" className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
-            Transparent, Simple Pricing
+    <section
+      id="pricing"
+      className="scroll-mt-24 bg-[color-mix(in_oklab,var(--primary)_5%,var(--background))] py-32 lg:py-48"
+      aria-labelledby="pricing-heading"
+    >
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div className="mb-24 flex flex-col items-center text-center">
+          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--bronze)]/40" />
+          <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
+            Investment
+          </span>
+          <h2
+            ref={heading}
+            id="pricing-heading"
+            className="reveal-up delay-1 font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+          >
+            Transparent. Simple.
           </h2>
-          <p className="mt-4 text-foreground/75">
-            One honest hourly rate. No add-ons, no agency markups, no awkward conversations.
+          <p className="reveal-up delay-2 mt-6 max-w-xl text-lg font-light text-foreground/75">
+            One honest hourly rate. No agency markups, no surprises, no awkward conversations.
           </p>
         </div>
 
-        <div className="mt-10 rounded-2xl border border-border bg-card p-8 shadow-sm sm:p-10">
-          <div className="flex flex-col items-center text-center">
-            <div className="flex items-baseline gap-2">
-              <span className="font-serif text-6xl font-semibold text-foreground">£20</span>
-              <span className="text-lg text-foreground/70">/ hour</span>
+        <div className="grid grid-cols-12 gap-y-16 gap-x-12">
+          <div ref={price} className="reveal-up col-span-12 lg:col-span-5">
+            <div className="border-t border-foreground/15 pt-10">
+              <p className="text-[10px] font-medium uppercase tracking-eyebrow text-foreground/55">
+                From
+              </p>
+              <div className="mt-6 flex items-baseline gap-3">
+                <span className="font-serif text-[8rem] font-light leading-none tracking-tight text-foreground">
+                  £20
+                </span>
+                <span className="font-serif text-2xl italic text-foreground/60">/ hour</span>
+              </div>
+              <p className="mt-6 max-w-xs font-serif text-xl italic leading-snug text-foreground/70">
+                A flat, all-inclusive rate covering Sabrina's time and local travel.
+              </p>
+              <a
+                href="#contact"
+                className="group mt-12 inline-flex items-center gap-4 border-b border-foreground/25 pb-2 text-[11px] font-medium uppercase tracking-eyebrow text-foreground transition-colors hover:border-[var(--bronze)] hover:text-[var(--bronze)]"
+              >
+                Request a Bespoke Quote
+                <span className="transition-transform group-hover:translate-x-2">→</span>
+              </a>
             </div>
-            <p className="mt-2 text-sm font-medium text-foreground/60">Flat rate · all inclusive</p>
           </div>
 
-          <ul className="mt-8 space-y-3">
-            {points.map((p) => (
-              <li key={p} className="flex items-start gap-3">
-                <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20">
-                  <Check className="h-4 w-4 text-foreground" />
-                </span>
-                <span className="text-foreground/85">{p}</span>
-              </li>
-            ))}
-          </ul>
-
-          <div className="mt-8 flex justify-center">
-            <Button asChild size="lg" className="font-semibold">
-              <a href="#contact">Request a Bespoke Quote</a>
-            </Button>
+          <div ref={list} className="reveal-up delay-1 col-span-12 lg:col-span-6 lg:col-start-7">
+            <ul>
+              {points.map(([k, v], i) => (
+                <li
+                  key={k}
+                  className="grid grid-cols-12 gap-6 border-t border-foreground/15 py-6"
+                >
+                  <span className="col-span-12 text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)] sm:col-span-3">
+                    0{i + 1} · {k}
+                  </span>
+                  <span className="col-span-12 font-serif text-lg leading-snug text-foreground/85 sm:col-span-9">
+                    {v}
+                  </span>
+                </li>
+              ))}
+              <li className="border-t border-foreground/15" />
+            </ul>
           </div>
         </div>
       </div>

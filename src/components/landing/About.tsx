@@ -1,43 +1,75 @@
-import { Button } from "@/components/ui/button";
 import sabrina from "@/assets/sabrina.jpg";
+import { useParallax, useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 export function About() {
+  const imgWrap = useScrollReveal<HTMLDivElement>();
+  const imgInner = useParallax<HTMLImageElement>(0.06);
+  const eyebrow = useScrollReveal<HTMLSpanElement>();
+  const title = useScrollReveal<HTMLHeadingElement>();
+  const p1 = useScrollReveal<HTMLParagraphElement>();
+  const p2 = useScrollReveal<HTMLParagraphElement>();
+  const sig = useScrollReveal<HTMLDivElement>();
+
   return (
-    <section id="about" className="scroll-mt-24 py-20 lg:py-28" aria-labelledby="about-heading">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
-        <div className="order-2 lg:order-1">
-          <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-muted shadow-lg">
+    <section
+      id="about"
+      className="scroll-mt-24 py-32 lg:py-48"
+      aria-labelledby="about-heading"
+    >
+      <div className="mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-16 gap-x-12 px-6 sm:px-8 lg:px-12">
+        <div ref={imgWrap} className="reveal-up col-span-12 lg:col-span-5">
+          <div className="relative aspect-[4/5] overflow-hidden bg-[var(--primary)]/10 shadow-[40px_40px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)]">
             <img
+              ref={imgInner}
               src={sabrina}
               alt="Sabrina Myers, Lifestyle Coordinator"
-              className="h-full w-full object-cover"
+              className="h-[115%] w-full -translate-y-[7%] object-cover [filter:grayscale(10%)]"
               loading="lazy"
             />
           </div>
         </div>
-        <div className="order-1 lg:order-2">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground/60">
-            About
-          </p>
-          <h2 id="about-heading" className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
-            Meet Sabrina, Your Lifestyle Coordinator
+
+        <div className="col-span-12 lg:col-span-6 lg:col-start-7">
+          <span
+            ref={eyebrow}
+            className="reveal-up mb-6 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]"
+          >
+            Chapter · Founder
+          </span>
+          <h2
+            ref={title}
+            id="about-heading"
+            className="reveal-up delay-1 font-serif text-5xl font-light leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+          >
+            A lifetime of <span className="italic">care</span>,
+            <br /> patiently practiced.
           </h2>
-          <p className="mt-6 text-foreground/80">
-            Hello! I’m Sabrina. With over 3 years of experience as a professional Activities and
-            Lifestyle Coordinator in premium care settings, I founded this business to bring joy,
-            engagement, and independence directly to seniors in their own homes.
+          <p
+            ref={p1}
+            className="reveal-up delay-2 mt-10 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80"
+          >
+            With over three years as a professional Activities and Lifestyle Coordinator in
+            premium care settings, I founded this practice to bring engagement, dignity and
+            independence directly into the home.
           </p>
-          <p className="mt-4 text-foreground/80">
-            Born and raised in Darwen, I have deep roots in this community and a genuine love for
-            the people who call Lancashire home. My approach is warm, patient, and unhurried —
-            because real connection takes time. Whether it’s a cup of tea and a good chat or an
-            afternoon out at a favourite spot, my mission is simply to make each day a little
-            brighter.
+          <p
+            ref={p2}
+            className="reveal-up delay-3 mt-6 max-w-[52ch] text-lg font-light leading-relaxed text-foreground/80"
+          >
+            Born and raised in Darwen, my approach is unhurried — because real connection takes
+            time. A cup of tea, a quiet conversation, an afternoon at a beloved spot. Each day,
+            considered.
           </p>
-          <div className="mt-8">
-            <Button asChild size="lg" className="font-semibold">
-              <a href="#contact">Ask Sabrina a Question</a>
-            </Button>
+
+          <div ref={sig} className="reveal-up delay-4 mt-12 flex items-center gap-6">
+            <div className="font-serif text-3xl italic text-[var(--bronze)]">— Sabrina</div>
+            <div className="hairline h-px flex-1" />
+            <a
+              href="#contact"
+              className="text-[11px] font-medium uppercase tracking-eyebrow text-foreground transition-colors hover:text-[var(--bronze)]"
+            >
+              Speak with Sabrina →
+            </a>
           </div>
         </div>
       </div>

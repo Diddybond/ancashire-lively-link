@@ -1,64 +1,141 @@
-import { Coffee, Map, Ticket, Building } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
 
-const services = [
+const chapters = [
   {
-    icon: Coffee,
+    no: "Chapter One",
     title: "Active Companionship",
-    desc: "Meaningful conversation, shared hobbies, and light home help.",
+    desc: "Considered conversation, shared interests, and the small rituals that make a home feel lived-in. We sit, we listen, we engage.",
+    image:
+      "https://images.unsplash.com/photo-1581579438747-104c53e7a01c?auto=format&fit=crop&w=1200&q=80",
+    meta: ["Conversation & company", "Hobbies & light home help", "Reading & memory work"],
   },
   {
-    icon: Map,
+    no: "Chapter Two",
     title: "Out & About",
-    desc: "Chaperoned appointments and daytime social outings. We include 15 miles of free travel per visit.",
+    desc: "Chaperoned appointments and unhurried daytime outings — the parks of Lancashire, a favourite tearoom, the quiet of a Sunday gallery. The first fifteen miles, always complimentary.",
+    image:
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
+    meta: ["Appointment chaperone", "Daytime social outings", "15 free miles per visit"],
   },
   {
-    icon: Ticket,
+    no: "Chapter Three",
     title: "Special Occasions",
-    desc: "Flexible hours for evening events like the theatre or late-night bingo.",
+    desc: "An evening at the theatre. A late-night bingo win. A milestone birthday in the company of friends. Flexible hours arranged with discretion.",
+    image:
+      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80",
+    meta: ["Evening events", "Theatre & bingo", "Family celebrations"],
   },
   {
-    icon: Building,
+    no: "Chapter Four",
     title: "Care Home Support",
-    desc: "B2B freelance Activities Coordination for local care settings.",
+    desc: "Freelance Activities Coordination for local care settings — bringing the same considered approach to wider residential communities.",
+    image:
+      "https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=1200&q=80",
+    meta: ["Lifestyle programming", "Event facilitation", "Cover for absences"],
   },
 ];
 
+function Chapter({
+  no,
+  title,
+  desc,
+  image,
+  meta,
+  index,
+}: (typeof chapters)[number] & { index: number }) {
+  const reverse = index % 2 === 1;
+  const imgWrap = useScrollReveal<HTMLDivElement>();
+  const imgInner = useParallax<HTMLImageElement>(0.05);
+  const text = useScrollReveal<HTMLDivElement>();
+
+  return (
+    <article className="grid grid-cols-12 items-center gap-y-10 gap-x-12">
+      <div
+        ref={imgWrap}
+        className={`reveal-up col-span-12 lg:col-span-7 ${
+          reverse ? "lg:order-2" : "lg:order-1"
+        }`}
+      >
+        <div
+          className={`relative aspect-[4/3] overflow-hidden bg-[var(--primary)]/10 ${
+            reverse
+              ? "shadow-[-40px_40px_0_0_color-mix(in_oklab,var(--bronze)_18%,transparent)]"
+              : "shadow-[40px_40px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)]"
+          }`}
+        >
+          <img
+            ref={imgInner}
+            src={image}
+            alt=""
+            loading="lazy"
+            className="h-[115%] w-full -translate-y-[7%] object-cover [filter:grayscale(15%)_contrast(1.02)] transition-transform duration-[1200ms] hover:scale-[1.03]"
+          />
+        </div>
+      </div>
+
+      <div
+        ref={text}
+        className={`reveal-up delay-1 col-span-12 lg:col-span-5 ${
+          reverse ? "lg:order-1 lg:col-start-1" : "lg:order-2 lg:col-start-8"
+        }`}
+      >
+        <span className="mb-4 block font-serif text-2xl italic text-[var(--bronze)]">{no}</span>
+        <h3 className="font-serif text-5xl font-light leading-[1.05] tracking-tight text-foreground sm:text-6xl">
+          {title}
+        </h3>
+        <p className="mt-8 max-w-[44ch] text-lg font-light leading-relaxed text-foreground/80">
+          {desc}
+        </p>
+        <ul className="mt-10 space-y-0">
+          {meta.map((m, i) => (
+            <li
+              key={m}
+              className="flex items-center justify-between border-t border-border/60 py-4 text-[11px] font-medium uppercase tracking-eyebrow text-foreground/85"
+            >
+              <span>
+                <span className="mr-4 text-foreground/40">0{i + 1}</span>
+                {m}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  );
+}
+
 export function Services() {
+  const heading = useScrollReveal<HTMLHeadingElement>();
+  const rule = useScrollReveal<HTMLDivElement>();
+
   return (
     <section
       id="services"
-      className="scroll-mt-24 bg-card/50 py-20 lg:py-28"
+      className="scroll-mt-24 py-32 lg:py-48"
       aria-labelledby="services-heading"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-foreground/60">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        <div className="mb-32 flex flex-col items-center text-center">
+          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--bronze)]/40" />
+          <span className="mb-4 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]">
             Services
-          </p>
-          <h2 id="services-heading" className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">
-            Tailored support for everyday life
+          </span>
+          <h2
+            ref={heading}
+            id="services-heading"
+            className="reveal-up delay-1 font-serif text-5xl font-light italic leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+          >
+            The Curation
           </h2>
-          <p className="mt-4 text-foreground/75">
-            Non-medical, person-centred companionship designed around what brings each individual
-            joy.
+          <p className="reveal-up delay-2 mt-6 max-w-xl text-lg font-light text-foreground/75">
+            Four pillars of non-medical, person-centred support — each shaped around what brings
+            the individual joy.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {services.map(({ icon: Icon, title, desc }) => (
-            <Card
-              key={title}
-              className="group border-border bg-background transition-all hover:-translate-y-1 hover:shadow-lg"
-            >
-              <CardContent className="p-6 pt-6">
-                <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/15 text-foreground transition-colors group-hover:bg-primary/25">
-                  <Icon className="h-6 w-6" />
-                </span>
-                <h3 className="font-serif text-xl font-semibold text-foreground">{title}</h3>
-                <p className="mt-2 text-foreground/75">{desc}</p>
-              </CardContent>
-            </Card>
+        <div className="space-y-32 lg:space-y-48">
+          {chapters.map((c, i) => (
+            <Chapter key={c.title} index={i} {...c} />
           ))}
         </div>
       </div>
