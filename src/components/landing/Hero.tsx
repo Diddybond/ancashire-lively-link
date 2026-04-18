@@ -19,27 +19,31 @@ export function Hero() {
         est. care
       </div>
 
-      <div className="mx-auto grid max-w-7xl grid-cols-12 items-end gap-8 px-6 pb-20 sm:px-8 lg:gap-12 lg:px-12 lg:pb-32">
-        <div className="col-span-12 lg:col-span-6 lg:pb-12">
+      <div className="mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-12 gap-x-8 px-6 pb-20 sm:px-8 lg:gap-x-16 lg:px-12 lg:pb-32">
+        <div className="col-span-12 lg:col-span-6">
           <span
             ref={eyebrowRef}
             className="reveal-up mb-8 block text-[10px] font-medium uppercase tracking-eyebrow text-[var(--bronze)]"
           >
-            Sabrina Myers Lifestyle &amp; Companionship
+            Sabrina Myers · Lifestyle &amp; Companionship
           </span>
           <h1
             ref={titleRef}
-            className="reveal-up delay-1 font-serif text-[clamp(2.5rem,6vw,5.25rem)] font-light leading-[1.05] tracking-tight text-balance text-foreground"
+            className="reveal-up delay-1 font-serif text-[clamp(2.75rem,6.5vw,5.5rem)] font-light leading-[1.02] tracking-tight text-balance text-foreground"
           >
-            A private companionship and lifestyle service for older adults across{" "}
-            <span className="italic">Blackburn with Darwen</span> and the wider Lancashire area.
+            Quietly attentive
+            <span className="block italic text-[var(--bronze)]">companionship.</span>
           </h1>
           <p
             ref={copyRef}
-            className="reveal-up delay-2 mt-10 max-w-[46ch] text-lg font-light leading-relaxed tracking-wide text-foreground/75"
+            className="reveal-up delay-2 mt-10 max-w-[48ch] text-lg font-light leading-relaxed text-foreground/75"
           >
-            Quietly attentive. Carefully considered. Personally led by Sabrina Myers to ensure
+            A private companionship and lifestyle service for older adults across Blackburn
+            with Darwen and the wider Lancashire area — personally led by Sabrina Myers, so
             your loved ones live beautifully and independently at home.
+          </p>
+          <p className="reveal-up delay-2 mt-6 text-[11px] font-medium uppercase tracking-[0.3em] text-foreground/55">
+            Quietly attentive · Carefully considered
           </p>
           <div ref={ctaRef} className="reveal-up delay-3 mt-12 flex flex-wrap items-center gap-10">
             <a
@@ -60,12 +64,12 @@ export function Hero() {
         </div>
 
         <div ref={imageWrapRef} className="reveal-up delay-2 relative col-span-12 lg:col-span-6">
-          <div className="relative aspect-[4/5] overflow-hidden bg-[var(--primary)]/10">
+          <div className="relative aspect-[4/5] overflow-hidden bg-[var(--primary)]/10 shadow-[40px_40px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)]">
             <img
               ref={imageInnerRef}
-              src="https://images.unsplash.com/photo-1447710441604-5bdc41bc6517?auto=format&fit=crop&w=1400&q=80"
-              alt="An older couple walking through a tree-lined Lancashire park at golden hour"
-              className="h-[115%] w-full -translate-y-[7%] object-cover [filter:grayscale(15%)_contrast(1.02)]"
+              src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=1400&q=80"
+              alt="A warm moment of companionship between a carer and an older woman"
+              className="h-[115%] w-full -translate-y-[7%] object-cover [filter:grayscale(10%)_contrast(1.02)]"
               loading="eager"
             />
             <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-foreground/5" />
@@ -83,7 +87,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div aria-hidden className="mx-auto mt-8 h-px max-w-7xl border-t border-[color-mix(in_oklab,var(--primary)_28%,transparent)]" />
+      <div aria-hidden className="mx-auto h-px max-w-7xl border-t border-[color-mix(in_oklab,var(--primary)_28%,transparent)]" />
     </section>
   );
 }
