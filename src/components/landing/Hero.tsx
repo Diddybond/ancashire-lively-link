@@ -25,9 +25,9 @@ export function Hero() {
         className="pointer-events-none absolute -bottom-10 -left-10 hidden h-64 w-64 rounded-full bg-[color-mix(in_oklab,var(--bronze)_18%,transparent)] blur-2xl lg:block"
       />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-12 gap-x-8 px-6 sm:px-8 lg:gap-x-12 lg:px-12">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-12 gap-x-0 px-4 sm:gap-x-8 sm:px-8 lg:gap-x-12 lg:px-12">
         {/* LEFT: white card with content (like reference) */}
-        <div className="relative z-10 col-span-12 lg:col-span-7">
+        <div className="relative z-10 col-span-12 min-w-0 lg:col-span-7">
           <div className="bg-background/95 p-6 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)] sm:p-12 lg:p-16 lg:-mr-16">
             <span
               ref={eyebrowRef}
@@ -82,7 +82,7 @@ export function Hero() {
         {/* RIGHT: large photo */}
         <div
           ref={imageWrapRef}
-          className="reveal-up delay-2 relative col-span-12 lg:col-span-5"
+          className="reveal-up delay-2 relative col-span-12 min-w-0 lg:col-span-5"
         >
           <div className="relative aspect-[4/5] overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,transparent)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.3)]">
             <img
