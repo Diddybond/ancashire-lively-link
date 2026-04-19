@@ -47,25 +47,25 @@ export function FAQ() {
       className="scroll-mt-24 py-32 lg:py-48"
       aria-labelledby="faq-heading"
     >
-      <div className="mx-auto grid max-w-7xl grid-cols-12 gap-12 px-6 sm:px-8 lg:px-12">
-        <div className="col-span-12 lg:col-span-4 lg:sticky lg:top-32 lg:self-start">
+      <div className="mx-auto grid max-w-7xl grid-cols-12 gap-8 px-4 sm:gap-12 sm:px-8 lg:px-12">
+        <div className="col-span-12 min-w-0 lg:col-span-4 lg:sticky lg:top-32 lg:self-start">
           <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             FAQs
           </span>
           <h2
             ref={heading}
             id="faq-heading"
-            className="reveal-up font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            className="reveal-up font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
             Common
             <span className="block italic text-[var(--primary)]">questions.</span>
           </h2>
-          <p className="mt-6 max-w-sm text-xl leading-relaxed text-foreground/80">
+          <p className="mt-5 max-w-sm text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
             The things clients and families most often ask before booking Sabrina.
           </p>
         </div>
 
-        <div ref={list} className="reveal-up col-span-12 lg:col-span-7 lg:col-start-6">
+        <div ref={list} className="reveal-up col-span-12 min-w-0 lg:col-span-7 lg:col-start-6">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((f, i) => (
               <AccordionItem
@@ -73,15 +73,15 @@ export function FAQ() {
                 value={`item-${i}`}
                 className="border-b border-foreground/15"
               >
-                <AccordionTrigger className="py-6 text-left font-serif text-xl font-medium text-foreground hover:no-underline sm:text-2xl">
-                  <span className="flex items-baseline gap-6">
-                    <span className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--primary)]">
+                <AccordionTrigger className="py-5 text-left font-serif text-lg font-medium text-foreground hover:no-underline sm:py-6 sm:text-2xl">
+                  <span className="grid min-w-0 w-full grid-cols-[auto_1fr] items-start gap-3 sm:gap-6">
+                    <span className="pt-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--primary)] sm:text-xs">
                       0{i + 1}
                     </span>
-                    <span>{f.q}</span>
+                    <span className="min-w-0 break-words">{f.q}</span>
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="pb-8 pl-14 text-lg leading-relaxed text-foreground/80">
+                <AccordionContent className="pb-6 pl-6 text-base leading-relaxed text-foreground/80 sm:pb-8 sm:pl-14 sm:text-lg">
                   {f.a}
                 </AccordionContent>
               </AccordionItem>
