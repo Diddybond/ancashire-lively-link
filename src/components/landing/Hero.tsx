@@ -28,7 +28,7 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-12 gap-x-8 px-6 sm:px-8 lg:gap-x-12 lg:px-12">
         {/* LEFT: white card with content (like reference) */}
         <div className="relative z-10 col-span-12 lg:col-span-7">
-          <div className="bg-background/95 p-8 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)] sm:p-12 lg:p-16 lg:-mr-16">
+          <div className="bg-background/95 p-6 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)] sm:p-12 lg:p-16 lg:-mr-16">
             <span
               ref={eyebrowRef}
               className="reveal-up mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]"
@@ -38,7 +38,7 @@ export function Hero() {
 
             <h1
               ref={titleRef}
-              className="reveal-up delay-1 font-serif text-[clamp(2.5rem,5.5vw,4.75rem)] font-medium leading-[1.05] tracking-tight text-foreground"
+              className="reveal-up delay-1 font-serif text-[clamp(2rem,5.5vw,4.75rem)] font-medium leading-[1.05] tracking-tight text-foreground"
             >
               Quietly attentive care,
               <span className="block text-[var(--primary)]">delivered personally.</span>
@@ -46,7 +46,7 @@ export function Hero() {
 
             <p
               ref={copyRef}
-              className="reveal-up delay-2 mt-8 max-w-[52ch] text-xl leading-relaxed text-foreground/80"
+              className="reveal-up delay-2 mt-6 max-w-[52ch] text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl"
             >
               <span className="font-semibold italic">Hello, I&apos;m Sabrina.</span> I offer
               private companionship and lifestyle support across Blackburn, Darwen, the
