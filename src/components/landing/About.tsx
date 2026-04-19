@@ -22,8 +22,8 @@ export function About() {
         className="pointer-events-none absolute left-0 top-24 hidden h-[70%] w-[38%] rounded-r-[3rem] bg-[color-mix(in_oklab,var(--primary)_12%,transparent)] lg:block"
       />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-16 gap-x-12 px-6 sm:px-8 lg:px-12">
-        <div ref={imgWrap} className="reveal-up col-span-12 lg:col-span-5">
+      <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-16 gap-x-0 px-4 sm:gap-x-8 sm:px-8 lg:gap-x-12 lg:px-12">
+        <div ref={imgWrap} className="reveal-up col-span-12 min-w-0 lg:col-span-5">
           <div className="relative aspect-[4/5] overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,transparent)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.3)]">
             <img
               ref={imgInner}
@@ -35,7 +35,7 @@ export function About() {
           </div>
         </div>
 
-        <div className="col-span-12 lg:col-span-6 lg:col-start-7">
+        <div className="col-span-12 min-w-0 lg:col-span-6 lg:col-start-7">
           <div className="bg-background/95 p-6 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.2)] sm:p-12 lg:p-14">
             <span
               ref={eyebrow}
