@@ -30,13 +30,13 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sabrina Myers | Private Senior Companionship Blackburn & Lancashire" },
+      { title: "Sabrina Myers — Elderly Companionship in Blackburn with Darwen, Lancashire" },
       {
         name: "description",
         content:
           "Sabrina Myers provides bespoke, independent lifestyle support and companionship for older adults in Blackburn with Darwen, the Ribble Valley, and Lancashire. £25/hr, no mileage fees for the first 15 miles.",
       },
-      { property: "og:title", content: "Sabrina Myers | Private Senior Companionship Blackburn & Lancashire" },
+      { property: "og:title", content: "Sabrina Myers — Elderly Companionship in Blackburn with Darwen, Lancashire" },
       {
         property: "og:description",
         content:
@@ -44,6 +44,12 @@ export const Route = createRootRoute({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Sabrina Myers — Elderly Companionship in Blackburn with Darwen, Lancashire" },
+      { name: "description", content: "Lancashire Companionship Hub offers private, non-medical companionship and lifestyle support for seniors." },
+      { property: "og:description", content: "Lancashire Companionship Hub offers private, non-medical companionship and lifestyle support for seniors." },
+      { name: "twitter:description", content: "Lancashire Companionship Hub offers private, non-medical companionship and lifestyle support for seniors." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/da9c1608-c7ab-487c-b90d-6c9b972601e3/id-preview-3a1e778d--df643023-88c3-43bf-b06c-71165a6ad7de.lovable.app-1776556858156.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/da9c1608-c7ab-487c-b90d-6c9b972601e3/id-preview-3a1e778d--df643023-88c3-43bf-b06c-71165a6ad7de.lovable.app-1776556858156.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
