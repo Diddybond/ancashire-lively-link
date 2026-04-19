@@ -36,7 +36,7 @@ export function About() {
         </div>
 
         <div className="col-span-12 lg:col-span-6 lg:col-start-7">
-          <div className="bg-background/95 p-8 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.2)] sm:p-12 lg:p-14">
+          <div className="bg-background/95 p-6 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.2)] sm:p-12 lg:p-14">
             <span
               ref={eyebrow}
               className="reveal-up mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]"
@@ -46,14 +46,14 @@ export function About() {
             <h2
               ref={title}
               id="about-heading"
-              className="reveal-up delay-1 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+              className="reveal-up delay-1 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
             >
               Meet
               <span className="block text-[var(--primary)]">Sabrina Myers.</span>
             </h2>
             <p
               ref={p1}
-              className="reveal-up delay-2 mt-8 max-w-[52ch] text-xl leading-relaxed text-foreground/80"
+              className="reveal-up delay-2 mt-8 max-w-[52ch] text-lg leading-relaxed text-foreground/80 sm:text-xl"
             >
               Hello! I'm Sabrina Myers. Originally from Ballymena in Northern Ireland, I've
               proudly called the mainland home for 25 years, and I love serving the community
@@ -61,13 +61,13 @@ export function About() {
             </p>
             <p
               ref={p2}
-              className="mt-6 max-w-[52ch] text-xl leading-relaxed text-foreground/80"
+              className="mt-6 max-w-[52ch] text-lg leading-relaxed text-foreground/80 sm:text-xl"
             >
               My early career spanned 25 years in retail — a background that taught me the value
               of genuine customer service and the simple pleasure of a really good chat. As my
               children grew older, I realised my true calling was lifestyle coordination and care.
             </p>
-            <p className="mt-6 max-w-[52ch] text-xl leading-relaxed text-foreground/80">
+            <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-foreground/80 sm:text-xl">
               I've always worked independently of agencies, and I always will. It's the only way
               to maintain the unhurried, premium standard of companionship I believe every older
               adult deserves. When you book with me, you get my dedicated time and a genuine
@@ -77,7 +77,7 @@ export function About() {
             <div ref={sig} className="reveal-up delay-4 mt-10 flex flex-wrap items-center gap-6">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center bg-[var(--primary)] px-8 py-4 text-base font-semibold uppercase tracking-[0.18em] text-[var(--primary-foreground)] transition-all hover:bg-[var(--bronze)]"
+                className="inline-flex items-center justify-center bg-[var(--primary)] px-6 py-3.5 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--primary-foreground)] transition-all hover:bg-[var(--bronze)] sm:px-8 sm:py-4 sm:text-base"
               >
                 Speak with Sabrina
               </a>
