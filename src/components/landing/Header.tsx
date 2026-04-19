@@ -31,18 +31,16 @@ export function Header() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto grid h-20 max-w-7xl grid-cols-3 items-center px-6 sm:px-8 lg:px-12">
-        <div aria-hidden className="hidden lg:block" />
-
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-6 sm:px-8 lg:px-12">
         <a
           href="#top"
-          className="col-start-1 col-end-3 truncate font-serif text-xl font-medium leading-none text-foreground sm:text-2xl lg:col-start-2 lg:col-end-3 lg:text-center"
+          className="font-serif text-xl font-medium leading-none text-foreground sm:text-2xl"
         >
           Sabrina Myers
         </a>
 
         <nav
-          className="col-start-3 hidden items-center justify-end gap-10 text-[10px] font-medium uppercase tracking-eyebrow lg:flex"
+          className="hidden items-center gap-10 text-[10px] font-medium uppercase tracking-eyebrow lg:flex"
           aria-label="Primary"
         >
           {links.map((l) => (
@@ -56,7 +54,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="col-start-3 flex justify-end lg:hidden">
+        <div className="lg:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Open menu">
