@@ -79,7 +79,9 @@ function Chapter({
           reverse ? "lg:order-1 lg:col-start-1" : "lg:order-2 lg:col-start-8"
         }`}
       >
-        <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">{no}</span>
+        <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
+          {no}
+        </span>
         <h3 className="font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl">
           {title}
         </h3>
@@ -101,7 +103,19 @@ function Chapter({
         </ul>
       </div>
     </article>
-...
+  );
+}
+
+export function Services() {
+  const heading = useScrollReveal<HTMLHeadingElement>();
+  const rule = useScrollReveal<HTMLDivElement>();
+
+  return (
+    <section
+      id="services"
+      className="scroll-mt-24 py-32 lg:py-48"
+      aria-labelledby="services-heading"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         <div className="mb-20 flex flex-col items-center text-center sm:mb-32">
           <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--primary)]/40" />
