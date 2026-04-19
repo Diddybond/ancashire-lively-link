@@ -15,7 +15,7 @@ export function TrustBar() {
       aria-label="Trust and credentials"
       className="reveal-up border-y border-border/60 bg-background"
     >
-      <div className="mx-auto grid max-w-7xl gap-x-12 gap-y-6 px-6 py-10 sm:grid-cols-3 sm:px-8 lg:px-12">
+      <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-6 px-4 py-10 sm:grid-cols-3 sm:gap-x-12 sm:px-8 lg:px-12">
         {items.map(({ icon: Icon, label }, i) => (
           <div
             key={label}
@@ -24,13 +24,13 @@ export function TrustBar() {
             }`}
           >
             <span className="text-[var(--bronze)]">
-              <Icon className="h-5 w-5" strokeWidth={1.25} />
+              <Icon className="h-5 w-5 shrink-0" strokeWidth={1.25} />
             </span>
-            <div>
+            <div className="min-w-0">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-foreground/60">
                 Assurance
               </p>
-              <p className="font-serif text-xl leading-tight text-foreground">{label}</p>
+              <p className="font-serif text-lg leading-tight text-foreground sm:text-xl">{label}</p>
             </div>
           </div>
         ))}

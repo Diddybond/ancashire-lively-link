@@ -2,16 +2,16 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="bg-[var(--forest)] text-[color-mix(in_oklab,var(--background)_92%,transparent)]">
-      <div className="mx-auto max-w-7xl px-6 py-32 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-12 gap-y-12 gap-x-6 border-b border-white/10 pb-20 sm:gap-x-8 lg:gap-x-12">
-          <div className="col-span-12 lg:col-span-5">
-            <div className="font-serif text-4xl leading-tight sm:text-5xl">
+      <div className="mx-auto max-w-7xl px-4 py-24 sm:px-8 sm:py-32 lg:px-12">
+        <div className="grid grid-cols-12 gap-y-12 gap-x-6 border-b border-white/10 pb-16 sm:gap-x-8 sm:pb-20 lg:gap-x-12">
+          <div className="col-span-12 min-w-0 lg:col-span-5">
+            <div className="font-serif text-3xl leading-tight sm:text-5xl">
               Sabrina Myers
-              <span className="block font-serif text-2xl italic font-normal tracking-wide opacity-80 sm:text-3xl">
+              <span className="block font-serif text-xl italic font-normal tracking-wide opacity-80 sm:text-3xl">
                 Lifestyle &amp; Companionship
               </span>
             </div>
-            <p className="mt-6 max-w-sm text-base leading-relaxed opacity-80">
+            <p className="mt-5 max-w-sm text-base leading-relaxed opacity-80 sm:mt-6">
               Friendly, independent companionship and lifestyle support for older adults
               across Blackburn with Darwen and the wider Lancashire area.
             </p>

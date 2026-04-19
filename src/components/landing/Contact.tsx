@@ -35,30 +35,30 @@ export function Contact() {
       className="scroll-mt-24 py-32 lg:py-48"
       aria-labelledby="contact-heading"
     >
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto mb-20 max-w-3xl text-center">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
+        <div className="mx-auto mb-16 max-w-3xl text-center sm:mb-20">
           <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             Get In Touch
           </span>
           <h2
             ref={heading}
             id="contact-heading"
-            className="reveal-up font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-7xl"
+            className="reveal-up font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-7xl"
           >
             Let's have a
             <span className="italic text-[var(--primary)]"> chat.</span>
           </h2>
-          <p className="reveal-up delay-1 mt-6 text-xl text-foreground/80">
+          <p className="reveal-up delay-1 mt-5 text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
             Tell me a little about what you're looking for and I'll be in touch within one
             working day.
           </p>
         </div>
 
-        <div className="grid grid-cols-12 gap-y-12 gap-x-12">
+        <div className="grid grid-cols-12 gap-y-12 gap-x-0 sm:gap-x-12">
           <form
             ref={form}
             onSubmit={handleSubmit}
-            className="reveal-up col-span-12 lg:col-span-7"
+            className="reveal-up col-span-12 min-w-0 lg:col-span-7"
           >
             <div className="grid gap-8 sm:grid-cols-2">
               <FieldRow label="Name" htmlFor="name" full>
@@ -98,7 +98,7 @@ export function Contact() {
             </Button>
           </form>
 
-          <aside ref={aside} className="reveal-up delay-1 col-span-12 lg:col-span-4 lg:col-start-9">
+          <aside ref={aside} className="reveal-up delay-1 col-span-12 min-w-0 lg:col-span-4 lg:col-start-9">
             <div className="border-t border-foreground/15 pt-10">
               <h3 className="font-serif text-3xl font-medium text-foreground">
                 Or just give me a <span className="italic text-[var(--primary)]">call</span>
