@@ -53,7 +53,7 @@ export function About() {
             </h2>
             <p
               ref={p1}
-              className="reveal-up delay-2 mt-8 max-w-[52ch] text-lg leading-relaxed text-foreground/80 sm:text-xl"
+              className="reveal-up delay-2 mt-6 max-w-[52ch] text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl"
             >
               Hello! I'm Sabrina Myers. Originally from Ballymena in Northern Ireland, I've
               proudly called the mainland home for 25 years, and I love serving the community
@@ -61,13 +61,13 @@ export function About() {
             </p>
             <p
               ref={p2}
-              className="mt-6 max-w-[52ch] text-lg leading-relaxed text-foreground/80 sm:text-xl"
+              className="mt-5 max-w-[52ch] text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl"
             >
               My early career spanned 25 years in retail — a background that taught me the value
               of genuine customer service and the simple pleasure of a really good chat. As my
               children grew older, I realised my true calling was lifestyle coordination and care.
             </p>
-            <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-foreground/80 sm:text-xl">
+            <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
               I've always worked independently of agencies, and I always will. It's the only way
               to maintain the unhurried, premium standard of companionship I believe every older
               adult deserves. When you book with me, you get my dedicated time and a genuine
