@@ -49,8 +49,8 @@ export function Testimonials() {
       aria-labelledby="testimonials-heading"
       className="scroll-mt-24 py-32 lg:py-48"
     >
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="mb-24 flex flex-col items-center text-center">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
+        <div className="mb-16 flex flex-col items-center text-center sm:mb-24">
           <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--primary)]/40" />
           <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             In Their Own Words
@@ -58,17 +58,17 @@ export function Testimonials() {
           <h2
             ref={heading}
             id="testimonials-heading"
-            className="reveal-up delay-1 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            className="reveal-up delay-1 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
             Kind <span className="italic text-[var(--primary)]">words.</span>
           </h2>
-          <p className="reveal-up delay-2 mt-6 max-w-xl text-xl text-foreground/80">
+          <p className="reveal-up delay-2 mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
             A growing collection of words from the families and care homes Sabrina has had the
             pleasure of working with.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-16 lg:grid-cols-3">
           {testimonials.map((t, i) => (
             <TestimonialCard key={i} index={i} {...t} />
           ))}
@@ -103,7 +103,7 @@ function TestimonialCard({
       >
         &ldquo;
       </span>
-      <blockquote className="font-serif text-2xl font-medium leading-snug text-foreground/85">
+      <blockquote className="font-serif text-xl font-medium leading-snug text-foreground/85 sm:text-2xl">
         {quote}
       </blockquote>
       <figcaption className="mt-8 flex items-baseline justify-between text-xs font-semibold uppercase tracking-[0.24em] text-foreground/60">

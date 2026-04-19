@@ -32,22 +32,22 @@ export function Journal() {
       className="scroll-mt-24 py-32 lg:py-48"
       aria-labelledby="journal-heading"
     >
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto mb-20 max-w-3xl text-center">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
+        <div className="mx-auto mb-16 max-w-3xl text-center sm:mb-20">
           <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             The Journal · Latest News
           </span>
           <h2
             ref={heading}
             id="journal-heading"
-            className="reveal-up font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            className="reveal-up font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
             What we&apos;ve been
             <span className="block italic text-[var(--primary)]">up to lately.</span>
           </h2>
           <p
             ref={intro}
-            className="reveal-up delay-1 mt-8 text-xl leading-relaxed text-foreground/80"
+            className="reveal-up delay-1 mt-6 text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl"
           >
             A quiet little record of the days out, kitchen-table moments, and small adventures
             Sabrina shares with the people she looks after.
@@ -109,7 +109,7 @@ function JournalCard({ post, index }: { post: JournalPost; index: number }) {
         </time>
       </div>
 
-      <p className="mt-4 font-serif text-xl leading-snug text-foreground/85">
+      <p className="mt-4 font-serif text-lg leading-snug text-foreground/85 sm:text-xl">
         {post.caption}
       </p>
     </article>
