@@ -49,18 +49,18 @@ function Chapter({
   const text = useScrollReveal<HTMLDivElement>();
 
   return (
-    <article className="grid grid-cols-12 items-center gap-y-10 gap-x-12">
+    <article className="grid grid-cols-12 items-center gap-y-10 gap-x-0 overflow-hidden sm:gap-x-8 lg:gap-x-12">
       <div
         ref={imgWrap}
-        className={`reveal-up col-span-12 lg:col-span-7 ${
+        className={`reveal-up col-span-12 min-w-0 lg:col-span-7 ${
           reverse ? "lg:order-2" : "lg:order-1"
         }`}
       >
         <div
           className={`relative aspect-[4/3] overflow-hidden bg-[var(--primary)]/10 ${
             reverse
-              ? "shadow-[-40px_40px_0_0_color-mix(in_oklab,var(--bronze)_18%,transparent)]"
-              : "shadow-[40px_40px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)]"
+              ? "shadow-[-16px_16px_0_0_color-mix(in_oklab,var(--bronze)_18%,transparent)] sm:shadow-[-40px_40px_0_0_color-mix(in_oklab,var(--bronze)_18%,transparent)]"
+              : "shadow-[16px_16px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)] sm:shadow-[40px_40px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)]"
           }`}
         >
           <img
@@ -75,18 +75,20 @@ function Chapter({
 
       <div
         ref={text}
-        className={`reveal-up delay-1 col-span-12 lg:col-span-5 ${
+        className={`reveal-up delay-1 col-span-12 min-w-0 lg:col-span-5 ${
           reverse ? "lg:order-1 lg:col-start-1" : "lg:order-2 lg:col-start-8"
         }`}
       >
-        <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">{no}</span>
-        <h3 className="font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl">
+        <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
+          {no}
+        </span>
+        <h3 className="font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl">
           {title}
         </h3>
-        <p className="mt-8 max-w-[44ch] text-xl leading-relaxed text-foreground/80">
+        <p className="mt-6 max-w-[44ch] text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl">
           {desc}
         </p>
-        <ul className="mt-10 space-y-0">
+        <ul className="mt-8 space-y-0 sm:mt-10">
           {meta.map((m, i) => (
             <li
               key={m}
@@ -114,8 +116,8 @@ export function Services() {
       className="scroll-mt-24 py-32 lg:py-48"
       aria-labelledby="services-heading"
     >
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
-        <div className="mb-32 flex flex-col items-center text-center">
+      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
+        <div className="mb-20 flex flex-col items-center text-center sm:mb-32">
           <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--primary)]/40" />
           <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
             Services
@@ -123,18 +125,18 @@ export function Services() {
           <h2
             ref={heading}
             id="services-heading"
-            className="reveal-up delay-1 font-serif text-5xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            className="reveal-up delay-1 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
             How I can
             <span className="italic text-[var(--primary)]"> help.</span>
           </h2>
-          <p className="reveal-up delay-2 mt-6 max-w-xl text-xl text-foreground/80">
+          <p className="reveal-up delay-2 mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
             Four ways I support older adults and their families — non-medical, person-centred,
             and shaped around what brings each person joy.
           </p>
         </div>
 
-        <div className="space-y-32 lg:space-y-48">
+        <div className="space-y-24 lg:space-y-48">
           {chapters.map((c, i) => (
             <Chapter key={c.title} index={i} {...c} />
           ))}
