@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Can you take my elderly parent out for the day?",
-    a: "Yes. Days out are one of the things families value most. I plan outings around the older person's interests — gardens, galleries, tearooms, favourite walks, theatre matinees, the seaside. The first 15 miles of travel from Blackburn are included free; further mileage is 45p per mile. My Enrichment Days package is a flat £140 for a planned 4-hour outing. For relatives in residential care, days out are arranged in agreement with the care home.",
+    a: "Yes. Days out are one of the things families value most. I plan outings in advance with you and your loved one — gardens, galleries, tearooms, favourite walks, theatre matinees, the seaside. The first 15 miles of travel from Blackburn are included free; further mileage is 45p per mile. My Enrichment Days package is a flat £140 for a planned 4-hour afternoon. For relatives in residential care, days out are arranged in agreement with the care home.",
   },
   {
     q: "Who pays for tickets, meals, or activities during an outing?",

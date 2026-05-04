@@ -23,7 +23,7 @@ const tiers = [
     price: "£140",
     unit: "/ 4 hours",
     minimum: "Flat planned outing",
-    desc: "Pre-planned outings built around the older person's interests — a gallery, a garden, a tearoom, a theatre matinee, a favourite place. A premium product families often gift to a parent.",
+    desc: "A planned afternoon built around your loved one's interests — a gallery, a garden, a tearoom, a theatre matinee, a favourite place. Lovely as a gift to a parent.",
   },
   {
     no: "04",
