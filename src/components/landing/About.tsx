@@ -1,8 +1,9 @@
+import sabrina from "@/assets/sabrina.jpg";
 import { useParallax, useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 export function About() {
   const imgWrap = useScrollReveal<HTMLDivElement>();
-  const imgInner = useParallax<HTMLDivElement>(0.06);
+  const imgInner = useParallax<HTMLImageElement>(0.06);
   const eyebrow = useScrollReveal<HTMLSpanElement>();
   const title = useScrollReveal<HTMLHeadingElement>();
   const p1 = useScrollReveal<HTMLParagraphElement>();
@@ -23,15 +24,14 @@ export function About() {
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-12 items-center gap-y-16 gap-x-0 px-4 sm:gap-x-8 sm:px-8 lg:gap-x-12 lg:px-12">
         <div ref={imgWrap} className="reveal-up col-span-12 min-w-0 lg:col-span-5">
-          <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,transparent)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.3)]">
-            <div ref={imgInner} className="px-8 text-center">
-              <span className="block text-xs font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-                Photography
-              </span>
-              <p className="mt-4 font-serif text-2xl italic leading-snug text-foreground/70 sm:text-3xl">
-                A real photograph of Sabrina coming soon.
-              </p>
-            </div>
+          <div className="relative aspect-[4/5] overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,transparent)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.3)]">
+            <img
+              ref={imgInner}
+              src={sabrina}
+              alt="Sabrina Myers, Lifestyle Coordinator"
+              className="h-[115%] w-full -translate-y-[7%] object-cover object-top"
+              loading="lazy"
+            />
           </div>
         </div>
 
