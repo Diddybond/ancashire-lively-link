@@ -55,6 +55,21 @@ export function Contact() {
         </div>
 
         <div className="grid grid-cols-12 gap-y-12 gap-x-0 sm:gap-x-12">
+          <div className="col-span-12 mb-4">
+            <div className="flex flex-col items-start gap-4 border-l-2 border-[var(--primary)] bg-[color-mix(in_oklab,var(--primary)_5%,transparent)] p-6 sm:flex-row sm:items-center sm:justify-between sm:p-8">
+              <p className="font-serif text-lg leading-snug text-foreground/85 sm:text-xl">
+                <span className="font-semibold text-foreground">Prefer to talk first?</span>{" "}
+                Call Sabrina on <a href="tel:07515975760" className="text-[var(--primary)] underline-offset-4 hover:underline">07515 975 760</a> — a free 20-minute chat is often the easiest way to start.
+              </p>
+              <a
+                href="tel:07515975760"
+                className="inline-flex shrink-0 items-center justify-center bg-[var(--primary)] px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--primary-foreground)] transition-all hover:bg-[var(--bronze)]"
+              >
+                Call Sabrina
+              </a>
+            </div>
+          </div>
+
           <form
             ref={form}
             onSubmit={handleSubmit}
@@ -79,10 +94,10 @@ export function Contact() {
                     <SelectValue placeholder="Choose a service" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="companionship">Active Companionship</SelectItem>
-                    <SelectItem value="outings">Out & About</SelectItem>
-                    <SelectItem value="special-events">Special Occasions</SelectItem>
-                    <SelectItem value="care-home-support">Care Home Support</SelectItem>
+                    <SelectItem value="companionship">Private Companionship Visits (£35/hr)</SelectItem>
+                    <SelectItem value="enrichment">Enrichment Days Out (£140 / 4 hrs)</SelectItem>
+                    <SelectItem value="special-events">Special Occasions & Evenings (£40/hr)</SelectItem>
+                    <SelectItem value="care-home-support">Care Home Lifestyle Programmes</SelectItem>
                   </SelectContent>
                 </Select>
               </FieldRow>

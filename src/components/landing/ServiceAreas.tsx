@@ -84,6 +84,24 @@ export function ServiceAreas() {
           Don&apos;t see your village? Sabrina happily travels across Lancashire — get in
           touch and she&apos;ll let you know.
         </p>
+
+        <div className="mx-auto mt-20 max-w-3xl space-y-8 sm:mt-24">
+          <p className="font-serif text-lg leading-relaxed text-foreground/85 sm:text-xl">
+            <span className="font-semibold text-[var(--primary)]">Looking for someone to take an elderly parent out in the Ribble Valley?</span>{" "}
+            I plan unhurried afternoons in Whalley, Clitheroe, Longridge and the
+            surrounding villages — tearooms, garden centres, gentle walks, favourite places.
+          </p>
+          <p className="font-serif text-lg leading-relaxed text-foreground/85 sm:text-xl">
+            <span className="font-semibold text-[var(--primary)]">Private companionship in Blackburn with Darwen</span>{" "}
+            — non-agency, one consistent professional, an unhurried alternative
+            to rushed agency visits.
+          </p>
+          <p className="font-serif text-lg leading-relaxed text-foreground/85 sm:text-xl">
+            <span className="font-semibold text-[var(--primary)]">Days out for older adults in Preston, Burnley, Accrington and Chorley</span>{" "}
+            — gardens, galleries, the coast, theatre matinees. Planned around what
+            each person actually loves.
+          </p>
+        </div>
       </div>
     </section>
   );
