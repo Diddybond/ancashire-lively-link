@@ -71,9 +71,9 @@ export function About() {
             <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
               I work independently of any agency, and I always will. It's the only way to
               maintain the unhurried, person-centred standard of companionship care I
-              believe every older adult deserves. When you book with me, you get my
-              dedicated time and a genuine relationship — never a rota, never a stranger,
-              every single visit.
+              believe every older adult deserves — wherever your loved one lives, at home
+              or in a care home. When you book with me, you get my dedicated time and a
+              genuine relationship — never a rota, never a stranger, every single visit.
             </p>
 
             <div ref={sig} className="reveal-up delay-4 mt-10 flex flex-wrap items-center gap-6">

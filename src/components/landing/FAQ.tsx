@@ -3,7 +3,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 const faqs = [
   {
     q: "What is companionship care?",
-    a: "Companionship care is a non-medical home support service for older adults who are largely independent but would benefit from regular company, engagement, and gentle help with daily life. It focuses on emotional and social wellbeing rather than personal or medical care — conversation, hobbies, outings, light home help, accompanying to appointments, and meaningful time together.",
+    a: "Companionship care is a non-medical home support service for older adults who are largely independent but would benefit from regular company, engagement, and gentle help with daily life. It focuses on emotional and social wellbeing rather than personal or medical care — conversation, hobbies, outings, light home help, accompanying to appointments, and meaningful time together. It can be provided in someone's own home or, increasingly, inside the care home where their loved one lives.",
   },
   {
     q: "What's the difference between companionship care and personal care?",
@@ -22,8 +22,12 @@ const faqs = [
     a: "No. There are no contracts and no minimum commitments beyond a two-hour minimum visit length. Most families book regular weekly or fortnightly visits because consistency is part of the value, but you're free to stop or change at any time.",
   },
   {
+    q: "Can I hire a private companion to visit my parent in a care home?",
+    a: "Yes. Many families hire a private companion to visit a parent or relative inside their care home, on top of the care home's own staff and group activities. This is particularly valuable for residents who are socially withdrawn, have recently moved into residential care, or simply aren't getting enough one-to-one time. Most care homes welcome private visitors who are properly DBS-checked and insured. I'm always happy to introduce myself to the home's manager before the first visit.",
+  },
+  {
     q: "Can you take my elderly parent out for the day?",
-    a: "Yes. Days out are one of the things families value most. I plan outings around the older person's interests — gardens, galleries, tearooms, favourite walks, theatre matinees, the seaside. The first 15 miles of travel from Blackburn are included free; further mileage is 45p per mile. My Enrichment Days package is a flat £140 for a planned 4-hour outing.",
+    a: "Yes. Days out are one of the things families value most. I plan outings around the older person's interests — gardens, galleries, tearooms, favourite walks, theatre matinees, the seaside. The first 15 miles of travel from Blackburn are included free; further mileage is 45p per mile. My Enrichment Days package is a flat £140 for a planned 4-hour outing. For relatives in residential care, days out are arranged in agreement with the care home.",
   },
   {
     q: "Who pays for tickets, meals, or activities during an outing?",
@@ -31,7 +35,7 @@ const faqs = [
   },
   {
     q: "Are you insured and DBS checked?",
-    a: "Yes. I hold an enhanced DBS check, full public liability insurance, and professional indemnity cover. Documentation available on request.",
+    a: "Yes. I hold an enhanced DBS check, full public liability insurance, and professional indemnity cover. Documentation available on request. Documentation can be shared directly with a care home manager before a first visit if needed.",
   },
   {
     q: "What areas of Lancashire do you cover?",
@@ -39,11 +43,11 @@ const faqs = [
   },
   {
     q: "Do you work with local care homes?",
-    a: "Yes. As a qualified lifestyle coordinator, I take freelance contracts with local care homes — running bespoke activity programmes, facilitating events, and covering activity coordinator absences. Care home managers can contact me directly to discuss day rates.",
+    a: "Yes — but it's a separate, B2B service. As a qualified lifestyle coordinator, I take freelance contracts with care home managers to deliver bespoke activity programmes, facilitate events, and cover for activity coordinator absences. This is different from my private family service, where I'm hired by the family to visit their loved one one-to-one. Care home managers can contact me directly to discuss day rates.",
   },
   {
     q: "How quickly can companionship visits start?",
-    a: "Most new clients can have an initial free chat within 48 hours, a home visit within a week, and regular visits beginning the week after. Special occasions can be arranged at shorter notice.",
+    a: "Most new clients can have an initial free chat within 48 hours, a home visit within a week, and regular visits beginning the week after. Special occasions can be arranged at shorter notice. For care home visits, the first session is usually arranged in agreement with the home's manager.",
   },
 ];
 
