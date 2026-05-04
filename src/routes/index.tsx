@@ -7,7 +7,6 @@ import { IndependentDifference } from "@/components/landing/IndependentDifferenc
 import { Services } from "@/components/landing/Services";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { InspirationMenu } from "@/components/landing/InspirationMenu";
-import { Testimonials } from "@/components/landing/Testimonials";
 import { Pricing } from "@/components/landing/Pricing";
 import { FAQ } from "@/components/landing/FAQ";
 import { Journal } from "@/components/landing/Journal";
@@ -32,7 +31,6 @@ function Index() {
         <Services />
         <HowItWorks />
         <InspirationMenu />
-        <Testimonials />
         <Journal />
         <Pricing />
         <ServiceAreas />

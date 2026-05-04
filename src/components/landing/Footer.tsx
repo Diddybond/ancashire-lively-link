@@ -54,13 +54,6 @@ export function Footer() {
             <a href="#" className="hover:opacity-100">Terms</a>
           </div>
         </div>
-
-        <p className="mt-8 max-w-4xl text-sm leading-relaxed text-white/55">
-          Private companionship care, independent companion carer, and non-medical
-          lifestyle support for older adults in Blackburn with Darwen, Clitheroe, Whalley,
-          Longridge, Accrington, Oswaldtwistle, Burnley, Preston, Chorley and the wider
-          Ribble Valley.
-        </p>
       </div>
     </footer>
   );
