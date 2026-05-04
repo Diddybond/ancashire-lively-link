@@ -49,7 +49,8 @@ export function Contact() {
             <span className="italic text-[var(--primary)]"> chat.</span>
           </h2>
           <p className="reveal-up delay-1 mt-5 text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
-            Tell me a little about what you're looking for and I'll be in touch within one
+            Whether you're looking into this for yourself or for someone you love,
+            tell me a little about what you need and I'll be in touch within one
             working day.
           </p>
         </div>
@@ -87,6 +88,18 @@ export function Contact() {
               </FieldRow>
               <FieldRow label="Location" htmlFor="location" full>
                 <Input id="location" name="location" required placeholder="e.g. Darwen, BB3" />
+              </FieldRow>
+              <FieldRow label="Booking for" htmlFor="booking-for" full>
+                <Select name="booking-for">
+                  <SelectTrigger id="booking-for" className="rounded-none border-0 border-b border-foreground/25 bg-transparent px-0 shadow-none focus:ring-0">
+                    <SelectValue placeholder="Who is this for?" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="myself">Myself</SelectItem>
+                    <SelectItem value="family-member">A family member or loved one</SelectItem>
+                    <SelectItem value="care-home">Care home (B2B enquiry)</SelectItem>
+                  </SelectContent>
+                </Select>
               </FieldRow>
               <FieldRow label="Service of Interest" htmlFor="service" full>
                 <Select name="service">

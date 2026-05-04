@@ -55,7 +55,7 @@ export function ServiceAreas() {
             ref={intro}
             className="reveal-up delay-1 mt-6 text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl"
           >
-            Based in Blackburn with Darwen, I work with families throughout the
+            Based in Blackburn with Darwen, I work with clients and families throughout the
             following areas:
           </p>
         </div>
@@ -87,7 +87,7 @@ export function ServiceAreas() {
 
         <div className="mx-auto mt-20 max-w-3xl space-y-8 sm:mt-24">
           <p className="font-serif text-lg leading-relaxed text-foreground/85 sm:text-xl">
-            <span className="font-semibold text-[var(--primary)]">Looking for someone to take an elderly parent out in the Ribble Valley?</span>{" "}
+            <span className="font-semibold text-[var(--primary)]">Looking for a companion for outings in the Ribble Valley?</span>{" "}
             I plan unhurried afternoons in Whalley, Clitheroe, Longridge and the
             surrounding villages — tearooms, garden centres, gentle walks, favourite places.
           </p>
@@ -98,8 +98,8 @@ export function ServiceAreas() {
           </p>
           <p className="font-serif text-lg leading-relaxed text-foreground/85 sm:text-xl">
             <span className="font-semibold text-[var(--primary)]">Days out for older adults in Preston, Burnley, Accrington and Chorley</span>{" "}
-            — gardens, galleries, the coast, theatre matinees. Planned in advance
-            with you and your loved one.
+            — gardens, galleries, the coast, theatre matinees. Planned in advance,
+            whether you're booking for yourself or for someone you love.
           </p>
           <p className="font-serif text-lg leading-relaxed text-foreground/85 sm:text-xl">
             <span className="font-semibold text-[var(--primary)]">A familiar face for relatives in Lancashire care homes</span>{" "}

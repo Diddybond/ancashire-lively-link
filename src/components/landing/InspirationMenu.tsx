@@ -1,10 +1,4 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 
 const menu = [
   {
@@ -123,60 +117,61 @@ export function InspirationMenu() {
             ref={intro}
             className="reveal-up delay-2 mt-5 max-w-2xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl"
           >
-            Sometimes it&apos;s hard to know exactly what kind of support you need. Here are
-            just a few examples of how Sabrina can turn a standard visit into a wonderful
-            day.
+            Sometimes it&apos;s hard to know exactly what kind of support would help most —
+            whether you&apos;re thinking about this for yourself or for someone you love. Here are
+            just a few examples of how a visit with Sabrina can turn an ordinary day into a wonderful
+            one.
           </p>
         </div>
 
-        <div ref={list} className="reveal-up delay-2">
-          <Accordion type="single" collapsible defaultValue="item-0" className="w-full">
-            {menu.map((m, i) => (
-              <AccordionItem
-                key={m.title}
-                value={`item-${i}`}
-                className="border-b border-border/60 data-[state=open]:bg-[color-mix(in_oklab,var(--primary)_6%,transparent)] transition-colors"
-              >
-                <AccordionTrigger className="group px-2 py-6 hover:no-underline sm:px-6 sm:py-8">
-                  <div className="flex flex-1 items-baseline gap-4 text-left sm:gap-6">
-                    <span className="font-serif text-xl italic text-[var(--primary)] shrink-0 sm:text-2xl">
-                      {m.no}
+        <div ref={list} className="reveal-up delay-2 w-full">
+          {menu.map((m) => (
+            <div
+              key={m.title}
+              className="border-b border-border/60 bg-[color-mix(in_oklab,var(--primary)_6%,transparent)] transition-colors"
+            >
+              {/* Section header — static, no toggle */}
+              <div className="px-2 py-6 sm:px-6 sm:py-8">
+                <div className="flex flex-1 items-baseline gap-4 text-left sm:gap-6">
+                  <span className="font-serif text-xl italic text-[var(--primary)] shrink-0 sm:text-2xl">
+                    {m.no}
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-serif text-2xl font-medium leading-tight tracking-tight text-foreground sm:text-4xl">
+                      {m.title}
+                    </h3>
+                    <span className="mt-2 block text-[10px] font-semibold uppercase tracking-[0.24em] text-foreground/60 sm:text-xs">
+                      {m.subtitle}
                     </span>
-                    <div className="min-w-0 flex-1">
-                      <h3 className="font-serif text-2xl font-medium leading-tight tracking-tight text-foreground sm:text-4xl">
-                        {m.title}
-                      </h3>
-                      <span className="mt-2 block text-[10px] font-semibold uppercase tracking-[0.24em] text-foreground/60 sm:text-xs">
-                        {m.subtitle}
-                      </span>
-                    </div>
                   </div>
-                </AccordionTrigger>
-                <AccordionContent className="px-2 pb-8 sm:px-6 sm:pb-10">
-                  <ul className="ml-0 space-y-0 sm:ml-16">
-                    {m.items.map((item, idx) => (
-                      <li
-                        key={item.h}
-                        className="flex flex-col gap-2 border-t border-border/50 py-5 sm:flex-row sm:gap-8"
-                      >
-                        <div className="flex shrink-0 items-baseline gap-3 sm:w-64">
-                          <span className="text-foreground/40 text-sm">
-                            0{idx + 1}
-                          </span>
-                          <span className="text-xs font-semibold uppercase tracking-[0.24em] text-foreground/85">
-                            {item.h}
-                          </span>
-                        </div>
-                        <p className="text-base leading-relaxed text-foreground/80 sm:text-lg">
-                          {item.d}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                </div>
+              </div>
+
+              {/* Section content — always visible */}
+              <div className="px-2 pb-8 sm:px-6 sm:pb-10">
+                <ul className="ml-0 space-y-0 sm:ml-16">
+                  {m.items.map((item, idx) => (
+                    <li
+                      key={item.h}
+                      className="flex flex-col gap-2 border-t border-border/50 py-5 sm:flex-row sm:gap-8"
+                    >
+                      <div className="flex shrink-0 items-baseline gap-3 sm:w-64">
+                        <span className="text-foreground/40 text-sm">
+                          0{idx + 1}
+                        </span>
+                        <span className="text-xs font-semibold uppercase tracking-[0.24em] text-foreground/85">
+                          {item.h}
+                        </span>
+                      </div>
+                      <p className="text-base leading-relaxed text-foreground/80 sm:text-lg">
+                        {item.d}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -3,15 +3,15 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 const chapters = [
   {
     no: "One",
-    audience: "For families",
+    audience: "For you or your family",
     title: "Private Companionship at Home",
     price: "£35 / hour · two-hour minimum",
-    desc: "Non-agency, unhurried visits to your loved one's own home. One consistent professional. Weekly or fortnightly — conversation, hobbies, light home help, walks, appointment chaperoning, life-story work. The core ongoing service for families wanting to support a parent ageing at home.",
+    desc: "Non-agency, unhurried visits at home — yours, or your loved one's. One consistent professional. Weekly or fortnightly — conversation, hobbies, light home help, walks, appointment chaperoning, life-story work. The core ongoing service, whether you're looking for regular company yourself or supporting a parent ageing at home.",
     meta: ["One consistent professional", "Weekly or fortnightly", "£35/hr · 2-hour minimum"],
   },
   {
     no: "Two",
-    audience: "For families",
+    audience: "For you or your family",
     title: "Private Companion Visits in a Care Home",
     price: "£35 / hour · two-hour minimum",
     desc: "Hired by the family, not the care home. One-to-one enrichment time for your loved one inside their care home — on top of the home's own staff and group activities. A familiar, regular face who knows them, spends unhurried time with them, and brings the conversation, activities and small adventures their day might otherwise lack. Particularly valued by families whose parent is socially withdrawn, has recently moved into residential care, or simply isn't getting enough one-to-one attention.",
@@ -19,15 +19,15 @@ const chapters = [
   },
   {
     no: "Three",
-    audience: "For families",
+    audience: "For you or your family",
     title: "Enrichment Days Out",
     price: "£140 · A planned 4-hour afternoon",
-    desc: "A proper afternoon out, planned in advance with you and your loved one — somewhere they've always loved, or somewhere new they've been meaning to try. A garden, a gallery, a tearoom, a theatre matinee, the seaside. Lunch sorted, route sorted, pace sorted. Just a lovely day, from pickup to drop-off.\n\nOften booked as a gift — a birthday, Mother's Day, or simply because.",
+    desc: "A proper afternoon out, planned in advance — somewhere you've always loved, or somewhere new you've been meaning to try. A garden, a gallery, a tearoom, a theatre matinee, the seaside. Lunch sorted, route sorted, pace sorted. Just a lovely day, from pickup to drop-off.\n\nOften booked for yourself, or as a gift for a parent — a birthday, Mother's Day, or simply because.",
     meta: ["Planned with you, in advance", "Lovely as a gift", "£140 for the full afternoon"],
   },
   {
     no: "Four",
-    audience: "For families",
+    audience: "For you or your family",
     title: "Special Occasions & Evenings",
     price: "£40 / hour · two-hour minimum",
     desc: "Milestone birthdays, theatre nights, family weddings, evening events. A calm, capable companion to make sure the day runs smoothly and everyone is at ease.",
@@ -124,9 +124,8 @@ export function Services() {
             <span className="italic text-[var(--primary)]"> help.</span>
           </h2>
           <p className="reveal-up delay-2 mt-5 max-w-2xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
-            Independent, non-agency companionship care and lifestyle support — wherever
-            your loved one lives, at home or in a care home — shaped around what brings
-            them joy.
+            Independent, non-agency companionship care and lifestyle support — at home
+            or in a care home — shaped around what brings you or your loved one joy.
           </p>
         </div>
 

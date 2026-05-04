@@ -1,7 +1,3 @@
-import tearoom from "@/assets/journal/tearoom.jpg";
-import flowers from "@/assets/journal/flowers.jpg";
-import parkWalk from "@/assets/journal/park-walk.jpg";
-
 export type JournalPost = {
   /** ISO date — used for sorting and the displayed date label. */
   date: string;
@@ -23,30 +19,6 @@ export type JournalPost = {
  * Sabrina's Journal — newest first.
  * To add a new post, drop the image into `src/assets/journal/`,
  * import it above, and prepend an object to this array.
+ * When at least one post exists, the grid appears automatically.
  */
-export const journalPosts: JournalPost[] = [
-  {
-    date: "2026-04-29",
-    tag: "Ribble Valley",
-    caption:
-      "A gentle drive out to a favourite tearoom in Whalley — proper scones, a warm pot of tea, and a long chat about Margaret's garden.",
-    image: tearoom,
-    ratio: "portrait",
-  },
-  {
-    date: "2026-04-13",
-    tag: "At Home",
-    caption:
-      "Spring is here. We arranged a small posy from the garden for the kitchen window — sweet peas, daisies, and a few sprigs of sage.",
-    image: flowers,
-    ratio: "square",
-  },
-  {
-    date: "2026-03-30",
-    tag: "Out & About",
-    caption:
-      "A bright spring afternoon in the park. Slow loops around the bandstand, blossom underfoot, and a 99 from the kiosk.",
-    image: parkWalk,
-    ratio: "portrait",
-  },
-];
+export const journalPosts: JournalPost[] = [];

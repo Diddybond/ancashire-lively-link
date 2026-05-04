@@ -50,7 +50,8 @@ export function Hero() {
             >
               <span className="font-semibold italic">Hello, I&apos;m Sabrina.</span> I offer
               independent, non-agency companionship and lifestyle support for older adults —
-              at home or in a care home — helping the people you love stay engaged,
+              at home or in a care home. Whether you&apos;re looking for support for yourself
+              or arranging it for someone you love, I help people stay engaged,
               connected and well. Across Blackburn with Darwen, the Ribble Valley,
               Preston, Burnley and the surrounding area.
             </p>
@@ -75,7 +76,7 @@ export function Hero() {
             </div>
 
             <p className="mt-8 text-sm font-medium uppercase tracking-[0.24em] text-foreground/60">
-              Quietly attentive · Carefully considered
+              For you or for your family · Quietly attentive · Carefully considered
             </p>
           </div>
         </div>

@@ -50,19 +50,32 @@ export function Journal() {
             className="reveal-up delay-1 mt-6 text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl"
           >
             A quiet little record of the days out, kitchen-table moments, and small adventures
-            Sabrina shares with the people she looks after.
+            I share with the people I look after.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post, i) => (
-            <JournalCard key={`${post.date}-${i}`} post={post} index={i} />
-          ))}
-        </div>
-
-        <p className="mx-auto mt-16 max-w-2xl text-center text-base text-foreground/65">
-          Want to follow along? New journal entries are added as Sabrina shares them.
-        </p>
+        {posts.length > 0 ? (
+          <>
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              {posts.map((post, i) => (
+                <JournalCard key={`${post.date}-${i}`} post={post} index={i} />
+              ))}
+            </div>
+            <p className="mx-auto mt-16 max-w-2xl text-center text-base text-foreground/65">
+              New entries appear here as we go.
+            </p>
+          </>
+        ) : (
+          <div className="mx-auto max-w-2xl rounded-sm border border-border/60 bg-[color-mix(in_oklab,var(--primary)_4%,transparent)] px-8 py-14 text-center">
+            <p className="font-serif text-xl leading-relaxed text-foreground/80 sm:text-2xl">
+              Adventures incoming.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-foreground/60">
+              I'll be sharing days out, kitchen-table moments, and small adventures
+              from across Lancashire. Check back soon — entries will appear here as they happen.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );

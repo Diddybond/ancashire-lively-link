@@ -3,7 +3,7 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 const faqs = [
   {
     q: "What is companionship care?",
-    a: "Companionship care is a non-medical home support service for older adults who are largely independent but would benefit from regular company, engagement, and gentle help with daily life. It focuses on emotional and social wellbeing rather than personal or medical care — conversation, hobbies, outings, light home help, accompanying to appointments, and meaningful time together. It can be provided in someone's own home or, increasingly, inside the care home where their loved one lives.",
+    a: "Companionship care is a non-medical support service for older adults who are largely independent but would benefit from regular company, engagement, and gentle help with daily life. It focuses on emotional and social wellbeing rather than personal or medical care — conversation, hobbies, outings, light home help, accompanying to appointments, and meaningful time together. It can be provided in someone's own home or inside a care home. Many people arrange it for a parent, but it's just as common to book it directly for yourself.",
   },
   {
     q: "What's the difference between companionship care and personal care?",
@@ -11,11 +11,11 @@ const faqs = [
   },
   {
     q: "How much does companionship care cost in the UK?",
-    a: "Hourly rates for companionship care typically range from £20 to £35 per hour in the UK. As an independent, non-agency provider, my rate is £35 per hour with a two-hour minimum visit. Families pay only for my time and local travel — there are no agency markups, no admin fees, and no hidden extras.",
+    a: "Hourly rates for companionship care typically range from £20 to £35 per hour in the UK. As an independent, non-agency provider, my rate is £35 per hour with a two-hour minimum visit. You pay only for my time and local travel — there are no agency markups, no admin fees, and no hidden extras.",
   },
   {
     q: "How is an independent companion carer different from a care agency?",
-    a: "With a large agency, families often face a rotating roster of different staff on tight 15-minute schedules. As an independent companion, I'm one consistent professional — every visit, without exception. No corporate red tape, no rotating staff, no rushed visits. Just a genuine relationship built over time.",
+    a: "With a large agency, you often face a rotating roster of different staff on tight 15-minute schedules. As an independent companion, I'm one consistent professional — every visit, without exception. No corporate red tape, no rotating staff, no rushed visits. Just a genuine relationship built over time.",
   },
   {
     q: "Do I have to commit to a long-term contract?",
@@ -49,6 +49,10 @@ const faqs = [
     q: "How quickly can companionship visits start?",
     a: "Most new clients can have an initial free chat within 48 hours, a home visit within a week, and regular visits beginning the week after. Special occasions can be arranged at shorter notice. For care home visits, the first session is usually arranged in agreement with the home's manager.",
   },
+  {
+    q: "Can I book companionship visits for myself, rather than through a family member?",
+    a: "Absolutely. Many of my clients get in touch directly \u2014 they live independently, enjoy their own routine, and simply want regular company, a companion for outings, or someone to share a cup of tea and good conversation with. You don't need a family member to arrange anything. Just call or fill in the form and we'll have a chat about what you're looking for.",
+  },
 ];
 
 export function FAQ() {
@@ -75,7 +79,7 @@ export function FAQ() {
             <span className="block italic text-[var(--primary)]">questions.</span>
           </h2>
           <p className="mt-5 max-w-sm text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
-            What families most often ask before booking private companionship care with Sabrina.
+            What people most often ask before booking private companionship care with Sabrina.
           </p>
         </div>
 

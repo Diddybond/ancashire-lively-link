@@ -7,7 +7,7 @@ const tiers = [
     price: "£35",
     unit: "/ hour",
     minimum: "Two-hour minimum",
-    desc: "The core service. Conversation, company, hobbies, light home help, walks, appointment chaperoning, life-story work, gentle cognitive activity. Regular weekly or fortnightly visits to your loved one's own home.",
+    desc: "The core service. Conversation, company, hobbies, light home help, walks, appointment chaperoning, life-story work, gentle cognitive activity. Regular weekly or fortnightly visits at home \u2014 yours, or your loved one's.",
   },
   {
     no: "02",
@@ -15,7 +15,7 @@ const tiers = [
     price: "£35",
     unit: "/ hour",
     minimum: "Two-hour minimum · hired by family",
-    desc: "One-to-one enrichment time inside your loved one's care home — a familiar, regular face on top of the home's own staff and group activities.",
+    desc: "One-to-one enrichment time inside a care home — a familiar, regular face on top of the home's own staff and group activities.",
   },
   {
     no: "03",
@@ -23,7 +23,7 @@ const tiers = [
     price: "£140",
     unit: "/ 4 hours",
     minimum: "Flat planned outing",
-    desc: "A proper afternoon out, planned in advance with you and your loved one — gardens, galleries, tearooms, theatre matinees, favourite places. Lunch, route, and pace all sorted. Often booked as a gift.",
+    desc: "A proper afternoon out, planned in advance — gardens, galleries, tearooms, theatre matinees, favourite places. Lunch, route, and pace all sorted. Book for yourself, or as a gift for someone you love.",
   },
   {
     no: "04",

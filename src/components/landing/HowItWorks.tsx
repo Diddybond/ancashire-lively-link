@@ -4,12 +4,12 @@ const steps = [
   {
     no: "01",
     title: "A free, unhurried chat",
-    desc: "Phone or video, around 20 minutes, no obligation. We talk through what's happening at home and whether companionship care is the right fit.",
+    desc: "Phone or video, around 20 minutes, no obligation. We talk through what you're looking for and whether companionship care is the right fit.",
   },
   {
     no: "02",
-    title: "A meeting with your loved one",
-    desc: "At home or in their care home — I meet your loved one and any family present, get to know their interests and what would make their week better.",
+    title: "A meeting in person",
+    desc: "At home or in a care home — I meet you (or your loved one) and any family present, get to know your interests and what would make the week better.",
   },
   {
     no: "03",
@@ -49,8 +49,8 @@ export function HowItWorks() {
             <span className="italic text-[var(--primary)]"> ongoing visits.</span>
           </h2>
           <p className="reveal-up delay-2 mt-5 max-w-2xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
-            A calm, considered process — designed so the family always knows what's
-            happening and your loved one always knows what to expect.
+            A calm, considered process — designed so you (and your family, if involved)
+            always know what's happening and what to expect.
           </p>
         </div>
 
