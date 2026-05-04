@@ -6,7 +6,6 @@ const chapters = [
     title: "Private Companionship Visits",
     price: "£35 / hour · two-hour minimum",
     desc: "Non-agency, unhurried companionship from one consistent professional. Weekly or fortnightly visits — conversation, hobbies, light home help, walks, appointment chaperoning, life-story work. The core ongoing service.",
-    motif: "A cup of tea, a long chat",
     meta: ["One consistent professional", "Weekly or fortnightly", "£35/hr · 2-hour minimum"],
   },
   {
@@ -14,7 +13,6 @@ const chapters = [
     title: "Enrichment Days Out",
     price: "£140 flat · 4-hour planned outing",
     desc: "Pre-planned premium outings built around what each older person actually loves — gardens, galleries, tearooms, theatre matinees, the seaside, favourite places. A gift-bookable day, end to end.",
-    motif: "Gardens, galleries, the coast",
     meta: ["Planned around interests", "Gift-bookable", "£140 for 4 hours"],
   },
   {
@@ -22,7 +20,6 @@ const chapters = [
     title: "Special Occasions & Evenings",
     price: "£40 / hour · two-hour minimum",
     desc: "Milestone birthdays, theatre nights, family weddings, evening events. A calm, capable companion to make sure the day runs smoothly and everyone is at ease.",
-    motif: "Theatre nights, family weddings",
     meta: ["Evenings & weekends", "Theatre, weddings, events", "£40/hr · 2-hour minimum"],
   },
   {
@@ -30,7 +27,6 @@ const chapters = [
     title: "Care Home Lifestyle Programmes",
     price: "Day rates · by arrangement",
     desc: "Freelance lifestyle coordination contracts for care homes — bespoke activity programmes, event facilitation, and cover for activity coordinator absences. A B2B service for care home managers.",
-    motif: "Lifestyle programmes for care homes",
     meta: ["Activity programmes", "Event facilitation", "Coordinator cover"],
   },
 ];
@@ -40,75 +36,40 @@ function Chapter({
   title,
   price,
   desc,
-  motif,
   meta,
-  index,
 }: (typeof chapters)[number] & { index: number }) {
-  const reverse = index % 2 === 1;
-  const imgWrap = useScrollReveal<HTMLDivElement>();
   const text = useScrollReveal<HTMLDivElement>();
 
   return (
-    <article className="grid grid-cols-12 items-center gap-y-10 gap-x-0 overflow-hidden sm:gap-x-8 lg:gap-x-12">
-      <div
-        ref={imgWrap}
-        className={`reveal-up col-span-12 min-w-0 lg:col-span-7 ${
-          reverse ? "lg:order-2" : "lg:order-1"
-        }`}
-      >
-        <div
-          className={`relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,var(--background))] ${
-            reverse
-              ? "shadow-[-16px_16px_0_0_color-mix(in_oklab,var(--bronze)_18%,transparent)] sm:shadow-[-40px_40px_0_0_color-mix(in_oklab,var(--bronze)_18%,transparent)]"
-              : "shadow-[16px_16px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)] sm:shadow-[40px_40px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)]"
-          }`}
-        >
-          <div className="px-8 text-center">
-            <span className="block text-[10px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-              {no}
+    <article
+      ref={text}
+      className="reveal-up mx-auto grid max-w-3xl grid-cols-1 border-t border-foreground/15 pt-10 text-left sm:pt-14"
+    >
+      <span className="block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
+        {no}
+      </span>
+      <h3 className="mt-4 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl">
+        {title}
+      </h3>
+      <p className="mt-3 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--bronze)]">
+        {price}
+      </p>
+      <p className="mt-6 max-w-[60ch] text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl">
+        {desc}
+      </p>
+      <ul className="mt-8 space-y-0 sm:mt-10">
+        {meta.map((m, i) => (
+          <li
+            key={m}
+            className="flex items-center justify-between border-t border-border/60 py-4 text-[11px] font-medium uppercase tracking-eyebrow text-foreground/85"
+          >
+            <span>
+              <span className="mr-4 text-foreground/40">0{i + 1}</span>
+              {m}
             </span>
-            <p className="mt-4 font-serif text-2xl italic leading-snug text-foreground/70 sm:text-4xl">
-              {motif}
-            </p>
-            <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.28em] text-foreground/45">
-              Photography coming soon
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div
-        ref={text}
-        className={`reveal-up delay-1 col-span-12 min-w-0 lg:col-span-5 ${
-          reverse ? "lg:order-1 lg:col-start-1" : "lg:order-2 lg:col-start-8"
-        }`}
-      >
-        <span className="mb-4 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-          {no}
-        </span>
-        <h3 className="font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl">
-          {title}
-        </h3>
-        <p className="mt-3 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--bronze)]">
-          {price}
-        </p>
-        <p className="mt-6 max-w-[44ch] text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl">
-          {desc}
-        </p>
-        <ul className="mt-8 space-y-0 sm:mt-10">
-          {meta.map((m, i) => (
-            <li
-              key={m}
-              className="flex items-center justify-between border-t border-border/60 py-4 text-[11px] font-medium uppercase tracking-eyebrow text-foreground/85"
-            >
-              <span>
-                <span className="mr-4 text-foreground/40">0{i + 1}</span>
-                {m}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
+          </li>
+        ))}
+      </ul>
     </article>
   );
 }
@@ -143,7 +104,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="space-y-24 lg:space-y-48">
+        <div className="space-y-16 lg:space-y-24">
           {chapters.map((c, i) => (
             <Chapter key={c.title} index={i} {...c} />
           ))}
