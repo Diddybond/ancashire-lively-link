@@ -51,7 +51,7 @@ function Chapter({
   desc,
   meta,
   isB2B,
-}: (typeof chapters)[number] & { index: number }) {
+}: (typeof chapters)[number] & { index: number; isB2B: boolean }) {
   const text = useScrollReveal<HTMLDivElement>();
 
   return (
