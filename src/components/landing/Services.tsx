@@ -1,8 +1,4 @@
-import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
-import companionshipTea from "@/assets/companionship-tea.png";
-import outAndAbout from "@/assets/out-and-about.jpeg";
-import specialOccasions from "@/assets/special-occasions.png";
-import careHomeSupport from "@/assets/care-home-support.png";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const chapters = [
   {
@@ -10,7 +6,7 @@ const chapters = [
     title: "Private Companionship Visits",
     price: "£35 / hour · two-hour minimum",
     desc: "Non-agency, unhurried companionship from one consistent professional. Weekly or fortnightly visits — conversation, hobbies, light home help, walks, appointment chaperoning, life-story work. The core ongoing service.",
-    image: companionshipTea,
+    motif: "A cup of tea, a long chat",
     meta: ["One consistent professional", "Weekly or fortnightly", "£35/hr · 2-hour minimum"],
   },
   {
@@ -18,7 +14,7 @@ const chapters = [
     title: "Enrichment Days Out",
     price: "£140 flat · 4-hour planned outing",
     desc: "Pre-planned premium outings built around what each older person actually loves — gardens, galleries, tearooms, theatre matinees, the seaside, favourite places. A gift-bookable day, end to end.",
-    image: outAndAbout,
+    motif: "Gardens, galleries, the coast",
     meta: ["Planned around interests", "Gift-bookable", "£140 for 4 hours"],
   },
   {
@@ -26,7 +22,7 @@ const chapters = [
     title: "Special Occasions & Evenings",
     price: "£40 / hour · two-hour minimum",
     desc: "Milestone birthdays, theatre nights, family weddings, evening events. A calm, capable companion to make sure the day runs smoothly and everyone is at ease.",
-    image: specialOccasions,
+    motif: "Theatre nights, family weddings",
     meta: ["Evenings & weekends", "Theatre, weddings, events", "£40/hr · 2-hour minimum"],
   },
   {
@@ -34,7 +30,7 @@ const chapters = [
     title: "Care Home Lifestyle Programmes",
     price: "Day rates · by arrangement",
     desc: "Freelance lifestyle coordination contracts for care homes — bespoke activity programmes, event facilitation, and cover for activity coordinator absences. A B2B service for care home managers.",
-    image: careHomeSupport,
+    motif: "Lifestyle programmes for care homes",
     meta: ["Activity programmes", "Event facilitation", "Coordinator cover"],
   },
 ];
@@ -44,13 +40,12 @@ function Chapter({
   title,
   price,
   desc,
-  image,
+  motif,
   meta,
   index,
 }: (typeof chapters)[number] & { index: number }) {
   const reverse = index % 2 === 1;
   const imgWrap = useScrollReveal<HTMLDivElement>();
-  const imgInner = useParallax<HTMLImageElement>(0.05);
   const text = useScrollReveal<HTMLDivElement>();
 
   return (
@@ -62,19 +57,23 @@ function Chapter({
         }`}
       >
         <div
-          className={`relative aspect-[4/3] overflow-hidden bg-[var(--primary)]/10 ${
+          className={`relative flex aspect-[4/3] items-center justify-center overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,var(--background))] ${
             reverse
               ? "shadow-[-16px_16px_0_0_color-mix(in_oklab,var(--bronze)_18%,transparent)] sm:shadow-[-40px_40px_0_0_color-mix(in_oklab,var(--bronze)_18%,transparent)]"
               : "shadow-[16px_16px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)] sm:shadow-[40px_40px_0_0_color-mix(in_oklab,var(--primary)_15%,transparent)]"
           }`}
         >
-          <img
-            ref={imgInner}
-            src={image}
-            alt=""
-            loading="lazy"
-            className="h-[115%] w-full -translate-y-[7%] object-cover [filter:grayscale(15%)_contrast(1.02)] transition-transform duration-[1200ms] hover:scale-[1.03]"
-          />
+          <div className="px-8 text-center">
+            <span className="block text-[10px] font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
+              {no}
+            </span>
+            <p className="mt-4 font-serif text-2xl italic leading-snug text-foreground/70 sm:text-4xl">
+              {motif}
+            </p>
+            <p className="mt-6 text-[10px] font-semibold uppercase tracking-[0.28em] text-foreground/45">
+              Photography coming soon
+            </p>
+          </div>
         </div>
       </div>
 

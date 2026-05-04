@@ -1,4 +1,5 @@
 import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
+import sabrinaPhoto from "@/assets/sabrina.jpg";
 
 export function Hero() {
   const titleRef = useScrollReveal<HTMLHeadingElement>();
@@ -6,7 +7,7 @@ export function Hero() {
   const copyRef = useScrollReveal<HTMLParagraphElement>();
   const ctaRef = useScrollReveal<HTMLDivElement>();
   const imageWrapRef = useScrollReveal<HTMLDivElement>();
-  const imageInnerRef = useParallax<HTMLDivElement>(0.06);
+  const imageInnerRef = useParallax<HTMLImageElement>(0.06);
 
   return (
     <section
@@ -84,15 +85,14 @@ export function Hero() {
           ref={imageWrapRef}
           className="reveal-up delay-2 relative col-span-12 min-w-0 lg:col-span-5"
         >
-          <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,transparent)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.3)]">
-            <div ref={imageInnerRef} className="px-8 text-center">
-              <span className="block text-xs font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-                Photography
-              </span>
-              <p className="mt-4 font-serif text-2xl italic leading-snug text-foreground/70 sm:text-3xl">
-                A new portrait of Sabrina is on its way.
-              </p>
-            </div>
+          <div className="relative aspect-[4/5] overflow-hidden bg-[color-mix(in_oklab,var(--primary)_10%,transparent)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.3)]">
+            <img
+              ref={imageInnerRef}
+              src={sabrinaPhoto}
+              alt="Sabrina Myers — founder of Sabrina Myers Lifestyle & Companionship"
+              className="h-[112%] w-full -translate-y-[6%] object-cover object-top"
+              loading="eager"
+            />
           </div>
         </div>
       </div>
