@@ -7,37 +7,42 @@ import careHomeSupport from "@/assets/care-home-support.png";
 const chapters = [
   {
     no: "One",
-    title: "Friendly Companionship",
-    desc: "A good chat over a cuppa, shared hobbies, and a helping hand around the house. Time spent together, never watched on a clock.",
+    title: "Private Companionship Visits",
+    price: "£35 / hour · two-hour minimum",
+    desc: "Non-agency, unhurried companionship from one consistent professional. Weekly or fortnightly visits — conversation, hobbies, light home help, walks, appointment chaperoning, life-story work. The core ongoing service.",
     image: companionshipTea,
-    meta: ["Conversation & company", "Hobbies & light home help", "Reading & memory work"],
+    meta: ["One consistent professional", "Weekly or fortnightly", "£35/hr · 2-hour minimum"],
   },
   {
     no: "Two",
-    title: "Out & About",
-    desc: "Lifts to appointments and proper days out — the local park, a favourite tearoom, the shops or a Sunday gallery. The first 15 miles are always on the house.",
+    title: "Enrichment Days Out",
+    price: "£140 flat · 4-hour planned outing",
+    desc: "Pre-planned premium outings built around what each older person actually loves — gardens, galleries, tearooms, theatre matinees, the seaside, favourite places. A gift-bookable day, end to end.",
     image: outAndAbout,
-    meta: ["Appointment chaperone", "Daytime social outings", "15 free miles per visit"],
+    meta: ["Planned around interests", "Gift-bookable", "£140 for 4 hours"],
   },
   {
     no: "Three",
-    title: "Special Occasions",
-    desc: "An evening at the theatre, a late-night bingo win, a milestone birthday with the family. Flexible hours arranged around what matters to you.",
+    title: "Special Occasions & Evenings",
+    price: "£40 / hour · two-hour minimum",
+    desc: "Milestone birthdays, theatre nights, family weddings, evening events. A calm, capable companion to make sure the day runs smoothly and everyone is at ease.",
     image: specialOccasions,
-    meta: ["Evening events", "Theatre & bingo", "Family celebrations"],
+    meta: ["Evenings & weekends", "Theatre, weddings, events", "£40/hr · 2-hour minimum"],
   },
   {
     no: "Four",
-    title: "Care Home Support",
-    desc: "Freelance Activities Coordination for local care homes — bringing the same warm, person-centred approach to wider residential settings.",
+    title: "Care Home Lifestyle Programmes",
+    price: "Day rates · by arrangement",
+    desc: "Freelance lifestyle coordination contracts for care homes — bespoke activity programmes, event facilitation, and cover for activity coordinator absences. A B2B service for care home managers.",
     image: careHomeSupport,
-    meta: ["Lifestyle programmes", "Event facilitation", "Cover for absences"],
+    meta: ["Activity programmes", "Event facilitation", "Coordinator cover"],
   },
 ];
 
 function Chapter({
   no,
   title,
+  price,
   desc,
   image,
   meta,
@@ -85,6 +90,9 @@ function Chapter({
         <h3 className="font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl">
           {title}
         </h3>
+        <p className="mt-3 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--bronze)]">
+          {price}
+        </p>
         <p className="mt-6 max-w-[44ch] text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl">
           {desc}
         </p>
@@ -127,12 +135,12 @@ export function Services() {
             id="services-heading"
             className="reveal-up delay-1 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            How I can
+            Four ways I can
             <span className="italic text-[var(--primary)]"> help.</span>
           </h2>
-          <p className="reveal-up delay-2 mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
-            Four ways I support older adults and their families — non-medical, person-centred,
-            and shaped around what brings each person joy.
+          <p className="reveal-up delay-2 mt-5 max-w-2xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
+            Independent, non-agency companionship care and lifestyle support — shaped around
+            what brings each older person joy.
           </p>
         </div>
 
