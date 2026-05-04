@@ -64,7 +64,7 @@ export function About() {
               className="mt-5 max-w-[52ch] text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl"
             >
               My early career spanned 25 years in retail — a background that taught me the
-              value of genuine customer service and the simple pleasure of a really good
+              value of really listening to people, and the simple pleasure of a good
               chat. As my children grew older, I retrained as a lifestyle coordinator and
               now work as an independent companion to older adults across Lancashire.
             </p>

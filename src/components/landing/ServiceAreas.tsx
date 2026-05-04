@@ -48,15 +48,15 @@ export function ServiceAreas() {
             id="areas-heading"
             className="reveal-up font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            Supporting independence
-            <span className="block italic text-[var(--primary)]">across the county.</span>
+            Across
+            <span className="block italic text-[var(--primary)]">Lancashire.</span>
           </h2>
           <p
             ref={intro}
             className="reveal-up delay-1 mt-6 text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl"
           >
-            Based in Blackburn with Darwen, Sabrina provides her quietly attentive
-            companionship to families throughout the following areas:
+            Based in Blackburn with Darwen, I work with families throughout the
+            following areas:
           </p>
         </div>
 
@@ -81,8 +81,8 @@ export function ServiceAreas() {
         </div>
 
         <p className="mx-auto mt-16 max-w-2xl text-center text-base text-foreground/65">
-          Don&apos;t see your village? Sabrina happily travels across Lancashire — get in
-          touch and she&apos;ll let you know.
+          Don&apos;t see your village? I happily travel across Lancashire — get in
+          touch and I&apos;ll let you know.
         </p>
 
         <div className="mx-auto mt-20 max-w-3xl space-y-8 sm:mt-24">

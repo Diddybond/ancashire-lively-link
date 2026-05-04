@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "Are you insured and DBS checked?",
-    a: "Yes. I hold an enhanced DBS check, full public liability insurance, and professional indemnity cover. Documentation available on request. Documentation can be shared directly with a care home manager before a first visit if needed.",
+    a: "Yes. I hold an enhanced DBS check, full public liability insurance, and professional indemnity cover. Documentation is available on request, and can be shared directly with a care home manager before a first visit if needed.",
   },
   {
     q: "What areas of Lancashire do you cover?",
