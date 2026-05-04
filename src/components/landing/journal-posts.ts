@@ -26,7 +26,7 @@ export type JournalPost = {
  */
 export const journalPosts: JournalPost[] = [
   {
-    date: "2025-04-12",
+    date: "2026-04-29",
     tag: "Ribble Valley",
     caption:
       "A gentle drive out to a favourite tearoom in Whalley — proper scones, a warm pot of tea, and a long chat about Margaret's garden.",
@@ -34,7 +34,7 @@ export const journalPosts: JournalPost[] = [
     ratio: "portrait",
   },
   {
-    date: "2025-04-05",
+    date: "2026-04-13",
     tag: "At Home",
     caption:
       "Spring is here. We arranged a small posy from the garden for the kitchen window — sweet peas, daisies, and a few sprigs of sage.",
@@ -42,10 +42,10 @@ export const journalPosts: JournalPost[] = [
     ratio: "square",
   },
   {
-    date: "2025-03-28",
+    date: "2026-03-30",
     tag: "Out & About",
     caption:
-      "An autumn-light afternoon in the park. Slow loops around the bandstand, fallen leaves underfoot, and a 99 from the kiosk.",
+      "A bright spring afternoon in the park. Slow loops around the bandstand, blossom underfoot, and a 99 from the kiosk.",
     image: parkWalk,
     ratio: "portrait",
   },
