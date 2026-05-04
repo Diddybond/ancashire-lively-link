@@ -98,8 +98,8 @@ export function ServiceAreas() {
           </p>
           <p className="font-serif text-lg leading-relaxed text-foreground/85 sm:text-xl">
             <span className="font-semibold text-[var(--primary)]">Days out for older adults in Preston, Burnley, Accrington and Chorley</span>{" "}
-            — gardens, galleries, the coast, theatre matinees. Planned around what
-            each person actually loves.
+            — gardens, galleries, the coast, theatre matinees. Planned in advance
+            with you and your loved one.
           </p>
           <p className="font-serif text-lg leading-relaxed text-foreground/85 sm:text-xl">
             <span className="font-semibold text-[var(--primary)]">A familiar face for relatives in Lancashire care homes</span>{" "}

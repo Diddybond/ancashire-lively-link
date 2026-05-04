@@ -21,9 +21,9 @@ const chapters = [
     no: "Three",
     audience: "For families",
     title: "Enrichment Days Out",
-    price: "£140 flat · 4-hour planned outing",
-    desc: "Pre-planned premium outings built around what each older person actually loves — gardens, galleries, tearooms, theatre matinees, the seaside, favourite places. A gift-bookable day, end to end. Available for older adults at home, and (subject to the care home's policy) for residents who can leave the home for the day.",
-    meta: ["Planned around interests", "Gift-bookable", "£140 for 4 hours"],
+    price: "£140 · A planned 4-hour afternoon",
+    desc: "A proper afternoon out, planned in advance with you and your loved one — somewhere they've always loved, or somewhere new they've been meaning to try. A garden, a gallery, a tearoom, a theatre matinee, the seaside. Lunch sorted, route sorted, pace sorted. Just a lovely day, from pickup to drop-off.\n\nOften booked as a gift — a birthday, Mother's Day, or simply because.",
+    meta: ["Planned with you, in advance", "Lovely as a gift", "£140 for the full afternoon"],
   },
   {
     no: "Four",
@@ -77,9 +77,11 @@ function Chapter({
       <p className="mt-3 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--bronze)]">
         {price}
       </p>
-      <p className="mt-6 max-w-[60ch] text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl">
-        {desc}
-      </p>
+      <div className="mt-6 max-w-[60ch] space-y-4 text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl">
+        {desc.split("\n\n").map((para, i) => (
+          <p key={i}>{para}</p>
+        ))}
+      </div>
       <ul className="mt-8 space-y-0 sm:mt-10">
         {meta.map((m, i) => (
           <li
@@ -124,7 +126,7 @@ export function Services() {
           <p className="reveal-up delay-2 mt-5 max-w-2xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
             Independent, non-agency companionship care and lifestyle support — wherever
             your loved one lives, at home or in a care home — shaped around what brings
-            each older person joy.
+            them joy.
           </p>
         </div>
 

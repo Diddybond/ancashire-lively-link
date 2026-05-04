@@ -50,7 +50,7 @@ export function HowItWorks() {
           </h2>
           <p className="reveal-up delay-2 mt-5 max-w-2xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
             A calm, considered process — designed so the family always knows what's
-            happening and the older person always knows what to expect.
+            happening and your loved one always knows what to expect.
           </p>
         </div>
 
