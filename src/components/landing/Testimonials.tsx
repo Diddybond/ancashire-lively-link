@@ -1,47 +1,8 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
-const testimonials = [
-  {
-    quote:
-      "A genuine, considered approach that has made a real difference to our family. Sabrina is a quiet professional in every sense.",
-    name: "Family Member",
-    location: "Blackburn",
-  },
-  {
-    quote:
-      "The continuity is what we noticed first — the same kind face, every visit. Mum looks forward to her afternoons with Sabrina.",
-    name: "Daughter of Client",
-    location: "Darwen",
-  },
-  {
-    quote:
-      "Unhurried, warm, and endlessly patient. After years of agency rotations, this has been a revelation.",
-    name: "Family Member",
-    location: "Lancashire",
-  },
-  {
-    quote:
-      "Dad now has someone to share a proper conversation with. The outings to the park have brought him back to himself.",
-    name: "Son of Client",
-    location: "Accrington",
-  },
-  {
-    quote:
-      "Honest, dependable, and kind. Sabrina treats my mother as a person first, never a task on a schedule.",
-    name: "Family Member",
-    location: "Clitheroe",
-  },
-  {
-    quote:
-      "We engaged Sabrina for our care home's lifestyle programme. Residents and staff alike adore her.",
-    name: "Care Home Manager",
-    location: "Lancashire",
-  },
-];
-
 export function Testimonials() {
   const heading = useScrollReveal<HTMLHeadingElement>();
-  const rule = useScrollReveal<HTMLDivElement>();
+  const card = useScrollReveal<HTMLDivElement>();
 
   return (
     <section
@@ -49,70 +10,35 @@ export function Testimonials() {
       aria-labelledby="testimonials-heading"
       className="scroll-mt-24 py-32 lg:py-48"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
-        <div className="mb-16 flex flex-col items-center text-center sm:mb-24">
-          <div ref={rule} className="reveal-up mb-10 h-24 w-px bg-[var(--primary)]/40" />
-          <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-            In Their Own Words
+      <div className="mx-auto max-w-3xl px-4 sm:px-8 lg:px-12">
+        <div
+          ref={card}
+          className="reveal-up flex flex-col items-center border border-[color-mix(in_oklab,var(--primary)_22%,transparent)] bg-[color-mix(in_oklab,var(--primary)_5%,transparent)] px-6 py-14 text-center sm:px-12 sm:py-20"
+        >
+          <span className="mb-6 block text-xs font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
+            Coming Soon
           </span>
           <h2
             ref={heading}
             id="testimonials-heading"
-            className="reveal-up delay-1 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
+            className="font-serif text-3xl font-medium leading-tight tracking-tight text-foreground sm:text-5xl"
           >
-            Kind <span className="italic text-[var(--primary)]">words.</span>
+            Stay tuned for
+            <span className="italic text-[var(--primary)]"> our journal.</span>
           </h2>
-          <p className="reveal-up delay-2 mt-5 max-w-xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
-            A growing collection of words from the families and care homes Sabrina has had the
-            pleasure of working with.
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">
+            A growing record of the days out, kitchen-table moments, and small adventures
+            Sabrina shares with the people she looks after. New entries appear here as
+            Sabrina shares them — pop back to follow along.
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-x-12 sm:gap-y-16 lg:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <TestimonialCard key={i} index={i} {...t} />
-          ))}
+          <a
+            href="#journal"
+            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.24em] text-[var(--primary)] transition-colors hover:text-[var(--bronze)]"
+          >
+            Read the journal <span aria-hidden>→</span>
+          </a>
         </div>
       </div>
     </section>
-  );
-}
-
-function TestimonialCard({
-  quote,
-  name,
-  location,
-  index,
-}: {
-  quote: string;
-  name: string;
-  location: string;
-  index: number;
-}) {
-  const ref = useScrollReveal<HTMLDivElement>();
-  const delayClass = `delay-${(index % 4) + 1}` as const;
-
-  return (
-    <figure
-      ref={ref}
-      className={`reveal-up ${delayClass} flex flex-col border-t border-foreground/15 pt-8`}
-    >
-      <span
-        aria-hidden
-        className="mb-4 font-serif text-6xl leading-none text-[var(--primary)]/70"
-      >
-        &ldquo;
-      </span>
-      <blockquote className="font-serif text-xl font-medium leading-snug text-foreground/85 sm:text-2xl">
-        {quote}
-      </blockquote>
-      <figcaption className="mt-8 flex items-baseline justify-between text-xs font-semibold uppercase tracking-[0.24em] text-foreground/60">
-        <span>{name}</span>
-        <span className="text-[var(--primary)]">{location}</span>
-      </figcaption>
-      <p className="mt-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-foreground/40">
-        Placeholder · 0{index + 1}
-      </p>
-    </figure>
   );
 }
