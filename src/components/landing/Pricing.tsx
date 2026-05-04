@@ -3,14 +3,22 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 const tiers = [
   {
     no: "01",
-    name: "Companionship Visits",
+    name: "Companionship at Home",
     price: "£35",
     unit: "/ hour",
     minimum: "Two-hour minimum",
-    desc: "The core service. Conversation, company, hobbies, light home help, walks, appointment chaperoning, life-story work, gentle cognitive activity. Regular weekly or fortnightly visits, or one-off bookings.",
+    desc: "The core service. Conversation, company, hobbies, light home help, walks, appointment chaperoning, life-story work, gentle cognitive activity. Regular weekly or fortnightly visits to your loved one's own home.",
   },
   {
     no: "02",
+    name: "Companion Visits in a Care Home",
+    price: "£35",
+    unit: "/ hour",
+    minimum: "Two-hour minimum · hired by family",
+    desc: "One-to-one enrichment time inside your loved one's care home — a familiar, regular face on top of the home's own staff and group activities.",
+  },
+  {
+    no: "03",
     name: "Enrichment Days",
     price: "£140",
     unit: "/ 4 hours",
@@ -18,7 +26,7 @@ const tiers = [
     desc: "Pre-planned outings built around the older person's interests — a gallery, a garden, a tearoom, a theatre matinee, a favourite place. A premium product families often gift to a parent.",
   },
   {
-    no: "03",
+    no: "04",
     name: "Special Occasions",
     price: "£40",
     unit: "/ hour",
@@ -26,11 +34,11 @@ const tiers = [
     desc: "Evening events, theatre, late-night bingo, weddings, family celebrations. Flexible hours, arranged around what matters to you.",
   },
   {
-    no: "04",
+    no: "05",
     name: "Care Home Lifestyle Programmes",
     price: "POA",
     unit: "day rates",
-    minimum: "By arrangement",
+    minimum: "B2B · for care home managers",
     desc: "Freelance lifestyle coordination for care homes — bespoke activity programmes, event facilitation, and cover for activity coordinator absences. A B2B service for care home managers.",
   },
 ];

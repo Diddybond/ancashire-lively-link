@@ -3,51 +3,74 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 const chapters = [
   {
     no: "One",
-    title: "Private Companionship Visits",
+    audience: "For families",
+    title: "Private Companionship at Home",
     price: "£35 / hour · two-hour minimum",
-    desc: "Non-agency, unhurried companionship from one consistent professional. Weekly or fortnightly visits — conversation, hobbies, light home help, walks, appointment chaperoning, life-story work. The core ongoing service.",
+    desc: "Non-agency, unhurried visits to your loved one's own home. One consistent professional. Weekly or fortnightly — conversation, hobbies, light home help, walks, appointment chaperoning, life-story work. The core ongoing service for families wanting to support a parent ageing at home.",
     meta: ["One consistent professional", "Weekly or fortnightly", "£35/hr · 2-hour minimum"],
   },
   {
     no: "Two",
-    title: "Enrichment Days Out",
-    price: "£140 flat · 4-hour planned outing",
-    desc: "Pre-planned premium outings built around what each older person actually loves — gardens, galleries, tearooms, theatre matinees, the seaside, favourite places. A gift-bookable day, end to end.",
-    meta: ["Planned around interests", "Gift-bookable", "£140 for 4 hours"],
+    audience: "For families",
+    title: "Private Companion Visits in a Care Home",
+    price: "£35 / hour · two-hour minimum",
+    desc: "Hired by the family, not the care home. One-to-one enrichment time for your loved one inside their care home — on top of the home's own staff and group activities. A familiar, regular face who knows them, spends unhurried time with them, and brings the conversation, activities and small adventures their day might otherwise lack. Particularly valued by families whose parent is socially withdrawn, has recently moved into residential care, or simply isn't getting enough one-to-one attention.",
+    meta: ["One-to-one inside the home", "Familiar, regular face", "Hired by the family"],
   },
   {
     no: "Three",
+    audience: "For families",
+    title: "Enrichment Days Out",
+    price: "£140 flat · 4-hour planned outing",
+    desc: "Pre-planned premium outings built around what each older person actually loves — gardens, galleries, tearooms, theatre matinees, the seaside, favourite places. A gift-bookable day, end to end. Available for older adults at home, and (subject to the care home's policy) for residents who can leave the home for the day.",
+    meta: ["Planned around interests", "Gift-bookable", "£140 for 4 hours"],
+  },
+  {
+    no: "Four",
+    audience: "For families",
     title: "Special Occasions & Evenings",
     price: "£40 / hour · two-hour minimum",
     desc: "Milestone birthdays, theatre nights, family weddings, evening events. A calm, capable companion to make sure the day runs smoothly and everyone is at ease.",
     meta: ["Evenings & weekends", "Theatre, weddings, events", "£40/hr · 2-hour minimum"],
   },
   {
-    no: "Four",
+    no: "Five",
+    audience: "For care home managers",
     title: "Care Home Lifestyle Programmes",
     price: "Day rates · by arrangement",
-    desc: "Freelance lifestyle coordination contracts for care homes — bespoke activity programmes, event facilitation, and cover for activity coordinator absences. A B2B service for care home managers.",
+    desc: "Direct freelance contracts with care home managers — bespoke activity programmes, event facilitation, and cover for activity coordinator absences. This is a separate B2B service for care homes themselves, not for families.",
     meta: ["Activity programmes", "Event facilitation", "Coordinator cover"],
   },
 ];
 
 function Chapter({
   no,
+  audience,
   title,
   price,
   desc,
   meta,
-}: (typeof chapters)[number] & { index: number }) {
+  isB2B,
+}: (typeof chapters)[number] & { index: number; isB2B: boolean }) {
   const text = useScrollReveal<HTMLDivElement>();
 
   return (
     <article
       ref={text}
-      className="reveal-up mx-auto grid max-w-3xl grid-cols-1 border-t border-foreground/15 pt-10 text-left sm:pt-14"
+      className={`reveal-up mx-auto grid max-w-3xl grid-cols-1 border-t pt-10 text-left sm:pt-14 ${
+        isB2B
+          ? "border-[var(--bronze)]/40"
+          : "border-foreground/15"
+      }`}
     >
-      <span className="block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-        {no}
-      </span>
+      <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+        <span className={`block text-sm font-semibold uppercase tracking-[0.28em] ${isB2B ? "text-[var(--bronze)]" : "text-[var(--primary)]"}`}>
+          {no}
+        </span>
+        <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-foreground/55">
+          {audience}
+        </span>
+      </div>
       <h3 className="mt-4 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl">
         {title}
       </h3>
@@ -95,18 +118,33 @@ export function Services() {
             id="services-heading"
             className="reveal-up delay-1 font-serif text-4xl font-medium leading-[1.05] tracking-tight text-foreground sm:text-6xl"
           >
-            Four ways I can
+            Five ways I can
             <span className="italic text-[var(--primary)]"> help.</span>
           </h2>
           <p className="reveal-up delay-2 mt-5 max-w-2xl text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
-            Independent, non-agency companionship care and lifestyle support — shaped around
-            what brings each older person joy.
+            Independent, non-agency companionship care and lifestyle support — wherever
+            your loved one lives, at home or in a care home — shaped around what brings
+            each older person joy.
           </p>
         </div>
 
         <div className="space-y-16 lg:space-y-24">
-          {chapters.map((c, i) => (
-            <Chapter key={c.title} index={i} {...c} />
+          {chapters.slice(0, 4).map((c, i) => (
+            <Chapter key={c.title} index={i} {...c} isB2B={false} />
+          ))}
+
+          <div className="mx-auto max-w-3xl pt-8">
+            <div className="flex items-center gap-4">
+              <span className="h-px flex-1 bg-[var(--bronze)]/30" />
+              <span className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[var(--bronze)]">
+                For care home managers · B2B
+              </span>
+              <span className="h-px flex-1 bg-[var(--bronze)]/30" />
+            </div>
+          </div>
+
+          {chapters.slice(4).map((c, i) => (
+            <Chapter key={c.title} index={i + 4} {...c} isB2B={true} />
           ))}
         </div>
       </div>

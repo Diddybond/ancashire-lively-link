@@ -101,6 +101,11 @@ export function ServiceAreas() {
             — gardens, galleries, the coast, theatre matinees. Planned around what
             each person actually loves.
           </p>
+          <p className="font-serif text-lg leading-relaxed text-foreground/85 sm:text-xl">
+            <span className="font-semibold text-[var(--primary)]">A familiar face for relatives in Lancashire care homes</span>{" "}
+            — privately-hired one-to-one companionship for residents whose families want
+            them to have more than the home's group activities can offer.
+          </p>
         </div>
       </div>
     </section>

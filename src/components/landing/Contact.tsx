@@ -94,7 +94,8 @@ export function Contact() {
                     <SelectValue placeholder="Choose a service" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="companionship">Private Companionship Visits (£35/hr)</SelectItem>
+                    <SelectItem value="companionship-home">Companionship at Home (£35/hr)</SelectItem>
+                    <SelectItem value="companionship-care-home">Visits in a Care Home (£35/hr)</SelectItem>
                     <SelectItem value="enrichment">Enrichment Days Out (£140 / 4 hrs)</SelectItem>
                     <SelectItem value="special-events">Special Occasions & Evenings (£40/hr)</SelectItem>
                     <SelectItem value="care-home-support">Care Home Lifestyle Programmes</SelectItem>
