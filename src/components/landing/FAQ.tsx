@@ -1,39 +1,49 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const faqs = [
   {
-    q: "What is the difference between companionship and personal care?",
-    a: "We focus entirely on enriching daily life through social support, hobbies, home help, and outings. We do not provide hands-on clinical care (such as bathing, toileting, or administering medication), which means we can focus 100% on lifestyle and wellbeing.",
+    q: "What is companionship care?",
+    a: "Companionship care is a non-medical home support service for older adults who are largely independent but would benefit from regular company, engagement, and gentle help with daily life. It focuses on emotional and social wellbeing rather than personal or medical care — conversation, hobbies, outings, light home help, accompanying to appointments, and meaningful time together.",
+  },
+  {
+    q: "What's the difference between companionship care and personal care?",
+    a: "Personal care is a regulated activity covering tasks like bathing, dressing, toileting and administering medication — provided by CQC-registered agencies. Companionship care is non-medical and focuses on engagement, social connection and quality of life. As an independent companion, I provide companionship care only. Where needs cross into personal care, I'm always happy to recommend a trusted CQC-registered provider.",
+  },
+  {
+    q: "How much does companionship care cost in the UK?",
+    a: "Hourly rates for companionship care typically range from £20 to £35 per hour in the UK. As an independent, non-agency provider, my rate is £35 per hour with a two-hour minimum visit. Families pay only for my time and local travel — there are no agency markups, no admin fees, and no hidden extras.",
+  },
+  {
+    q: "How is an independent companion carer different from a care agency?",
+    a: "With a large agency, families often face a rotating roster of different staff on tight 15-minute schedules. As an independent companion, I'm one consistent professional — every visit, without exception. No corporate red tape, no rotating staff, no rushed visits. Just a genuine relationship built over time.",
   },
   {
     q: "Do I have to commit to a long-term contract?",
-    a: "Not at all. We are completely flexible. Whether you need a regular weekly schedule or just ad-hoc cover for special events and respite, our only requirement is a minimum visit time of 2 hours.",
+    a: "No. There are no contracts and no minimum commitments beyond a two-hour minimum visit length. Most families book regular weekly or fortnightly visits because consistency is part of the value, but you're free to stop or change at any time.",
   },
   {
-    q: "Can you take my parent to appointments or out shopping?",
-    a: "Absolutely. Getting out and about is our specialty. Sabrina is fully insured for business travel. We include 15 miles completely free with every visit; further afield is charged at a standard 45p per mile.",
+    q: "Can you take my elderly parent out for the day?",
+    a: "Yes. Days out are one of the things families value most. I plan outings around the older person's interests — gardens, galleries, tearooms, favourite walks, theatre matinees, the seaside. The first 15 miles of travel from Blackburn are included free; further mileage is 45p per mile. My Enrichment Days package is a flat £140 for a planned 4-hour outing.",
   },
   {
     q: "Who pays for tickets, meals, or activities during an outing?",
-    a: "Our £25 hourly rate covers Sabrina's time and all travel/mileage. Out-of-pocket expenses during the visit — theatre tickets, café bills, admission fees for both client and Sabrina — are covered by the client.",
+    a: "The client covers out-of-pocket costs during outings — tickets, café bills, entry fees — for both themselves and for me. These are agreed in advance.",
   },
   {
-    q: "Are you insured and background checked?",
-    a: "Yes. Sabrina holds an Enhanced DBS check and the business carries full public liability insurance for complete peace of mind.",
+    q: "Are you insured and DBS checked?",
+    a: "Yes. I hold an enhanced DBS check, full public liability insurance, and professional indemnity cover. Documentation available on request.",
   },
   {
-    q: "What exact areas do you cover?",
-    a: "Proudly based in Blackburn with Darwen and serving the wider Lancashire area. If you are unsure whether we cover your specific village, please simply get in touch.",
+    q: "What areas of Lancashire do you cover?",
+    a: "Blackburn with Darwen, the Ribble Valley (Clitheroe, Whalley, Longridge), Hyndburn (Accrington, Oswaldtwistle), Burnley, Preston, South Ribble, Chorley and Rossendale. The first 15 miles of travel from Blackburn are included free in every visit; further afield is 45p per mile.",
   },
   {
     q: "Do you work with local care homes?",
-    a: "Yes — freelance Activities Coordination support for events, lifestyle sessions, or cover for staff absences.",
+    a: "Yes. As a qualified lifestyle coordinator, I take freelance contracts with local care homes — running bespoke activity programmes, facilitating events, and covering activity coordinator absences. Care home managers can contact me directly to discuss day rates.",
+  },
+  {
+    q: "How quickly can companionship visits start?",
+    a: "Most new clients can have an initial free chat within 48 hours, a home visit within a week, and regular visits beginning the week after. Special occasions can be arranged at shorter notice.",
   },
 ];
 
@@ -50,7 +60,7 @@ export function FAQ() {
       <div className="mx-auto grid max-w-7xl grid-cols-12 gap-8 px-4 sm:gap-12 sm:px-8 lg:px-12">
         <div className="col-span-12 min-w-0 lg:col-span-4 lg:sticky lg:top-32 lg:self-start">
           <span className="mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]">
-            FAQs
+            Companionship Care FAQs
           </span>
           <h2
             ref={heading}
@@ -61,32 +71,28 @@ export function FAQ() {
             <span className="block italic text-[var(--primary)]">questions.</span>
           </h2>
           <p className="mt-5 max-w-sm text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
-            The things clients and families most often ask before booking Sabrina.
+            What families most often ask before booking private companionship care with Sabrina.
           </p>
         </div>
 
         <div ref={list} className="reveal-up col-span-12 min-w-0 lg:col-span-7 lg:col-start-6">
-          <Accordion type="single" collapsible className="w-full">
+          <dl className="w-full">
             {faqs.map((f, i) => (
-              <AccordionItem
-                key={f.q}
-                value={`item-${i}`}
-                className="border-b border-foreground/15"
-              >
-                <AccordionTrigger className="py-5 text-left font-serif text-lg font-medium text-foreground hover:no-underline sm:py-6 sm:text-2xl">
-                  <span className="grid min-w-0 w-full grid-cols-[auto_1fr] items-start gap-3 sm:gap-6">
-                    <span className="pt-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--primary)] sm:text-xs">
-                      0{i + 1}
-                    </span>
-                    <span className="min-w-0 break-words">{f.q}</span>
+              <div key={f.q} className="border-b border-foreground/15 py-6 sm:py-8">
+                <dt className="grid min-w-0 w-full grid-cols-[auto_1fr] items-start gap-3 sm:gap-6">
+                  <span className="pt-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-[var(--primary)] sm:text-xs">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
-                </AccordionTrigger>
-                <AccordionContent className="pb-6 pl-6 text-base leading-relaxed text-foreground/80 sm:pb-8 sm:pl-14 sm:text-lg">
+                  <h3 className="min-w-0 break-words font-serif text-lg font-medium text-foreground sm:text-2xl">
+                    {f.q}
+                  </h3>
+                </dt>
+                <dd className="mt-3 pl-0 text-base leading-relaxed text-foreground/80 sm:pl-14 sm:text-lg">
                   {f.a}
-                </AccordionContent>
-              </AccordionItem>
+                </dd>
+              </div>
             ))}
-          </Accordion>
+          </dl>
         </div>
       </div>
     </section>

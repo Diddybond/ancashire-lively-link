@@ -33,15 +33,15 @@ export function Hero() {
               ref={eyebrowRef}
               className="reveal-up mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]"
             >
-              Companionship &amp; Lifestyle Support
+              Private Companionship Care &amp; Lifestyle Support
             </span>
 
             <h1
               ref={titleRef}
               className="reveal-up delay-1 font-serif text-[clamp(2rem,5.5vw,4.75rem)] font-medium leading-[1.05] tracking-tight text-foreground"
             >
-              Quietly attentive care,
-              <span className="block text-[var(--primary)]">delivered personally.</span>
+              Private companionship and lifestyle support
+              <span className="block text-[var(--primary)]">across Lancashire.</span>
             </h1>
 
             <p
@@ -49,9 +49,10 @@ export function Hero() {
               className="reveal-up delay-2 mt-6 max-w-[52ch] text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl"
             >
               <span className="font-semibold italic">Hello, I&apos;m Sabrina.</span> I offer
-              private companionship and lifestyle support across Blackburn, Darwen, the
-              Ribble Valley, and wider Lancashire — helping you, or someone you love,
-              live well, comfortably, and independently at home.
+              independent, non-agency companionship and lifestyle support for older adults —
+              helping the people you love stay engaged, connected and well at home and out
+              in the world. Across Blackburn with Darwen, the Ribble Valley, Preston,
+              Burnley and the surrounding area.
             </p>
 
             <div

@@ -63,15 +63,17 @@ export function About() {
               ref={p2}
               className="mt-5 max-w-[52ch] text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl"
             >
-              My early career spanned 25 years in retail — a background that taught me the value
-              of genuine customer service and the simple pleasure of a really good chat. As my
-              children grew older, I realised my true calling was lifestyle coordination and care.
+              My early career spanned 25 years in retail — a background that taught me the
+              value of genuine customer service and the simple pleasure of a really good
+              chat. As my children grew older, I retrained as a lifestyle coordinator and
+              now work as an independent companion to older adults across Lancashire.
             </p>
             <p className="mt-5 max-w-[52ch] text-base leading-relaxed text-foreground/80 sm:mt-6 sm:text-xl">
-              I've always worked independently of agencies, and I always will. It's the only way
-              to maintain the unhurried, premium standard of companionship I believe every older
-              adult deserves. When you book with me, you get my dedicated time and a genuine
-              relationship — never a rota, never a stranger, every single visit.
+              I work independently of any agency, and I always will. It's the only way to
+              maintain the unhurried, person-centred standard of companionship care I
+              believe every older adult deserves. When you book with me, you get my
+              dedicated time and a genuine relationship — never a rota, never a stranger,
+              every single visit.
             </p>
 
             <div ref={sig} className="reveal-up delay-4 mt-10 flex flex-wrap items-center gap-6">

@@ -8,12 +8,13 @@ export function Footer() {
             <div className="font-serif text-3xl leading-tight sm:text-5xl">
               Sabrina Myers
               <span className="block font-serif text-xl italic font-normal tracking-wide opacity-80 sm:text-3xl">
-                Lifestyle &amp; Companionship
+                Companionship &amp; Lifestyle Support
               </span>
             </div>
             <p className="mt-5 max-w-sm text-base leading-relaxed opacity-80 sm:mt-6">
-              Friendly, independent companionship and lifestyle support for older adults
-              across Blackburn with Darwen and the wider Lancashire area.
+              Independent, non-agency companionship care and lifestyle support for older
+              adults across Blackburn with Darwen, the Ribble Valley, Preston, Burnley
+              and wider Lancashire.
             </p>
           </div>
 
@@ -55,8 +56,10 @@ export function Footer() {
         </div>
 
         <p className="mt-8 max-w-4xl text-sm leading-relaxed text-white/55">
-          Private senior companionship and non-medical home help in Blackburn, Darwen,
-          Clitheroe, Accrington, Burnley, Preston, and Chorley.
+          Private companionship care, independent companion carer, and non-medical
+          lifestyle support for older adults in Blackburn with Darwen, Clitheroe, Whalley,
+          Longridge, Accrington, Oswaldtwistle, Burnley, Preston, Chorley and the wider
+          Ribble Valley.
         </p>
       </div>
     </footer>
