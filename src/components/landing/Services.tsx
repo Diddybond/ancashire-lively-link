@@ -77,9 +77,11 @@ function Chapter({
       <p className="mt-3 text-xs font-semibold uppercase tracking-[0.24em] text-[var(--bronze)]">
         {price}
       </p>
-      <p className="mt-6 max-w-[60ch] text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl">
-        {desc}
-      </p>
+      <div className="mt-6 max-w-[60ch] space-y-4 text-base leading-relaxed text-foreground/80 sm:mt-8 sm:text-xl">
+        {desc.split("\n\n").map((para, i) => (
+          <p key={i}>{para}</p>
+        ))}
+      </div>
       <ul className="mt-8 space-y-0 sm:mt-10">
         {meta.map((m, i) => (
           <li
