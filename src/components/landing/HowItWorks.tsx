@@ -8,8 +8,8 @@ const steps = [
   },
   {
     no: "02",
-    title: "A home visit",
-    desc: "I come to meet the older person — and any family present. I get to know their interests, routines, and what would genuinely make their week better.",
+    title: "A meeting with your loved one",
+    desc: "At home or in their care home — I meet your loved one and any family present, get to know their interests and what would make their week better.",
   },
   {
     no: "03",
