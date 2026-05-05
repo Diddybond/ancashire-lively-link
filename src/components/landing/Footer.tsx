@@ -1,3 +1,6 @@
+import { Link } from "@tanstack/react-router";
+import { LogoMark } from "@/components/Logo";
+
 export function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -5,6 +8,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-24 sm:px-8 sm:py-32 lg:px-12">
         <div className="grid grid-cols-12 gap-y-12 gap-x-6 border-b border-white/10 pb-16 sm:gap-x-8 sm:pb-20 lg:gap-x-12">
           <div className="col-span-12 min-w-0 lg:col-span-5">
+            <LogoMark height={64} className="mb-6" />
             <div className="font-serif text-3xl leading-tight sm:text-5xl">
               Sabrina Myers
               <span className="block font-serif text-xl italic font-normal tracking-wide opacity-80 sm:text-3xl">
@@ -50,8 +54,8 @@ export function Footer() {
         <div className="flex flex-col items-start justify-between gap-6 pt-10 text-xs font-semibold uppercase tracking-[0.24em] opacity-60 sm:flex-row sm:items-center">
           <p>© {year} Sabrina Myers Lifestyle &amp; Companionship · All Rights Reserved</p>
           <div className="flex gap-8">
-            <a href="#privacy" className="hover:opacity-100">Privacy</a>
-            <a href="#" className="hover:opacity-100">Terms</a>
+            <Link to="/privacy" className="hover:opacity-100">Privacy</Link>
+            <Link to="/terms" className="hover:opacity-100">Terms</Link>
           </div>
         </div>
       </div>
