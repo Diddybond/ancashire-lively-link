@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 308" fill="none" role="img" aria-label="Sabrina Myers — Companionship Care, Lancashire">
+  <!-- ── BOTANICAL ELEMENT ─────────────────────────────── -->
+
+  <!-- Top diamond in bronze -->
+  <path d="M 140,11 L 146,17.5 L 140,24 L 134,17.5 Z" fill="#c4944f" opacity="0.9"/>
+
+  <!-- Short connecting stem -->
+  <line x1="140" y1="24" x2="140" y2="42" stroke="#4a7a52" stroke-width="0.75" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- Small opposing leaves on stem -->
+  <g transform="translate(133,36) rotate(-32)">
+    <path d="M 0,0 C -2,-2.5 -2,-5.5 0,-7.5 C 2,-5.5 2,-2.5 0,0 Z" fill="#4a7a52" opacity="0.6"/>
+  </g>
+  <g transform="translate(147,36) rotate(32)">
+    <path d="M 0,0 C -2,-2.5 -2,-5.5 0,-7.5 C 2,-5.5 2,-2.5 0,0 Z" fill="#4a7a52" opacity="0.6"/>
+  </g>
+
+  <!-- Left main branch -->
+  <path d="M 138,70 C 116,56 90,41 72,26" stroke="#4a7a52" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <g transform="translate(121,59) rotate(-46)">
+    <path d="M 0,0 C -2.8,-3.2 -2.8,-7 0,-10.5 C 2.8,-7 2.8,-3.2 0,0 Z" fill="#4a7a52" opacity="0.72"/>
+  </g>
+  <g transform="translate(104,48) rotate(-58)">
+    <path d="M 0,0 C -2.8,-3.2 -2.8,-7 0,-10.5 C 2.8,-7 2.8,-3.2 0,0 Z" fill="#4a7a52" opacity="0.80"/>
+  </g>
+  <g transform="translate(87,37) rotate(-67)">
+    <path d="M 0,0 C -2.8,-3.2 -2.8,-7 0,-10.5 C 2.8,-7 2.8,-3.2 0,0 Z" fill="#4a7a52" opacity="0.75"/>
+  </g>
+  <g transform="translate(75,28) rotate(-75)">
+    <path d="M 0,0 C -3,-3.5 -3,-7.5 0,-11.5 C 3,-7.5 3,-3.5 0,0 Z" fill="#4a7a52" opacity="0.85"/>
+  </g>
+
+  <!-- Branch junction dot -->
+  <circle cx="140" cy="70" r="2.2" fill="#c4944f" opacity="0.8"/>
+
+  <!-- Right main branch (mirror) -->
+  <path d="M 142,70 C 164,56 190,41 208,26" stroke="#4a7a52" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <g transform="translate(159,59) rotate(46)">
+    <path d="M 0,0 C -2.8,-3.2 -2.8,-7 0,-10.5 C 2.8,-7 2.8,-3.2 0,0 Z" fill="#4a7a52" opacity="0.72"/>
+  </g>
+  <g transform="translate(176,48) rotate(58)">
+    <path d="M 0,0 C -2.8,-3.2 -2.8,-7 0,-10.5 C 2.8,-7 2.8,-3.2 0,0 Z" fill="#4a7a52" opacity="0.80"/>
+  </g>
+  <g transform="translate(193,37) rotate(67)">
+    <path d="M 0,0 C -2.8,-3.2 -2.8,-7 0,-10.5 C 2.8,-7 2.8,-3.2 0,0 Z" fill="#4a7a52" opacity="0.75"/>
+  </g>
+  <g transform="translate(205,28) rotate(75)">
+    <path d="M 0,0 C -3,-3.5 -3,-7.5 0,-11.5 C 3,-7.5 3,-3.5 0,0 Z" fill="#4a7a52" opacity="0.85"/>
+  </g>
+
+  <!-- ── S MONOGRAM ────────────────────────────────────── -->
+  <text
+    x="140"
+    y="190"
+    font-family="'Cormorant Garamond', 'Times New Roman', Georgia, serif"
+    font-size="122"
+    font-style="italic"
+    font-weight="500"
+    text-anchor="middle"
+    fill="#4a7a52"
+  >S</text>
+
+  <!-- ── WORDMARK ──────────────────────────────────────── -->
+  <line x1="48" y1="208" x2="128" y2="208" stroke="#4a7a52" stroke-width="0.5" opacity="0.38"/>
+  <path d="M 140,203 L 145.5,208.5 L 140,214 L 134.5,208.5 Z" fill="#c4944f" opacity="0.85"/>
+  <line x1="152" y1="208" x2="232" y2="208" stroke="#4a7a52" stroke-width="0.5" opacity="0.38"/>
+
+  <text
+    x="140"
+    y="234"
+    font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif"
+    font-size="15"
+    font-weight="500"
+    text-anchor="middle"
+    textLength="162"
+    lengthAdjust="spacing"
+    fill="#2e3a30"
+  >SABRINA</text>
+
+  <text
+    x="140"
+    y="253"
+    font-family="'Montserrat', 'Helvetica Neue', Arial, sans-serif"
+    font-size="9.5"
+    font-weight="400"
+    text-anchor="middle"
+    textLength="86"
+    lengthAdjust="spacing"
+    fill="#c4944f"
+  >MYERS</text>
+
+  <line x1="94" y1="265" x2="186" y2="265" stroke="#4a7a52" stroke-width="0.4" opacity="0.32"/>
+
+  <text
+    x="140"
+    y="284"
+    font-family="'Cormorant Garamond', 'Times New Roman', Georgia, serif"
+    font-size="10"
+    font-style="italic"
+    text-anchor="middle"
+    fill="#4a7a52"
+    opacity="0.65"
+  >Companionship Care · Lancashire</text>
+</svg>

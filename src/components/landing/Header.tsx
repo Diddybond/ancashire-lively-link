@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
+import { LogoMark } from "@/components/Logo";
 
 const links = [
   { href: "#about", label: "About" },
@@ -35,9 +36,13 @@ export function Header() {
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-6 px-6 sm:px-8 lg:px-12">
         <a
           href="#top"
-          className="font-serif text-xl font-medium leading-none text-foreground sm:text-2xl"
+          className="flex items-center gap-3 leading-none"
+          aria-label="Sabrina Myers — home"
         >
-          Sabrina Myers
+          <LogoMark height={42} />
+          <span className="font-serif text-xl font-medium text-foreground sm:text-2xl">
+            Sabrina Myers
+          </span>
         </a>
 
         <nav

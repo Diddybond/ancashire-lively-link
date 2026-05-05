@@ -1,5 +1,6 @@
 import { useScrollReveal, useParallax } from "@/hooks/use-scroll-reveal";
 import sabrinaPhoto from "@/assets/sabrina.jpg";
+import { Logo } from "@/components/Logo";
 
 export function Hero() {
   const titleRef = useScrollReveal<HTMLHeadingElement>();
@@ -29,6 +30,8 @@ export function Hero() {
         {/* LEFT: white card with content (like reference) */}
         <div className="relative z-10 col-span-12 min-w-0 lg:col-span-7">
           <div className="bg-background/95 p-6 shadow-[0_30px_80px_-40px_rgba(0,0,0,0.25)] sm:p-12 lg:p-16 lg:-mr-16">
+            <Logo height={72} className="reveal-up mb-8" />
+
             <span
               ref={eyebrowRef}
               className="reveal-up mb-6 block text-sm font-semibold uppercase tracking-[0.28em] text-[var(--primary)]"
